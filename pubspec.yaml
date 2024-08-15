@@ -17,3 +17,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: Ribeye
+      fonts:
+        - asset: assets/fonts/Ribeye-Regular.ttf
+
+  assets:
+    - 'assets/images/'
