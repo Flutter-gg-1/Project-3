@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RichTextWidget extends StatelessWidget {
   const RichTextWidget({super.key});
@@ -6,18 +7,18 @@ class RichTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
-              text: const TextSpan(
+              text:  TextSpan(
                 children: [
-                  TextSpan(text: 'M', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xffEB9F4A), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: 'E', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff77B29F), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: 'N', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xffAB70DF), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: 'T', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff6884F6), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: 'A', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xffECC055), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: 'L', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff77B29F), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: '^', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xffAB70DF), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: 'u', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff6884F6), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: 'p', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xffECC055), fontFamily: 'Ribeye', fontSize: 40)),
-                  TextSpan(text: '^', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff77B29F), fontFamily: 'Ribeye', fontSize: 40)),
+                  TextSpan(text: 'M', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xffEB9F4A), fontSize: 40))),
+                  TextSpan(text: 'E', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xff77B29F), fontSize: 40))),
+                  TextSpan(text: 'N', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xffAB70DF), fontSize: 40))),
+                  TextSpan(text: 'T', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xff6884F6), fontSize: 40))),
+                  TextSpan(text: 'A', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xffECC055), fontSize: 40))),
+                  TextSpan(text: 'L', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xff77B29F), fontSize: 40))),
+                  TextSpan(text: ' ^', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xffAB70DF), fontSize: 40))),
+                  TextSpan(text: 'u', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xff6884F6), fontSize: 40))),
+                  TextSpan(text: 'p', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xffECC055), fontSize: 40))),
+                  TextSpan(text: '^', style: GoogleFonts.ribeye(textStyle:  const TextStyle(color: Color(0xff77B29F), fontSize: 40))),
         
                 ]
               ),

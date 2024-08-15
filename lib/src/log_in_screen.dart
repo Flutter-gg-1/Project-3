@@ -12,30 +12,33 @@ class LogInScreen extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           bottom: const PreferredSize(
-              preferredSize: Size.fromHeight(60), child: RichTextWidget())),
+              preferredSize: Size.fromHeight(89), child: RichTextWidget())),
       body: SafeArea(
         child: Column(
           children: [
-            const Padding(padding: EdgeInsets.all(40)),
+            const Padding(padding: EdgeInsets.only(top: 65)),
             const Center(
               child: SizedBox(
                   height: 60,
                   width: 316,
                   child: TextFieldWidget(hintMessege: 'Username')),
             ),
-            const Padding(padding: EdgeInsets.all(10)),
+            const Padding(padding: EdgeInsets.only(top: 24)),
             const SizedBox(
                 height: 60,
                 width: 316,
                 child: TextFieldWidget(hintMessege: 'Password')),
-            const Padding(padding: EdgeInsets.only(top: 30)),
-            const Text(
-              "                                 Forgot Password?",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            const Padding(padding: EdgeInsets.only(top: 25)),
+            Container(
+              margin: const EdgeInsets.only(left: 170),
+              child: const Text(
+                "Forgot Password?",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
             ),
-            const Padding(padding: EdgeInsets.only(top: 30)),
+            const Padding(padding: EdgeInsets.only(top: 24)),
             SizedBox(
-              height: 60,
+              height: 58,
               width: 316,
               child: ElevatedButton(
                 onPressed: () {},
@@ -51,7 +54,7 @@ class LogInScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(padding: EdgeInsets.only(top: 30)),
+            const Padding(padding: EdgeInsets.only(top: 41)),
             RichText(
                 text: const TextSpan(children: [
               TextSpan(
@@ -61,6 +64,8 @@ class LogInScreen extends StatelessWidget {
                   text: ' Sign Up',
                   style: TextStyle(color: Color(0xff77B29F), fontSize: 14, fontWeight: FontWeight.bold)),
             ])),
+            Expanded(
+                child: Image.asset('assets/logo.png')),
           ],
         ),
       ),

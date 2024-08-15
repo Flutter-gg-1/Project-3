@@ -9,14 +9,14 @@ class TextFieldWidget extends StatelessWidget {
     return TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(25),
                     borderSide: const BorderSide(
                       width: 0,
                       style: BorderStyle.none,
                     )
                   ),
                   filled: true,
-                  label:  Text(hintMessege, style: TextStyle(fontSize: 18),),
+                  label:  Text(hintMessege, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
                   labelStyle: const TextStyle(color: Color(0xff999999)),
                   fillColor: const Color(0xffFFFFFF)
 
