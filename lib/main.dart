@@ -1,4 +1,5 @@
-import 'package:education_app/home_screen.dart';
+import 'package:education_app/screens/login_screen.dart';
+import 'package:education_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
