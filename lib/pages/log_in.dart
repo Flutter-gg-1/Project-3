@@ -1,3 +1,4 @@
+import 'package:educational_kids_game/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LogIn extends StatelessWidget {
@@ -13,7 +14,7 @@ class LogIn extends StatelessWidget {
               height: 200,
               width: 300,
               child: Placeholder(
-                child: Text("LOGO"),
+                child: Center(child: Text("LOGO")),
               ),
             ),
             const SizedBox(
@@ -55,12 +56,14 @@ class LogIn extends StatelessWidget {
             ),
 
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              ),
               child: const Text("Log in"),
             ),
 
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
 
             const Row(
@@ -69,7 +72,16 @@ class LogIn extends StatelessWidget {
                 Text("Don't have account yet? "),
                 Text(style: TextStyle(color: Color(0xff77B29F)), "Sign Up")
               ],
-            )
+            ),
+            const Flexible(
+              child: SizedBox(
+                height: double.infinity,
+                width: double.infinity,
+                child: Placeholder(
+                  child: Center(child: Text("Image")),
+                ),
+              ),
+            ),
           ],
         ),
       ),
