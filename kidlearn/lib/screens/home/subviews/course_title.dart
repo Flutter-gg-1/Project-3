@@ -11,22 +11,27 @@ class CourseTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 32, left: 24, right: 24),
+      padding: const EdgeInsets.only(top: 24, left: 24, right: 24),
       child: Row(
         children: [
           Text(
             course.title,
             textAlign: TextAlign.start,
-            style: TextStyle(fontSize: 32, fontWeight: FontWeight.w400),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.w400),
           ),
           const Spacer(),
-          const Row(
+          Row(
             children: [
-              Icon(
-                Icons.lock,
+              const Icon(
+                Icons.square,
+                color: ThemeColors.crownYellow,
+                size: 32,
               ),
-              Text('18/40',
-                  style: TextStyle(
+              Text(
+                  '${course.crowns.toString()}/${course.totalCrowns.toString()}',
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
                     color: ThemeColors.textGrey,

@@ -1,28 +1,50 @@
 import 'package:flutter/material.dart';
-
 import '../constants/color_ext.dart';
 
-class ThemeProgressView extends StatelessWidget {
-  const ThemeProgressView({super.key});
+class ProgressView extends StatelessWidget {
+  const ProgressView({super.key, required this.value, required this.total});
+
+  final int value;
+  final int total;
+
+  double progressValue() {
+    return value / total;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
-        LinearProgressIndicator(
-          value: 0.5,
-          borderRadius: BorderRadius.circular(16),
-          minHeight: 12,
-          backgroundColor: ThemeColors.unitCardBorder,
-          color: ThemeColors.crownYellow,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 2),
+          child: LinearProgressIndicator(
+            value: progressValue(),
+            borderRadius: BorderRadius.circular(16),
+            minHeight: 12,
+            backgroundColor: ThemeColors.unitCardBorder,
+            color: ThemeColors.crownYellow,
+          ),
         ),
         const Row(
           children: [
-            Icon(
-              Icons.person,
-              color: ThemeColors.crownYellow,
-              size: 28,
+            Stack(
+              alignment: Alignment.bottomLeft,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 3.0),
+                  child: Icon(
+                    Icons.square,
+                    size: 20,
+                    color: ThemeColors.courseCardBG,
+                  ),
+                ),
+                Icon(
+                  Icons.square,
+                  size: 20,
+                  color: ThemeColors.crownYellow,
+                ),
+              ],
             ),
           ],
         )

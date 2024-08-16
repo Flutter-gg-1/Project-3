@@ -64,23 +64,48 @@ class _ChapterCard extends StatelessWidget {
             border: Border.all(color: ThemeColors.chapterBorder, width: 8),
             shape: BoxShape.circle,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Container(
-              decoration: const BoxDecoration(
-                color: ThemeColors.chapterGreen,
-                shape: BoxShape.circle,
-              ),
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Image(
-                    image: chapter.img,
-                    fit: BoxFit.contain,
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: ThemeColors.chapterGreen,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Image(
+                        image: chapter.img,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Stack(
+                  children: [
+                    const Icon(
+                      Icons.square,
+                      color: ThemeColors.crownYellow,
+                      size: 36,
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
+                      child: Text(
+                        chapter.completed ? '1' : '',
+                        style:
+                            const TextStyle(color: Colors.black, fontSize: 18),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
           ),
         ),
         Text(chapter.name),

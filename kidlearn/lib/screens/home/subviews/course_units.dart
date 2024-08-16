@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../constants/color_ext.dart';
 import '../../../model/course.dart';
 import '../../../model/unit.dart';
+import '../../../reusable_components/theme_progress_view.dart';
 import '../../course_unit/course_unit_screen.dart';
 
 class CourseUnits extends StatelessWidget {
@@ -14,11 +15,13 @@ class CourseUnits extends StatelessWidget {
     required Course course,
     required Unit unit,
   }) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => CourseUnitScreen(course: course, unit: unit),
-      ),
-    );
+    if (unit.isUnlocked) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => CourseUnitScreen(course: course, unit: unit),
+        ),
+      );
+    }
   }
 
   @override
@@ -55,7 +58,7 @@ class _UnitCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 0.8,
       child: Padding(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(24),
           child: Container(
@@ -81,23 +84,9 @@ class _UnitCard extends StatelessWidget {
                   const Spacer(),
                   // MARK: - ProgressBar
                   if (unit.isUnlocked)
-                    Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        LinearProgressIndicator(
-                          value: 0.5,
-                          borderRadius: BorderRadius.circular(16),
-                          minHeight: 12,
-                          backgroundColor: ThemeColors.unitCardBorder,
-                          color: ThemeColors.crownYellow,
-                        ),
-                        const Row(
-                          children: [
-                            Icon(Icons.person, color: ThemeColors.crownYellow),
-                          ],
-                        )
-                      ],
-                    )
+                    ProgressView(
+                        value: unit.completedChapters,
+                        total: unit.totalChapters)
                 ],
               ),
             ),

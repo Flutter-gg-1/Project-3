@@ -12,6 +12,7 @@ extension Img on AssetImage {
   static AssetImage cat = const AssetImage('assets/images/cat.png');
   static AssetImage dino = const AssetImage('assets/images/dinosaur.png');
   static AssetImage horse = const AssetImage('assets/images/horse.png');
+  static AssetImage lock = const AssetImage('assets/images/lock.png');
   static AssetImage pencil = const AssetImage('assets/images/pencil.png');
   static AssetImage reading = const AssetImage('assets/images/reading.png');
   static AssetImage streak = const AssetImage('assets/images/streak.png');

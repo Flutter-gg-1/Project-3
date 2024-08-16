@@ -33,6 +33,8 @@ class MockData {
     stats = _createStats();
     users = _createUsers();
 
+    print(courses.first.units.length);
+
     currentUser = users.first;
   }
 
@@ -65,10 +67,18 @@ class MockData {
           achievements: achievements,
         )
       ];
+  List<Unit> _createUnits() => [
+        Unit(id: 'C1U1', unitNum: 1, chapters: chapters, completedChapters: 18),
+        Unit(id: 'C1U2', unitNum: 2, chapters: chapters, completedChapters: 0),
+        Unit(id: 'C2U1', unitNum: 1, chapters: chapters, completedChapters: 15),
+        Unit(id: 'C2U2', unitNum: 2, chapters: chapters, completedChapters: 0),
+        Unit(id: 'C3U1', unitNum: 1, chapters: chapters, completedChapters: 6),
+        Unit(id: 'C3U2', unitNum: 2, chapters: chapters, completedChapters: 0),
+      ];
   List<Chapter> _createChapters() => [
-        Chapter(id: '1', name: 'Intro', img: Img.pencil),
-        Chapter(id: '2', name: 'Phrases', img: Img.book),
-        Chapter(id: '3', name: 'Travel', img: Img.bicycle),
+        Chapter(id: '1', name: 'Intro', completed: true, img: Img.pencil),
+        Chapter(id: '2', name: 'Phrases', completed: true, img: Img.book),
+        Chapter(id: '3', name: 'Travel', completed: true, img: Img.bicycle),
         Chapter(id: '4'),
         Chapter(id: '5'),
         Chapter(id: '6'),
@@ -89,14 +99,6 @@ class MockData {
           title: 'Verbal skills',
           units: units.where((unit) => unit.id.contains('C3')).toList(),
         ),
-      ];
-  List<Unit> _createUnits() => [
-        Unit(id: 'C1U1', unitNum: 1, chapters: chapters),
-        Unit(id: 'C1U2', unitNum: 2, chapters: chapters),
-        Unit(id: 'C2U1', unitNum: 1, chapters: chapters),
-        Unit(id: 'C2U2', unitNum: 2, chapters: chapters),
-        Unit(id: 'C3U1', unitNum: 1, chapters: chapters),
-        Unit(id: 'C3U2', unitNum: 2, chapters: chapters),
       ];
   List<Stats> _createStats() => [
         Stats(

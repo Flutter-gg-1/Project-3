@@ -53,15 +53,15 @@ class UnitCardView extends StatelessWidget {
             ),
             //MARK: - Image
             Align(
-                alignment: Alignment.topCenter,
-                child: AspectRatio(
-                  aspectRatio: 1.8,
-                  child: Image(
-                    image: Img.horse,
-                    fit: BoxFit.contain,
-                  ),
-                )),
-            // MARK: Text
+              alignment: Alignment.topCenter,
+              child: AspectRatio(
+                aspectRatio: 1.8,
+                child: Image(
+                  image: Img.horse,
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
           ],
         ),
       ),

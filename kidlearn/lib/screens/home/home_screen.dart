@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
       body: Expanded(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(left: 8.0, right: 8, top: 24),
             child: Column(
                 children: MockData.shared.courses
                     .map(
