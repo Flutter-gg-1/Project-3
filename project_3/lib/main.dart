@@ -21,26 +21,12 @@ class MainApp extends StatelessWidget {
                   Text('Hello World!'),
                 ]),
                 const Text('Hello World!'),
-                // Simple progress indicators package with solid colors and gradients
-
-                Container(
-                  color: ColorPallete.colorDarkGrey,
-                  width: 179,
-                  height: 227,
-                  padding: const EdgeInsets.all(10),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text('Unit 1'),
-                      Expanded(child: Image.asset('assets/gf.png')),
-                      Row(
-                        children: [
-                          Image.asset('assets/t.png'),
-                          myLoadingIndicator(value: 0.5),
-                        ],
-                      ),
-                    ],
-                  ),
+                myContainer(
+                  title: 'Hello World!',
+                  listWidget: [
+                    Image.asset('assets/t.png'),
+                    myLoadingIndicator(value: 0.5),
+                  ],
                 ),
               ],
             ),

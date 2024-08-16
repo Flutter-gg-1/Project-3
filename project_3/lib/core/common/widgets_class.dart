@@ -16,7 +16,10 @@ Widget myRowContainer({required List<Widget> addItem}) {
 
 // loading indicator
 Widget myLoadingIndicator(
-    {required double value, double horizontalPadding = 5, double height = 14, double width = 100}) {
+    {required double value,
+    double horizontalPadding = 5,
+    double height = 14,
+    double width = 100}) {
   return SizedBox(
     height: 14,
     width: 100,
@@ -32,6 +35,27 @@ Widget myLoadingIndicator(
               topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
         ),
       ),
+    ),
+  );
+}
+
+Widget myContainer({
+  List<Widget>? listWidget,
+  String? title,
+}) {
+  return Container(
+    color: ColorPallete.colorDarkGrey,
+    width: 179,
+    height: 227,
+    padding: const EdgeInsets.all(10),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Expanded(child: Text(title ?? '')),
+        Row(
+          children: listWidget ?? [],
+        ),
+      ],
     ),
   );
 }
