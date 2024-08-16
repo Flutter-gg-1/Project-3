@@ -24,8 +24,8 @@ extension ThemeColors on Color {
   // Locked Content
   static const Color lockGrey = Color(0xFF737170);
   // unitView card
-  static const Color unitCardBg = Color(0xFFE9E8E8);
+  static const Color headerBG = Color(0xFFE9E8E8);
   static const Color unitCardBorder = Color(0xFFBABABA);
   // courseView card
-  static const Color courseCardBg = Color(0xFFE5E1E0);
+  static const Color courseCardBG = Color(0xFFE5E1E0);
 }

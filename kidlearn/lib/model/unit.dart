@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'chapter.dart';
 
 class Unit {
+  String id;
   int unitNum;
   Image img;
   List<Chapter> chapters;
@@ -9,20 +11,11 @@ class Unit {
   bool isUnlocked = false;
 
   Unit({
+    required this.id,
     required this.unitNum,
     Image? img,
     required this.chapters,
     this.completedChapters = 0,
     this.totalChapters = 0,
   }) : img = Image.asset('horse.png');
-}
-
-class Chapter {
-  String name;
-  Image img;
-
-  Chapter({
-    this.name = '',
-    Image? img,
-  }) : img = Image.asset('lock.svg');
 }

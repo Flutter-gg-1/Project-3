@@ -2,10 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:kidlearn/reusable_components/theme_scaffold.dart';
 import '../../constants/theme_colors.dart';
 import '../home/home_screen.dart';
-import '../../constants/img.dart';
+import 'custom_text_field.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
+
+  void _navigateToHome(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +24,9 @@ class AuthScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 56.0),
             child: Column(
               children: [
-                const _CustomTextField(hint: 'Username'),
+                const CustomTextField(hint: 'Username'),
                 const SizedBox(height: 24),
-                const _CustomTextField(hint: 'Password'),
+                const CustomTextField(hint: 'Password'),
                 const SizedBox(height: 24),
                 const Row(
                   children: [
@@ -38,19 +46,16 @@ class AuthScreen extends StatelessWidget {
                         backgroundColor:
                             WidgetStateProperty.all(ThemeColors.orange),
                       ),
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
-                          ),
-                        );
-                      },
-                      child: const Text(
-                        'GO',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 24,
-                            color: Colors.white),
+                      onPressed: () => _navigateToHome(context),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'GO',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 24,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
@@ -76,38 +81,8 @@ class AuthScreen extends StatelessWidget {
               ],
             ),
           ),
-          Row(
-            children: [
-              Expanded(
-                child: Text(''),
-              ),
-            ],
-          )
         ],
       ),
-    );
-  }
-}
-
-class _CustomTextField extends StatelessWidget {
-  const _CustomTextField({super.key, required this.hint});
-
-  final String hint;
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: Colors.white,
-        hintText: hint,
-        contentPadding: EdgeInsets.all(24),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(24),
-          borderSide: BorderSide.none,
-        ),
-      ),
-      style: const TextStyle(fontSize: 18),
     );
   }
 }

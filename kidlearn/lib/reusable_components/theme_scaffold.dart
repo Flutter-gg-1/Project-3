@@ -28,7 +28,13 @@ class ThemeScaffold extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     if (hasHeader)
-                      Expanded(child: headerContent ?? const Placeholder())
+                      Expanded(
+                        child: Container(
+                          height: 71,
+                          color: ThemeColors.headerBG,
+                          child: headerContent ?? const Placeholder(),
+                        ),
+                      )
                     else
                       Expanded(
                         child: Padding(
@@ -41,6 +47,12 @@ class ThemeScaffold extends StatelessWidget {
               ),
             ),
             body,
+            if (!hasHeader)
+              Expanded(
+                  child: Container(
+                width: double.infinity,
+                child: Img.dino,
+              ))
           ],
         ),
       ),
