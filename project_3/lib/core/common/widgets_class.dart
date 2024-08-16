@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:project_3/core/all_files.dart';
 
-Widget myRowContainer({required List<Widget> addItem}) {
+Widget myRowContainer(
+    {required List<Widget> addItem,
+    MainAxisAlignment mainAxisAlignment = MainAxisAlignment.center}) {
   return Container(
     color: ColorPallete.colorDarkGrey,
     width: double.infinity,
     height: 71,
     padding: const EdgeInsets.all(10),
     child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: mainAxisAlignment,
       children: addItem,
     ),
   );
@@ -73,7 +75,7 @@ Widget myContainerInput({
       decoration: InputDecoration(
         labelText: title ?? '',
         labelStyle: TextStyle(
-          color: const Color.fromRGBO(0, 0, 0, 0.5),
+          color: ColorPallete.colorLightBlack,
           fontWeight: fontWeight ?? FontWeight.bold,
         ),
         border: OutlineInputBorder(
