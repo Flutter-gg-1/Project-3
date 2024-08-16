@@ -15,17 +15,22 @@ Widget myRowContainer({required List<Widget> addItem}) {
 }
 
 // loading indicator
-Widget myLoadingIndicator({required double value}) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 90),
-    child: Transform(
-      transform: Matrix4.skewX(-0.5),
-      child: LinearProgressIndicator(
-        value: value,
-        color: const Color.fromRGBO(236, 192, 85, 1),
-        minHeight: 14,
-        borderRadius: const BorderRadius.only(
-            topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
+Widget myLoadingIndicator(
+    {required double value, double horizontalPadding = 5, double height = 14, double width = 100}) {
+  return SizedBox(
+    height: 14,
+    width: 100,
+    child: Padding(
+      padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+      child: Transform(
+        transform: Matrix4.skewX(-0.5),
+        child: LinearProgressIndicator(
+          value: value,
+          color: const Color.fromRGBO(236, 192, 85, 1),
+          minHeight: 14,
+          borderRadius: const BorderRadius.only(
+              topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
+        ),
       ),
     ),
   );
