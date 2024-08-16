@@ -1,4 +1,4 @@
-import 'package:educational_kids_game/pages/home_screen.dart';
+import 'package:educational_kids_game/pages/landing_screen.dart';
 import 'package:flutter/material.dart';
 
 class LogInScreen extends StatelessWidget {
@@ -79,7 +79,10 @@ class LogInScreen extends StatelessWidget {
                 style: const ButtonStyle(
                     backgroundColor: WidgetStatePropertyAll(Color(0xFFEB9F4A))),
                 onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  MaterialPageRoute(builder: (context) {
+                    // return const HomeScreen();
+                    return const LandingScreen();
+                  }),
                 ),
                 child: const Text(
                     style: TextStyle(fontSize: 25, color: Color(0xFFFFFFFF)),

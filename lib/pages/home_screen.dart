@@ -146,27 +146,6 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: NavigationBar(
-        destinations: const [
-          NavigationDestination(
-            selectedIcon: Icon(color: Color(0xff41AC78), Icons.home),
-            icon: Icon(Icons.home),
-            label: '',
-          ),
-          NavigationDestination(
-            icon: Icon(FontAwesomeIcons.bullseye),
-            label: '',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.people),
-            label: '',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.settings),
-            label: '',
-          ),
-        ],
-      ),
     );
   }
 }
