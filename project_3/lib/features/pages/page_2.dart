@@ -83,6 +83,11 @@ class _YourScoreState extends State<YourScore> {
           ],
         ),
       ),
+      bottomNavigationBar: const BottomAppBar(
+        child: Row(
+          children: [],
+        ),
+      ),
     );
   }
 }
