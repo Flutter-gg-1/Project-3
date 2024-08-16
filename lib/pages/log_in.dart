@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:educational_kids_game/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -9,15 +7,16 @@ class LogIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xfffbf5f2),
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(
+            SizedBox(
               height: 100,
               width: double.infinity,
-              child: Placeholder(
-                child: Center(child: Text("LOGO")),
+              child: Flexible(
+                child: Image.asset(fit: BoxFit.cover, "assets/logo.png"),
               ),
             ),
             const SizedBox(
@@ -25,7 +24,8 @@ class LogIn extends StatelessWidget {
             ),
             //user name
             Container(
-              decoration: const BoxDecoration(color: Colors.white),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(19), color: Colors.white),
               width: MediaQuery.of(context).size.width / 1.4,
               child: TextField(
                 decoration: InputDecoration(
@@ -43,7 +43,8 @@ class LogIn extends StatelessWidget {
             ),
             //password
             Container(
-              decoration: const BoxDecoration(color: Colors.white),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(19), color: Colors.white),
               width: MediaQuery.of(context).size.width / 1.4,
               child: TextField(
                 obscureText: true,
@@ -52,7 +53,7 @@ class LogIn extends StatelessWidget {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(19),
                   ),
-                  labelText: 'Passwird',
+                  labelText: 'Password',
                 ),
               ),
             ),
@@ -60,19 +61,29 @@ class LogIn extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(
-                  onPressed: () {},
-                  child: const Text(
-                      style: TextStyle(fontSize: 10), "Forgot password"),
+                Container(
+                  margin: const EdgeInsets.only(right: 60),
+                  child: TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                        style: TextStyle(fontSize: 15), "Forgot password"),
+                  ),
                 ),
               ],
             ),
 
-            ElevatedButton(
-              onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const HomeScreen()),
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 1.5,
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll(Color(0xFFEB9F4A))),
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                ),
+                child: const Text(
+                    style: TextStyle(fontSize: 25, color: Color(0xFFFFFFFF)),
+                    "GO"),
               ),
-              child: const Text("Log in"),
             ),
 
             const Row(
@@ -83,10 +94,7 @@ class LogIn extends StatelessWidget {
               ],
             ),
             Flexible(
-              child: Image.asset(
-                  height: double.infinity,
-                  width: double.infinity,
-                  "assets/lets have fun.png"),
+              child: Image.asset(fit: BoxFit.cover, "assets/lets have fun.png"),
             ),
           ],
         ),
