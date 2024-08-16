@@ -36,6 +36,11 @@ class YourScore extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 26),
+              myContainer(
+                title: 'Your Score',
+                listWidget: [],
+              ),
             ],
           ),
         ),

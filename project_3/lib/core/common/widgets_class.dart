@@ -44,6 +44,7 @@ Widget myLoadingIndicator(
 Widget myContainer({
   List<Widget>? listWidget,
   String? title,
+  double? fontSize,
 }) {
   return Container(
     color: ColorPallete.colorDarkGrey,
@@ -53,7 +54,9 @@ Widget myContainer({
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Expanded(child: Text(title ?? '')),
+        Expanded(
+            child:
+                Text(title ?? '', style: TextStyle(fontSize: fontSize ?? 30))),
         Row(
           children: listWidget ?? [],
         ),
