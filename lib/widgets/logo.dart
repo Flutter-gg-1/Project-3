@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; // imports material design widgets and properities
 
+// widget represents app logo
 class Logo extends StatelessWidget {
   const Logo({super.key});
 

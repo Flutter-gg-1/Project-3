@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; // imports material design widgets and properities
 
+// widget represents user input
 class UserInput extends StatelessWidget {
   final String inputName;
   const UserInput({super.key, required this.inputName});

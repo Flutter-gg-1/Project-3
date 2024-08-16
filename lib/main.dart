@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:project3/screens/home_screen.dart';
+import 'package:flutter/material.dart';                 // imports material design widgets and properities
+import 'package:project3/screens/login_screen.dart';    // login page
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen()
+      home: LoginScreen()
     );
   }
 }
