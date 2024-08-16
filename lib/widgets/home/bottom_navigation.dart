@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screens/home_screen.dart';
+import '../../screens/home_screen.dart';
 
 class BottomNavigation extends StatelessWidget {
   static final List<String> imagePaths = [
