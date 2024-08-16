@@ -10,9 +10,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      theme: ThemeData(
+        fontFamily: 'RobotoBold', //or 'RobotoRegular'
+      ),
+      home: const HomeScreen(),
     );
   }
 }

@@ -15,10 +15,15 @@ class HomeScreen extends StatelessWidget {
               Image.asset('assets/mental.png'),
               const SizedBox(height: 40),
               // Login field
-              Container(
-                color: ColorPallete.colorWhite,
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                
+              myContainerInput(title: 'Username'),
+              const SizedBox(height: 24),
+              myContainerInput(title: 'Password'),
+              const SizedBox(height: 25),
+              const Padding(
+                padding: EdgeInsets.only(right: 50),
+                child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text('Forgot Password?')),
               ),
             ],
           ),

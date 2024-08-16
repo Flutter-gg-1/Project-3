@@ -19,3 +19,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+  fonts:
+    - family: RobotoBold
+      fonts:
+        - asset: assets/fonts/Roboto-Bold.ttf
+    - family: RobotoRegular
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
