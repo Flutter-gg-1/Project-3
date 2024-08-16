@@ -9,5 +9,5 @@ class Chapter {
     required this.id,
     this.name = '',
     AssetImage? img,
-  }) : img = img ?? const AssetImage('lock.svg');
+  }) : img = img ?? const AssetImage('assets/icons/lock.svg');
 }
