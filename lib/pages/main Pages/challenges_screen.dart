@@ -6,6 +6,88 @@ class ChallengesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Placeholder();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Container(
+          color: const Color(0xFFe9e8e8),
+          width: double.infinity,
+          child: const Center(
+            child: Text("Challenges"),
+          ),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width / 1.1,
+          height: MediaQuery.of(context).size.height / 7,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 2,
+              color: const Color(0xffbababa),
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+          ),
+          child: const ListTile(
+            leading: CircleAvatar(),
+            title: Text("Complete 1000 word streak"),
+            subtitle: Text("Win 1000XP along with 300 diamonds."),
+          ),
+        ),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [Text(style: TextStyle(fontSize: 24), "Achievements")],
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width / 1.1,
+          height: MediaQuery.of(context).size.height / 7,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 2,
+              color: const Color(0xffbababa),
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+          ),
+          child: const ListTile(
+            leading: CircleAvatar(),
+            title: Text("Lorem Ipsum "),
+            subtitle: Text(
+                "is simply dummy text of the printing and typesetting industry."),
+          ),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width / 1.1,
+          height: MediaQuery.of(context).size.height / 7,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 2,
+              color: const Color(0xffbababa),
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+          ),
+          child: const ListTile(
+            leading: CircleAvatar(),
+            title: Text("Lorem Ipsum "),
+            subtitle: Text(
+                "is simply dummy text of the printing and typesetting industry."),
+          ),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width / 1.1,
+          height: MediaQuery.of(context).size.height / 7,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 2,
+              color: const Color(0xffbababa),
+            ),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
+          ),
+          child: const ListTile(
+            leading: CircleAvatar(),
+            title: Text("Lorem Ipsum "),
+            subtitle: Text(
+                "is simply dummy text of the printing and typesetting industry."),
+          ),
+        ),
+      ],
+    );
   }
 }
