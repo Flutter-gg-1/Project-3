@@ -17,7 +17,13 @@ class MainApp extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                rowContainer(),
+                rowContainer(addItem: const [
+                  Text('Hello World!'),
+                  Icon(Icons.abc),
+                  Text('Hello World!'),
+                  Icon(Icons.abc),
+                  Text('Hello World!'),
+                ]),
                 const Text('Hello World!'),
                 // Simple progress indicators package with solid colors and gradients
                 const LinearProgressIndicator(
