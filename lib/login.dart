@@ -138,11 +138,14 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 15,
-          ),
           Expanded(
-              child: Image.asset('images/Screenshot 2022-01-25 at 1.24 1.png'))
+            child: Container(
+                margin: EdgeInsets.only(top: 15),
+                height: 368,
+                width: 428,
+                child:
+                    Image.asset('images/Screenshot 2022-01-25 at 1.24 1.png')),
+          )
         ],
       ),
     );
