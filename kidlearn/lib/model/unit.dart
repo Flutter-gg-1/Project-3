@@ -4,7 +4,7 @@ import 'chapter.dart';
 class Unit {
   String id;
   int unitNum;
-  Image img;
+  AssetImage img;
   List<Chapter> chapters;
   int completedChapters;
   int totalChapters;
@@ -17,5 +17,5 @@ class Unit {
     required this.chapters,
     this.completedChapters = 0,
     this.totalChapters = 0,
-  }) : img = Image.asset('horse.png');
+  }) : img = const AssetImage('horse.png');
 }

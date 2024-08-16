@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../../../constants/theme_colors.dart';
+import 'package:kidlearn/constants/text_ext.dart';
+import '../../../constants/color_ext.dart';
 
-class HeaderContentView extends StatelessWidget {
-  const HeaderContentView({
+class HomeHeaderView extends StatelessWidget {
+  const HomeHeaderView({
     super.key,
   });
 
@@ -49,12 +50,7 @@ class _HeaderStatsItem extends StatelessWidget {
           color: iconColor,
         ),
         const SizedBox(width: 4),
-        Text(
-          statNum.toString(),
-          maxLines: 1,
-          overflow: TextOverflow.clip,
-          style: const TextStyle(fontSize: 24),
-        ),
+        Text(statNum.toString()).headerText(color: iconColor),
       ],
     );
   }

@@ -1,4 +1,4 @@
-import '../constants/img.dart';
+import '../constants/img_ext.dart';
 import '../model/achievement.dart';
 import '../model/challenge.dart';
 import '../model/chapter.dart';

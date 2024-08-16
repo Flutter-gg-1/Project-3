@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
-import '../../../constants/theme_colors.dart';
+import '../../../constants/color_ext.dart';
 import '../../../model/course.dart';
 import '../../../model/unit.dart';
+import '../../course_unit/course_unit_screen.dart';
 
 class CourseUnits extends StatelessWidget {
   const CourseUnits({super.key, required this.course});
 
   final Course course;
+
+  void _navigateToCourseUnit({
+    required BuildContext context,
+    required Course course,
+    required Unit unit,
+  }) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CourseUnitScreen(course: course, unit: unit),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +27,17 @@ class CourseUnits extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: course.units.map((unit) {
+        children: course.units.map<Widget>((unit) {
           return Expanded(
             flex: 1,
-            child: _UnitCard(unit: unit),
+            child: InkWell(
+              onTap: () => _navigateToCourseUnit(
+                context: context,
+                course: course,
+                unit: unit,
+              ),
+              child: _UnitCard(unit: unit),
+            ),
           );
         }).toList(),
       ),

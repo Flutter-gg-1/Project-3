@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/theme_colors.dart';
+import '../../../constants/color_ext.dart';
 import '../../../model/course.dart';
 
 class CourseTitle extends StatelessWidget {

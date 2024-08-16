@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class Chapter {
   String id;
   String name;
-  Image img;
+  AssetImage img;
 
   Chapter({
     required this.id,
     this.name = '',
-    Image? img,
-  }) : img = Image.asset('lock.svg');
+    AssetImage? img,
+  }) : img = img ?? const AssetImage('lock.svg');
 }

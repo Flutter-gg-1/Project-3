@@ -4,7 +4,7 @@ class Achievement {
   String id;
   String title;
   String description;
-  Image img;
+  AssetImage img;
 
   Achievement({
     required this.id,

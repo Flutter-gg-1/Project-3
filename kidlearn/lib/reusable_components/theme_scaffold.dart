@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kidlearn/constants/theme_colors.dart';
-import '../constants/img.dart';
+import 'package:kidlearn/constants/color_ext.dart';
+import '../constants/img_ext.dart';
 
 class ThemeScaffold extends StatelessWidget {
   const ThemeScaffold(
@@ -39,7 +39,10 @@ class ThemeScaffold extends StatelessWidget {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 70),
-                          child: Img.logo,
+                          child: Image(
+                            image: Img.logo,
+                            fit: BoxFit.contain,
+                          ),
                         ),
                       )
                   ],
@@ -51,7 +54,10 @@ class ThemeScaffold extends StatelessWidget {
               Expanded(
                   child: Container(
                 width: double.infinity,
-                child: Img.dino,
+                child: Image(
+                  image: Img.dino,
+                  fit: BoxFit.contain,
+                ),
               ))
           ],
         ),

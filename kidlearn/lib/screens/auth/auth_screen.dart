@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearn/reusable_components/theme_scaffold.dart';
-import '../../constants/theme_colors.dart';
+import '../../constants/color_ext.dart';
 import '../home/home_screen.dart';
 import 'custom_text_field.dart';
 

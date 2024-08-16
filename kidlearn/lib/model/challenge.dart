@@ -5,7 +5,7 @@ class Challenge {
   String id;
   String title;
   String description;
-  Image img;
+  AssetImage img;
   List<Achievement> achievements;
 
   Challenge({

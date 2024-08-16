@@ -6,7 +6,7 @@ class User {
   String name;
   String username;
   DateTime joinDate;
-  Image? avatar;
+  AssetImage? avatar;
   List<User> following;
   List<User> followers;
   Stats stats;
