@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 245, 230, 223),
+        backgroundColor: const Color(0xfffbf5f2),
         body: Center(
           child: Column(
             children: [
@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
               ),
               Image.asset("assets/logo/logo.png"),
               const SizedBox(
-                height: 100,
+                height: 70,
               ),
               Container(
                 width: size.width * 0.80,
@@ -60,6 +60,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                 )),
               ),
+              const SizedBox(
+                height: 15,
+              ),
               const Align(
                 alignment: Alignment.centerRight,
                 child: Text(
@@ -70,12 +73,49 @@ class LoginScreen extends StatelessWidget {
                       fontSize: 16,
                       fontWeight: FontWeight.bold),
                 ),
-              
-              )
-              // SizedBox(
-              //     width: size.width,
-              //     height: size.height * 0.6,
-              //     child: Image.asset("assets/image1.png"))
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Container(
+                  width: size.width * 0.8,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: const Color(0xffEB9F4A),
+                  ),
+                  child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "GO",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      ))),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have account yet?",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Sign UP",
+                        style: TextStyle(
+                            color: Color(0xff77b29f),
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
+                      ))
+                ],
+              ),
+              SizedBox(
+                  height: size.height * 0.333,
+                  width: size.width,
+                  child: Image.asset(
+                    "assets/image1.png",
+                    fit: BoxFit.fill,
+                  ))
             ],
           ),
         ),
