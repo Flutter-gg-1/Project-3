@@ -6,8 +6,6 @@ class ChallengesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Placeholder(),
-    );
+    return Placeholder();
   }
 }

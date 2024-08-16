@@ -1,7 +1,7 @@
-import 'package:educational_kids_game/pages/challenges_screen.dart';
-import 'package:educational_kids_game/pages/home_screen.dart';
-import 'package:educational_kids_game/pages/profile_screen.dart';
-import 'package:educational_kids_game/pages/setting_screen.dart';
+import 'package:educational_kids_game/pages/main%20Pages/challenges_screen.dart';
+import 'package:educational_kids_game/pages/main%20Pages/home_screen.dart';
+import 'package:educational_kids_game/pages/main%20Pages/profile_screen.dart';
+import 'package:educational_kids_game/pages/main%20Pages/setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -32,7 +32,7 @@ class _LandingScreenState extends State<LandingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfffbf5f2),
-      body: _widgetOptions.elementAt(_selectedIndex),
+      body: SafeArea(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(

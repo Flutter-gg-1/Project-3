@@ -1,4 +1,4 @@
-import 'package:educational_kids_game/pages/skills_screen.dart';
+import 'package:educational_kids_game/pages/main%20Pages/sub%20Pages/skills_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
