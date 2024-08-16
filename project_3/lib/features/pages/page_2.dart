@@ -1,61 +1,86 @@
 import 'package:flutter/material.dart';
 import '/core/all_files.dart';
 
-class YourScore extends StatelessWidget {
+class YourScore extends StatefulWidget {
   const YourScore({super.key});
+
+  @override
+  State<YourScore> createState() => _YourScoreState();
+}
+
+class _YourScoreState extends State<YourScore> {
+  List<String> titleName = [
+    'Logical reasoning',
+    'Artistic thinking',
+    'Verbal skills'
+  ];
+  List<String> titleScore = ['18 / 40', '35 / 40', '3 / 40'];
+  List<double> score = [0.5, 0.8, 0.2];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-              const SizedBox(height: 75),
-              myRowContainer(addItem: [
-                Image.asset('assets/fire.png'),
-                Image.asset('assets/xp.png'),
-                Image.asset('assets/heart.png'),
-              ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
-              const SizedBox(height: 53),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const Text(
-                    'Logical reasoning ',
-                    style:
-                        TextStyle(fontSize: 35, color: ColorPallete.colorBlack),
-                  ),
-                  Image.asset('assets/t.png'),
-                  const Text(
-                    '18 / 40',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: ColorPallete.colorLightBlack,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 26),
-              Row(
-                children: [
-                  myContainer(
-                    title: 'Unit 1',
-                    listWidget: [
-                      Image.asset('assets/t.png'),
-                      myLoadingIndicator(value: 0.5),
+        child: ListView(
+          children: [
+            Column(
+              children: [
+                const SizedBox(height: 25),
+                myRowContainer(addItem: [
+                  Image.asset('assets/fire.png'),
+                  Image.asset('assets/xp.png'),
+                  Image.asset('assets/heart.png'),
+                ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                const SizedBox(height: 25),
+                for (int i = 0; i < titleName.length; i++)
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              titleName[i],
+                              style: const TextStyle(
+                                  fontSize: 35, color: ColorPallete.colorBlack),
+                            ),
+                            Row(
+                              children: [
+                                Image.asset('assets/t.png'),
+                                const SizedBox(width: 5),
+                                Text(
+                                  titleScore[i],
+                                  style: const TextStyle(
+                                    fontSize: 20,
+                                    color: ColorPallete.colorLightBlack,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Row(
+                        children: [
+                          myContainer(
+                            title: 'Unit 1',
+                            listWidget: [
+                              Image.asset('assets/t.png'),
+                              myLoadingIndicator(value: score[i]),
+                            ],
+                          ),
+                          const SizedBox(width: 5),
+                          myContainerImage(),
+                          const SizedBox(height: 15),
+                        ],
+                      ),
                     ],
                   ),
-                  const SizedBox(width: 5),
-                  myContainer(
-                    listWidget: [
-                      Image.asset('assets/gf.png'),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
         ),
       ),
     );

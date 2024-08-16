@@ -45,27 +45,59 @@ Widget myContainer({
   List<Widget>? listWidget,
   String? title,
   double? fontSize,
+  String? imagePath,
 }) {
-  return Container(
-    width: 179,
-    height: 227,
-    padding: const EdgeInsets.all(10),
-    alignment: Alignment.center,
-    margin: const EdgeInsets.only(left: 5, right: 5),
-    decoration: const BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
-      color: ColorPallete.colorDarkGrey,
-    ),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Expanded(
-            child:
-                Text(title ?? '', style: TextStyle(fontSize: fontSize ?? 30))),
-        Row(
-          children: listWidget ?? [],
+  return Center(
+    child: Container(
+      width: 179,
+      height: 227,
+      padding: const EdgeInsets.all(10),
+      alignment: Alignment.center,
+      margin: const EdgeInsets.only(left: 5, right: 5),
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        color: ColorPallete.colorDarkGrey,
+      ),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+                child: Text(title ?? '',
+                    style: TextStyle(fontSize: fontSize ?? 30))),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Row(
+                children: listWidget ?? [],
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
+    ),
+  );
+}
+
+Widget myContainerImage() {
+  return Center(
+    child: Container(
+      width: 179,
+      height: 227,
+      padding: const EdgeInsets.all(10),
+      alignment: Alignment.center,
+      margin: const EdgeInsets.only(left: 5, right: 5),
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        color: ColorPallete.colorDarkGrey,
+      ),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/gf.png'),
+          ],
+        ),
+      ),
     ),
   );
 }
