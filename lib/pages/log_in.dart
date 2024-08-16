@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:educational_kids_game/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -7,25 +9,30 @@ class LogIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xfffbf5f2),
       body: SafeArea(
         child: Column(
           children: [
             const SizedBox(
-              height: 200,
-              width: 300,
+              height: 100,
+              width: double.infinity,
               child: Placeholder(
                 child: Center(child: Text("LOGO")),
               ),
             ),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             //user name
-            const SizedBox(
+            Container(
+              decoration: const BoxDecoration(color: Colors.white),
+              width: MediaQuery.of(context).size.width / 1.4,
               child: TextField(
-                obscureText: true,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(19),
+                  ),
                   labelText: 'User Name',
                 ),
               ),
@@ -35,11 +42,16 @@ class LogIn extends StatelessWidget {
               height: 20,
             ),
             //password
-            const SizedBox(
+            Container(
+              decoration: const BoxDecoration(color: Colors.white),
+              width: MediaQuery.of(context).size.width / 1.4,
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  fillColor: Colors.white,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(19),
+                  ),
                   labelText: 'Passwird',
                 ),
               ),
@@ -50,7 +62,8 @@ class LogIn extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: const Text("Forgot password"),
+                  child: const Text(
+                      style: TextStyle(fontSize: 10), "Forgot password"),
                 ),
               ],
             ),
@@ -62,10 +75,6 @@ class LogIn extends StatelessWidget {
               child: const Text("Log in"),
             ),
 
-            const SizedBox(
-              height: 20,
-            ),
-
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -73,14 +82,11 @@ class LogIn extends StatelessWidget {
                 Text(style: TextStyle(color: Color(0xff77B29F)), "Sign Up")
               ],
             ),
-            const Flexible(
-              child: SizedBox(
-                height: double.infinity,
-                width: double.infinity,
-                child: Placeholder(
-                  child: Center(child: Text("Image")),
-                ),
-              ),
+            Flexible(
+              child: Image.asset(
+                  height: double.infinity,
+                  width: double.infinity,
+                  "assets/lets have fun.png"),
             ),
           ],
         ),
