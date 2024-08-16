@@ -1,4 +1,4 @@
-import 'package:educational_kids_game/widget/Lock_padge.dart';
+import 'package:educational_kids_game/widget/lock_padge.dart';
 import 'package:educational_kids_game/widget/intro_padge.dart';
 import 'package:educational_kids_game/widget/phrases_padge.dart';
 import 'package:educational_kids_game/widget/travel_padge.dart';
@@ -20,7 +20,7 @@ class SkillsScreen extends StatelessWidget {
               color: const Color(0xFFe9e8e8),
               width: double.infinity,
               child: const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Verbal skills"),
                   Flexible(
@@ -42,20 +42,85 @@ class SkillsScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const Expanded(
+            const SizedBox(
+              height: 4,
+            ),
+            Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Center(child: IntroPadge()),
-                    Row(
+                    Stack(
+                      children: [
+                        Center(
+                          child: Container(
+                            margin: const EdgeInsets.only(top: 70),
+                            width: MediaQuery.of(context).size.width / 2.4,
+                            height: MediaQuery.of(context).size.height / 9,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(10)),
+                              color: const Color(0xffE9E8E8),
+                              border: Border.all(
+                                  width: 2, color: const Color(0xffbababa)),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                const Text(
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                    "Unit 1"),
+                                SizedBox(
+                                  height: 20,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Stack(
+                                        children: [
+                                          Container(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width /
+                                                6,
+                                            margin:
+                                                const EdgeInsets.only(top: 6),
+                                            child:
+                                                const LinearProgressIndicator(
+                                              color: Color(0xFFECC055),
+                                              value: .4,
+                                            ),
+                                          ),
+                                          const Positioned(
+                                            top: -4,
+                                            child: Icon(
+                                              size: 16,
+                                              FontAwesomeIcons.crown,
+                                              color: Colors.yellowAccent,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      const Text("3/40")
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Center(child: Image.asset("assets/Beep Beep Horse.png"))
+                      ],
+                    ),
+                    const Center(child: IntroPadge()),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         PhrasesPadge(),
                         TravelPadge(),
                       ],
                     ),
-                    LockPadge(),
-                    Row(
+                    const LockPadge(),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         LockPadge(),
