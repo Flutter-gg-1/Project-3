@@ -38,8 +38,13 @@ class YourScore extends StatelessWidget {
               ),
               const SizedBox(height: 26),
               myContainer(
-                title: 'Your Score',
-                listWidget: [],
+                title: 'Unit 1',
+                listWidget: [
+                  Image.asset('assets/t.png'),
+                  myLoadingIndicator(
+                    value: 0.5,
+                  )
+                ],
               ),
             ],
           ),

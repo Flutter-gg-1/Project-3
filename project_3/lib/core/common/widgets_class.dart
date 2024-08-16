@@ -21,10 +21,10 @@ Widget myLoadingIndicator(
     {required double value,
     double horizontalPadding = 5,
     double height = 14,
-    double width = 100}) {
+    double width = 115}) {
   return SizedBox(
-    height: 14,
-    width: 100,
+    height: height,
+    width: width,
     child: Padding(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
       child: Transform(
