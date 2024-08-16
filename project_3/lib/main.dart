@@ -31,8 +31,8 @@ class MainApp extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Hello World!'),
-                      const Icon(Icons.abc_outlined),
+                      const Text('Unit 1'),
+                      Expanded(child: Image.asset('assets/gf.png')),
                       Row(
                         children: [
                           Image.asset('assets/t.png'),
