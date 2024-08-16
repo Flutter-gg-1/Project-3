@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(300, 50),
+                    minimumSize: const Size(316, 58),
                     backgroundColor: ColorPallete.colorDarkOrange),
                 child: const Text(
                   'Go',
