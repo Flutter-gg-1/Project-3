@@ -60,19 +60,21 @@ Widget myContainer({
   );
 }
 
-Widget myContainerInput(
-    {double? paddingHorizontal,
-    BorderSide borderSide = BorderSide.none,
-    double borderRadius = 25,
-    String? title}) {
+Widget myContainerInput({
+  double? paddingHorizontal,
+  BorderSide borderSide = BorderSide.none,
+  double borderRadius = 25,
+  String? title,
+  FontWeight? fontWeight,
+}) {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: paddingHorizontal ?? 25),
     child: TextFormField(
       decoration: InputDecoration(
         labelText: title ?? '',
-        labelStyle: const TextStyle(
-          color: Color.fromRGBO(0, 0, 0, 0.5),
-          fontWeight: FontWeight.bold,
+        labelStyle: TextStyle(
+          color: const Color.fromRGBO(0, 0, 0, 0.5),
+          fontWeight: fontWeight ?? FontWeight.bold,
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(borderRadius)),

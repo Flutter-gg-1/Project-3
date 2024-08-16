@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        fontFamily: 'RobotoBold', //or 'RobotoRegular'
+        fontFamily: 'RobotoRegular', //or 'RobotoBold'
       ),
       home: const HomeScreen(),
     );

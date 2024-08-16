@@ -23,7 +23,11 @@ class HomeScreen extends StatelessWidget {
                 padding: EdgeInsets.only(right: 50),
                 child: Align(
                     alignment: Alignment.centerRight,
-                    child: Text('Forgot Password?')),
+                    child: Text('Forgot Password?',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ))),
               ),
               const SizedBox(height: 24),
               ElevatedButton(
