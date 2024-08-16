@@ -25,6 +25,40 @@ class HomeScreen extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     child: Text('Forgot Password?')),
               ),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                    minimumSize: const Size(300, 50),
+                    backgroundColor: ColorPallete.colorDarkOrange),
+                child: const Text(
+                  'Go',
+                  style: TextStyle(
+                    color: ColorPallete.colorWhite,
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 41),
+              RichText(
+                  text: const TextSpan(children: [
+                TextSpan(
+                    text: 'Don\'t have an account? ',
+                    style: TextStyle(
+                      color: ColorPallete.colorBlack,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    )),
+                TextSpan(
+                    text: 'Sign Up',
+                    style: TextStyle(
+                      color: ColorPallete.colorSky,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ))
+              ])),
+              const SizedBox(height: 20),
+              Expanded(child: Image.asset('assets/dyn.png')),
             ],
           ),
         ),
