@@ -27,7 +27,12 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const YourScore()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                     minimumSize: const Size(300, 50),
                     backgroundColor: ColorPallete.colorDarkOrange),
