@@ -1,3 +1,4 @@
+import 'package:education_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -101,20 +102,28 @@ class LoginScreen extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(top: 20),
-          child: Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: const Color.fromRGBO(235, 159, 74, 1),
-                  borderRadius: BorderRadius.circular(25)),
-              height: 58,
-              width: 316,
-              child: const Text(
-                'GO',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold),
-              )),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (contex) {
+                return const HomeScreen();
+              }));
+            
+          },
+            child: Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: const Color.fromRGBO(235, 159, 74, 1),
+                    borderRadius: BorderRadius.circular(25)),
+                height: 58,
+                width: 316,
+                child: const Text(
+                  'GO',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
+                )),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 30),
