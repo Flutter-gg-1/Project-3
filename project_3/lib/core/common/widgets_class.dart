@@ -47,10 +47,15 @@ Widget myContainer({
   double? fontSize,
 }) {
   return Container(
-    color: ColorPallete.colorDarkGrey,
     width: 179,
     height: 227,
     padding: const EdgeInsets.all(10),
+    alignment: Alignment.center,
+    margin: const EdgeInsets.only(left: 5, right: 5),
+    decoration: const BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+      color: ColorPallete.colorDarkGrey,
+    ),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
