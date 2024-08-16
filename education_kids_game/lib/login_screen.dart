@@ -1,3 +1,5 @@
+import 'package:education_kids_game/bottom_nav_bar.dart';
+import 'package:education_kids_game/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -84,7 +86,10 @@ class LoginScreen extends StatelessWidget {
                     color: const Color(0xffEB9F4A),
                   ),
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const ButtomNavBar()));
+                      },
                       child: const Text(
                         "GO",
                         style: TextStyle(
@@ -94,6 +99,7 @@ class LoginScreen extends StatelessWidget {
                       ))),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const Text("Don't have account yet?",
                       style:
@@ -109,13 +115,15 @@ class LoginScreen extends StatelessWidget {
                       ))
                 ],
               ),
-              SizedBox(
-                  height: size.height * 0.333,
-                  width: size.width,
-                  child: Image.asset(
-                    "assets/image1.png",
-                    fit: BoxFit.fill,
-                  ))
+              Expanded(
+                child: SizedBox(
+                    width: size.width,
+                    height: size.height * 0.2,
+                    child: Image.asset(
+                      "assets/image1.png",
+                      fit: BoxFit.fill,
+                    )),
+              )
             ],
           ),
         ),
