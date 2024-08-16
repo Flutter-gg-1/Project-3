@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project3/src/widgets/rich_text.dart';
-import 'package:project3/src/widgets/text_field.dart';
+import 'package:project3/src/home_screen.dart';
+import 'package:project3/src/widgets_of_login_screen/rich_text.dart';
+import 'package:project3/src/widgets_of_login_screen/text_field.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});
@@ -41,7 +42,11 @@ class LogInScreen extends StatelessWidget {
               height: 58,
               width: 316,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                    return const HomeScreen();
+                  }));
+                },
                 style: ButtonStyle(
                     backgroundColor:
                         WidgetStateProperty.all(const Color(0xffEB9F4A))),
