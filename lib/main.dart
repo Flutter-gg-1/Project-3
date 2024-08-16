@@ -1,4 +1,4 @@
-import 'package:educational_kids_game/pages/log_in.dart';
+import 'package:educational_kids_game/pages/log_in_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,6 +10,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: LogIn());
+    return const MaterialApp(home: LogInScreen());
   }
 }

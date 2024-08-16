@@ -14,9 +14,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const SizedBox(
+            Container(
+              color: const Color(0xFFe9e8e8),
               width: double.infinity,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Flexible(
@@ -53,7 +54,9 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Logical reasoning"),
+                        const Text(
+                            style: TextStyle(fontSize: 18),
+                            "Logical reasoning"),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3,
                           child: const ListTile(
@@ -62,7 +65,8 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.yellowAccent,
                               size: 14,
                             ),
-                            title: Text("18/40"),
+                            title:
+                                Text(style: TextStyle(fontSize: 12), "18/40"),
                           ),
                         ),
                       ],
@@ -80,7 +84,9 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Artistic thinking"),
+                        const Text(
+                            style: TextStyle(fontSize: 18),
+                            "Artistic thinking"),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3,
                           child: const ListTile(
@@ -89,7 +95,8 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.yellowAccent,
                               size: 14,
                             ),
-                            title: Text("35/40"),
+                            title:
+                                Text(style: TextStyle(fontSize: 12), "35/40"),
                           ),
                         ),
                       ],
@@ -107,7 +114,8 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Verbal skills"),
+                        const Text(
+                            style: TextStyle(fontSize: 18), "Verbal skills"),
                         SizedBox(
                           width: MediaQuery.of(context).size.width / 3,
                           child: const ListTile(
@@ -116,7 +124,7 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.yellowAccent,
                               size: 14,
                             ),
-                            title: Text("3/40"),
+                            title: Text(style: TextStyle(fontSize: 12), "3/40"),
                           ),
                         ),
                       ],
