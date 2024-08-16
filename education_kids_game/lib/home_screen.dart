@@ -1,4 +1,3 @@
-import 'package:education_kids_game/challenges_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -113,7 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Container(
                               width: 130,
-                              padding: EdgeInsets.only(top: 10),
+                              padding: const EdgeInsets.only(top: 10),
                               alignment: Alignment.bottomCenter,
                               child: const LinearProgressIndicator(
                                 backgroundColor: Color(0xffC4C4C4),
@@ -227,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Container(
                               width: 130,
-                              padding: EdgeInsets.only(top: 10),
+                              padding: const EdgeInsets.only(top: 10),
                               alignment: Alignment.bottomCenter,
                               child: const LinearProgressIndicator(
                                 backgroundColor: Color(0xffC4C4C4),
@@ -341,7 +340,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Container(
                               width: 130,
-                              padding: EdgeInsets.only(top: 10),
+                              padding: const EdgeInsets.only(top: 10),
                               alignment: Alignment.bottomCenter,
                               child: const LinearProgressIndicator(
                                 backgroundColor: Color(0xffC4C4C4),

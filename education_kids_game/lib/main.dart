@@ -1,5 +1,3 @@
-import 'package:education_kids_game/challenges_screen.dart';
-import 'package:education_kids_game/home_screen.dart';
 import 'package:education_kids_game/login_screen.dart';
 import 'package:flutter/material.dart';
 

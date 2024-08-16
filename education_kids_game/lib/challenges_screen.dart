@@ -4,12 +4,12 @@ class ChallengesScreen extends StatefulWidget {
   const ChallengesScreen({super.key});
 
   @override
-  State<ChallengesScreen> createState() => _HomeScreenState();
+  State<ChallengesScreen> createState() => _ChallengesScreenState();
 }
 
-class _HomeScreenState extends State<ChallengesScreen> {
+class _ChallengesScreenState extends State<ChallengesScreen> {
   int currentIndex = 1;
-  Color selectedColor = Color(0xffDC3F00);
+  Color selectedColor = const Color(0xffDC3F00);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<ChallengesScreen> {
                 width: size.width,
                 height: size.height * 0.10,
                 color: const Color(0xffE5E5E5),
-                child: Align(
+                child: const Align(
                   alignment: Alignment.center,
                   child: Text(
                     "Challenges",
@@ -51,11 +51,11 @@ class _HomeScreenState extends State<ChallengesScreen> {
                   "assets/image2.png",
                   fit: BoxFit.fitHeight,
                 ),
-                title: Text(
+                title: const Text(
                   "Complete 1000 word streak",
                   style: TextStyle(fontSize: 20),
                 ),
-                subtitle: Text("Win 1000XP along with 300 diamonds."),
+                subtitle: const Text("Win 1000XP along with 300 diamonds."),
               ),
             ),
             const SizedBox(
@@ -64,7 +64,8 @@ class _HomeScreenState extends State<ChallengesScreen> {
             Container(
                 width: size.width * 0.9,
                 alignment: Alignment.centerLeft,
-                child: Text(" Achievements", style: TextStyle(fontSize: 30))),
+                child: const Text(" Achievements",
+                    style: TextStyle(fontSize: 30))),
             const SizedBox(
               height: 20,
             ),
@@ -81,17 +82,17 @@ class _HomeScreenState extends State<ChallengesScreen> {
                   "assets/image3.png",
                   fit: BoxFit.fitHeight,
                 ),
-                title: Text(
+                title: const Text(
                   "Lorem Ipsum",
                   style: TextStyle(fontSize: 20),
                 ),
-                subtitle: Text(
+                subtitle: const Text(
                   "is simply dummy text of the printing and typesetting industry.",
                   style: TextStyle(fontSize: 20),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -107,17 +108,17 @@ class _HomeScreenState extends State<ChallengesScreen> {
                   "assets/image4.png",
                   fit: BoxFit.fitHeight,
                 ),
-                title: Text(
+                title: const Text(
                   "Lorem Ipsum",
                   style: TextStyle(fontSize: 20),
                 ),
-                subtitle: Text(
+                subtitle: const Text(
                   "is simply dummy text of the printing and typesetting industry.",
                   style: TextStyle(fontSize: 20),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -133,11 +134,11 @@ class _HomeScreenState extends State<ChallengesScreen> {
                   "assets/image5.png",
                   fit: BoxFit.fitHeight,
                 ),
-                title: Text(
+                title: const Text(
                   "Lorem Ipsum",
                   style: TextStyle(fontSize: 20),
                 ),
-                subtitle: Text(
+                subtitle: const Text(
                   "is simply dummy text of the printing and typesetting industry.",
                   style: TextStyle(fontSize: 20),
                 ),

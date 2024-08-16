@@ -1,5 +1,4 @@
 import 'package:education_kids_game/bottom_nav_bar.dart';
-import 'package:education_kids_game/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
