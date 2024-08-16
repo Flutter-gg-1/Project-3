@@ -83,10 +83,13 @@ class _YourScoreState extends State<YourScore> {
           ],
         ),
       ),
-      bottomNavigationBar: const BottomAppBar(
-        child: Row(
-          children: [],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Goals'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Personal'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Settings'),
+        ],
       ),
     );
   }
