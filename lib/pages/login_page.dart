@@ -1,4 +1,4 @@
-import 'package:educational_kids_project/pages/home_page.dart';
+import 'package:educational_kids_project/widgets/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -64,7 +64,7 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const HomePage();
+                        return const BottomNavBar();
                       }));
                     },
                     style: ElevatedButton.styleFrom(

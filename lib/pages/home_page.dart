@@ -9,32 +9,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffFBF5F2),
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.green,
-          unselectedItemColor: Colors.grey,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-              ),
-              label: "",
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.grading_outlined,
-                ),
-                label: ""),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.person,
-                ),
-                label: ""),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.settings,
-                ),
-                label: ""),
-          ]),
       body: ListView(
         children: [
           const SizedBox(
@@ -310,8 +284,10 @@ class HomePage extends StatelessWidget {
                                     children: [
                                       GFProgressBar(
                                         percentage: 9 / 40,
-                                        backgroundColor: const Color(0xffC4C4C4),
-                                        progressBarColor: const Color(0xffECC055),
+                                        backgroundColor:
+                                            const Color(0xffC4C4C4),
+                                        progressBarColor:
+                                            const Color(0xffECC055),
                                         lineHeight: 15,
                                       ),
                                       Positioned(

@@ -1,39 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Challenges extends StatelessWidget {
-  const Challenges({super.key});
+class ChallengesPage extends StatelessWidget {
+  const ChallengesPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffFBF5F2),
-      bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: Colors.green,
-          unselectedItemColor: Colors.grey,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-              ),
-              label: "",
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.grading_outlined,
-                ),
-                label: ""),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.person,
-                ),
-                label: ""),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.settings,
-                ),
-                label: ""),
-          ]),
-      body: ListView(
+      body: Expanded(child: ListView(
         children: [
           const SizedBox(
             height: 70,
@@ -117,6 +91,6 @@ class Challenges extends StatelessWidget {
               )),
         ],
       ),
-    );
+    ));
   }
 }
