@@ -38,27 +38,34 @@ The education app screens are implemented using flutter framework, it has visual
 **Home Screen: The topics screen, where users can choose the topic they are interested in.**
 **It also contains details of the crowns and xp collected**
 
-![Home](./assets/images/screenshots/2.png)
+<img src="./assets/images/screenshots/2.png" width="510" height="1120">
+
 
 **Topic Screen: Where users can choose the subject to complete and unlock next subjects for that unit**
 
-![Topic](./assets/images/screenshots/3.png)
+<img src="./assets/images/screenshots/3.png" width="510" height="1120">
+
 
 **Locked subjects!! Unlock it by collecting more XP**
-![Lockeed](./assets/images/screenshots/4.png)
+
+<img src="./assets/images/screenshots/4.png" width="510" height="1120">
+
 
 **Profile Screen: The app allows users to follow each other to compare progress**
 
-![Profile](./assets/images/screenshots/5.png)
+<img src="./assets/images/screenshots/5.png" width="510" height="1120">
+
 
 **Make friends and progress together!!**
 
-![Profile](./assets/images/screenshots/6.png)
+<img src="./assets/images/screenshots/6.png" width="510" height="1120">
+
 
 **Challenges Screen: This page shows the achievements earned**
 **And new challenges to overcome**
 
-![Challenges](./assets/images/screenshots/7.png)
+<img src="./assets/images/screenshots/7.png" width="510" height="1120">
+
 
 
 - Finally, stay tuned for more topics and fun subjects...!!
