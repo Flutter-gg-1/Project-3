@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:project3/screens/challenges_screen.dart';
 import 'package:project3/screens/home_screen.dart';
 import 'package:project3/screens/profile_screen.dart';
+import 'package:project3/screens/settings_screen.dart';
 
 class BottomNavbar extends StatelessWidget {
   final int currentIndex;
   final Color iconColor;
-  final List<Widget> screens = const [HomeScreen(),Placeholder(),ProfileScreen(), Placeholder()];
+  final List<Widget> screens = const [HomeScreen(),ChallengesScreen(),ProfileScreen(), SettingsScreen()];
 
   const BottomNavbar({super.key, required this.currentIndex, required this.iconColor});
 
