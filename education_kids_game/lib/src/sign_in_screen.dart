@@ -1,4 +1,5 @@
 import 'package:education_kids_game/src/home_screen.dart';
+import 'package:education_kids_game/src/current_page.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -69,7 +70,7 @@ class SignIn extends StatelessWidget {
                 onPressed: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) {
-                    return const HomeScreen();
+                    return const CurrentPage();
                   }));
                 },
                 child: const Text(

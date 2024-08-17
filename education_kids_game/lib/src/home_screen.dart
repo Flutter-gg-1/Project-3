@@ -1,44 +1,24 @@
+import 'package:education_kids_game/src/challenges_screen.dart';
 import 'package:education_kids_game/src/course_screen.dart';
 import 'package:education_kids_game/src/customWidgets/course_title.dart';
 import 'package:education_kids_game/src/customWidgets/unit_widget.dart';
-import 'package:education_kids_game/src/custom_icons_icons.dart';
+import 'package:education_kids_game/src/customWidgets/custom_icons_icons.dart';
+import 'package:education_kids_game/src/profile_screen.dart';
+import 'package:education_kids_game/src/setting_screen.dart';
 
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
+  State<HomeScreen> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<HomeScreen> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, // Fixed
-        backgroundColor: const Color(0xffE5E5E5),
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(
-              CustomIcons.home,
-              color: Color.fromARGB(255, 137, 136, 136),
-              size: 30,
-            ),
-            label: "home",
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(CustomIcons.target,
-                  color: Color.fromARGB(255, 137, 136, 136), size: 30),
-              label: "target"),
-          BottomNavigationBarItem(
-              icon: Icon(CustomIcons.profile,
-                  color: Color.fromARGB(255, 137, 136, 136), size: 30),
-              label: "profile"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings,
-                  color: Color.fromARGB(255, 137, 136, 136), size: 40),
-              label: "settings")
-        ],
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [

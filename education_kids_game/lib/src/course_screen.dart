@@ -1,5 +1,5 @@
 import 'package:education_kids_game/src/customWidgets/skill_widget.dart';
-import 'package:education_kids_game/src/custom_icons_icons.dart';
+import 'package:education_kids_game/src/customWidgets/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
 
 class CourseScreen extends StatelessWidget {
