@@ -1,7 +1,7 @@
 import 'package:education_kids_game/challenges_screen.dart';
 import 'package:education_kids_game/home_screen.dart';
 import 'package:education_kids_game/profile_screen.dart';
-import 'package:education_kids_game/verbal_skills_screen.dart';
+import 'package:education_kids_game/settings_screen.dart';
 import 'package:flutter/material.dart';
 
 class ButtomNavBar extends StatefulWidget {
@@ -18,7 +18,7 @@ class _ButtomNavBarState extends State<ButtomNavBar> {
     const HomeScreen(),
     const ChallengesScreen(),
     ProfileScreen(),
-    const VerbalSkillsScreen()
+    const SettingsScreen()
   ];
   @override
   Widget build(BuildContext context) {

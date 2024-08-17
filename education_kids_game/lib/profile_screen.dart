@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
-  ProfileScreen({super.key});
+  const ProfileScreen({super.key});
 
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
@@ -172,7 +172,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Container(
                   width: size.width * 0.45,
                   height: size.height * 0.09,
-                  margin: const EdgeInsets.all(8),
+                  margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(color: Colors.black12, width: 3)),
@@ -194,7 +194,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Container(
                   width: size.width * 0.45,
                   height: size.height * 0.09,
-                  margin: const EdgeInsets.all(8),
+                  margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(color: Colors.black12, width: 3)),
@@ -215,23 +215,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ],
             ),
-            const Row(
-              children: [
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  "Friends",
-                  style: TextStyle(fontSize: 30),
-                ),
-                SizedBox(
-                  width: 135,
-                ),
-                Text(
-                  "ADD FRIENDS",
-                  style: TextStyle(fontSize: 20, color: Color(0xff02A1FB)),
-                )
-              ],
+            Container(
+              margin: const EdgeInsets.only(left: 12, right: 12),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Friends",
+                    style: TextStyle(fontSize: 30),
+                  ),
+                  Text(
+                    "ADD FRIENDS",
+                    style: TextStyle(fontSize: 20, color: Color(0xff02A1FB)),
+                  )
+                ],
+              ),
             ),
             Container(
               width: size.width * 0.9,
@@ -261,62 +259,65 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   SizedBox(
                     width: size.width * 0.9,
                     height: size.width * 0.3,
-                    child: ListView(children: [
-                      ListTile(
-                        leading: Container(
-                          width: 25,
-                          height: 25,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: Colors.purple,
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Text(
-                            names[0][0],
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                    child: ListView(
+                        padding: const EdgeInsets.only(bottom: 10),
+                        children: [
+                          ListTile(
+                            leading: Container(
+                              width: 25,
+                              height: 25,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                  color: Colors.purple,
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: Text(
+                                names[0][0],
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                            ),
+                            title: Text(
+                              names[0],
+                              style: const TextStyle(fontSize: 15),
+                            ),
+                            subtitle: const Text("4367 XP"),
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.black12,
+                            ),
                           ),
-                        ),
-                        title: Text(
-                          names[0],
-                          style: const TextStyle(fontSize: 15),
-                        ),
-                        subtitle: const Text("4367 XP"),
-                        trailing: const Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.black12,
-                        ),
-                      ),
-                      const Divider(
-                        color: Colors.black12,
-                        thickness: 2,
-                      ),
-                      ListTile(
-                        leading: Container(
-                          width: 25,
-                          height: 25,
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(12)),
-                          child: Text(
-                            names[1][0],
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                          const Divider(
+                            color: Colors.black12,
+                            thickness: 2,
+                            height: 20,
                           ),
-                        ),
-                        title: Text(
-                          names[1],
-                          style: const TextStyle(fontSize: 15),
-                        ),
-                        subtitle: const Text("2334 XP"),
-                        trailing: const Icon(
-                          Icons.arrow_forward_ios,
-                          color: Colors.black12,
-                        ),
-                      ),
-                    ]),
+                          ListTile(
+                            leading: Container(
+                              width: 25,
+                              height: 25,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: Text(
+                                names[1][0],
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white),
+                              ),
+                            ),
+                            title: Text(
+                              names[1],
+                              style: const TextStyle(fontSize: 15),
+                            ),
+                            subtitle: const Text("2334 XP"),
+                            trailing: const Icon(
+                              Icons.arrow_forward_ios,
+                              color: Colors.black12,
+                            ),
+                          ),
+                        ]),
                   ),
                 ],
               ),

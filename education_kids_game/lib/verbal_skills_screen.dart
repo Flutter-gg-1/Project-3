@@ -16,34 +16,41 @@ class VerbalSkillsScreen extends StatelessWidget {
               width: double.infinity,
               height: 80,
               color: const Color(0xffE5E5E5),
-              child: const Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Verbal skills",
-                  style: TextStyle(
-                    fontSize: 30,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text(
+                    "Verbal skills",
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),
                   ),
-                ),
+                  Image.asset(
+                    "assets/icons/icon1.png",
+                    width: 31,
+                    height: 27,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8),
+                    child: Text(
+                      "3",
+                      style: TextStyle(color: Color(0xffECC055), fontSize: 25),
+                    ),
+                  ),
+                  Image.asset(
+                    "assets/icons/icon12.png",
+                    width: 28,
+                    height: 25,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 8),
+                    child: Text(
+                      "213",
+                      style: TextStyle(color: Color(0xff02A1FB), fontSize: 25),
+                    ),
+                  )
+                ],
               )),
-          // SizedBox(
-          //   height: 150,
-          //   child: Stack(children: [
-          //     Container(
-          //         width: size.width * 0.5,
-          //         height: 100,
-          //         decoration: BoxDecoration(
-          //             color: Color(0xffE9E8E8),
-          //             border: Border.all(color: Colors.black12, width: 3),
-          //             borderRadius: BorderRadius.circular(20))),
-          //     Positioned(
-          //       height: 130,
-          //       right: 0,
-          //       top: 0,
-          //       child: Image.asset("assets/image8.png", fit: BoxFit.cover),
-          //     ),
-          //     Text("Unit 1"),
-          //   ]),
-          // )
           SizedBox(
             height: 200,
             child: Stack(

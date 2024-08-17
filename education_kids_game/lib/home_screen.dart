@@ -1,3 +1,4 @@
+import 'package:education_kids_game/verbal_skills_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -44,6 +45,7 @@ class HomeScreen extends StatelessWidget {
               height: 25,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
                   " Logical reasoning",
@@ -61,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                       height: 25,
                     ),
                     Text(
-                      " 35/40",
+                      " 18/40   ",
                       style: TextStyle(color: Colors.black.withOpacity(0.6)),
                     ),
                   ],
@@ -97,8 +99,11 @@ class HomeScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Align(
+                            Container(
                               alignment: Alignment.topCenter,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      width: 1, color: Colors.white)),
                               child: Image.asset(
                                 "assets/icons/icon1.png",
                                 width: 31,
@@ -113,7 +118,7 @@ class HomeScreen extends StatelessWidget {
                                 backgroundColor: Color(0xffC4C4C4),
                                 valueColor: AlwaysStoppedAnimation<Color>(
                                     Color(0xffECC055)),
-                                value: 0.4,
+                                value: 18 / 40,
                                 minHeight: 14,
                                 borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(30),
@@ -296,89 +301,101 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-            Container(
-              height: 230,
-              width: size.width,
-              padding: const EdgeInsets.all(8),
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  Container(
-                    width: 180,
-                    height: 230,
-                    decoration: BoxDecoration(
-                        color: const Color(0xffC4C4C4).withOpacity(0.4),
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        const Text(
-                          "Unit 1",
-                          style: TextStyle(fontSize: 35),
-                        ),
-                        const SizedBox(
-                          height: 100,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
+            InkWell(
+              child: Container(
+                height: 230,
+                width: size.width,
+                padding: const EdgeInsets.all(8),
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (anotherContext) {
+                            return const VerbalSkillsScreen();
+                          }),
+                        );
+                      },
+                      child: Container(
+                        width: 180,
+                        height: 230,
+                        decoration: BoxDecoration(
+                            color: const Color(0xffC4C4C4).withOpacity(0.4),
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Column(
                           children: [
-                            Align(
-                              alignment: Alignment.topCenter,
-                              child: Image.asset(
-                                "assets/icons/icon1.png",
-                                width: 31,
-                                height: 27,
-                              ),
+                            const SizedBox(
+                              height: 20,
                             ),
-                            Container(
-                              width: 130,
-                              padding: const EdgeInsets.only(top: 10),
-                              alignment: Alignment.bottomCenter,
-                              child: const LinearProgressIndicator(
-                                backgroundColor: Color(0xffC4C4C4),
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                    Color(0xffECC055)),
-                                value: 0.15,
-                                minHeight: 14,
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(30),
-                                  bottomRight: Radius.circular(30),
+                            const Text(
+                              "Unit 1",
+                              style: TextStyle(fontSize: 35),
+                            ),
+                            const SizedBox(
+                              height: 100,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Align(
+                                  alignment: Alignment.topCenter,
+                                  child: Image.asset(
+                                    "assets/icons/icon1.png",
+                                    width: 31,
+                                    height: 27,
+                                  ),
                                 ),
-                              ),
+                                Container(
+                                  width: 130,
+                                  padding: const EdgeInsets.only(top: 10),
+                                  alignment: Alignment.bottomCenter,
+                                  child: const LinearProgressIndicator(
+                                    backgroundColor: Color(0xffC4C4C4),
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                        Color(0xffECC055)),
+                                    value: 0.15,
+                                    minHeight: 14,
+                                    borderRadius: BorderRadius.only(
+                                      topRight: Radius.circular(30),
+                                      bottomRight: Radius.circular(30),
+                                    ),
+                                  ),
+                                )
+                              ],
                             )
                           ],
-                        )
-                      ],
+                        ),
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    width: 180,
-                    height: 230,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        color: const Color(0xffC4C4C4).withOpacity(0.4),
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Image.asset("assets/icons/icon2.png"),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    width: 180,
-                    height: 230,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        color: const Color(0xffC4C4C4).withOpacity(0.4),
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Image.asset("assets/icons/icon2.png"),
-                  ),
-                ],
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      width: 180,
+                      height: 230,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: const Color(0xffC4C4C4).withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Image.asset("assets/icons/icon2.png"),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Container(
+                      width: 180,
+                      height: 230,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          color: const Color(0xffC4C4C4).withOpacity(0.4),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Image.asset("assets/icons/icon2.png"),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
