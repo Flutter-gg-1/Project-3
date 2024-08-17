@@ -322,9 +322,7 @@ class ProfileClass extends StatelessWidget {
                 },
                 icon: const Icon(Icons.arrow_outward, size: 35)),
             IconButton(
-                onPressed: () {
-                  (context).goTo(ProfileClass());
-                },
+                onPressed: () {},
                 icon: const Icon(Icons.person,
                     size: 35, color: ColorPallete.colorPurple)),
             IconButton(
