@@ -1,3 +1,4 @@
+import 'package:educational_kids_game/src/bottom_navigation_bar.dart';
 import 'package:educational_kids_game/src/colored_text.dart';
 import 'package:educational_kids_game/src/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,15 +23,17 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: const Color(0xffFBF5F2),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.only(top: 100),
+          padding: const EdgeInsets.only(top: 85),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
+                
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: coloredText("MENTAL ^up^"),
               ),
               const SizedBox(
-                height: 40,
+                height: 70,
               ),
               Form(
                   key: formKey,
@@ -78,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   )),
               const SizedBox(
-                height: 30,
+                height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 180),
@@ -98,13 +101,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const HomeScreen()));
+                          builder: (context) => const CustomBottomNavigationBar()));
                     }
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffEB9F4A),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 140, vertical: 9)),
+                      padding: const EdgeInsets.symmetric( horizontal: 140
+                      ,
+                          vertical: 9)),
                   child: Text(
                     "GO",
                     style: GoogleFonts.roboto(
