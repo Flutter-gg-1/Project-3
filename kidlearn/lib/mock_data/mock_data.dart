@@ -173,9 +173,9 @@ class MockData {
       ];
 
   void _assignFollowers() {
-    users.map((user) {
+    for (var user in users) {
       user.followers = users.where((e) => user.id != e.id).toList();
       user.following = users.where((e) => user.id != e.id).toList();
-    });
+    }
   }
 }

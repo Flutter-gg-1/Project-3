@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearn/constants/text_ext.dart';
 import 'package:kidlearn/screens/profile/subviews/friends_view.dart';
+import 'package:kidlearn/screens/profile/subviews/invite_friends_view.dart';
 import 'package:kidlearn/screens/profile/subviews/profile_card_view.dart';
 import 'package:kidlearn/screens/profile/subviews/statistics_view.dart';
 import 'package:kidlearn/screens/profile/subviews/updates_btn_view.dart';
@@ -37,7 +38,9 @@ class ProfileScreen extends StatelessWidget {
                 const SizedBox(height: 24),
                 StatisticsView(user: user),
                 const SizedBox(height: 24),
-                const FriendsView(),
+                FriendsView(user: user),
+                const SizedBox(height: 24),
+                const InviteFriendsView(),
               ],
             ),
           ),

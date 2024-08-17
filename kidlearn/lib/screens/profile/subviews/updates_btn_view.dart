@@ -20,8 +20,8 @@ class UpdatesBtnView extends StatelessWidget {
         title: const Text('Friends updates'),
         trailing: const Icon(
           Icons.chevron_right,
-          size: 24,
-          color: ThemeColors.headerBG,
+          size: 40,
+          color: ThemeColors.borderLight,
         ),
         onTap: () => (),
       ),

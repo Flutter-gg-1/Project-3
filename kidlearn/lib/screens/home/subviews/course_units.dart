@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../../constants/color_ext.dart';
+import '../../../constants/img_ext.dart';
 import '../../../model/course.dart';
 import '../../../model/unit.dart';
-import '../../../reusable_components/theme_progress_view.dart';
+import '../../../reusable_components/progress_view.dart';
 import '../course_unit/course_unit_screen.dart';
 
 class CourseUnits extends StatelessWidget {
@@ -79,8 +80,10 @@ class _UnitCard extends StatelessWidget {
                   const Spacer(),
                   // MARK: - Lock Icon
                   if (!unit.isUnlocked)
-                    const Icon(Icons.lock,
-                        size: 70, color: ThemeColors.lockGrey),
+                    Image(
+                      image: Img.lock,
+                      width: 70,
+                    ),
                   const Spacer(),
                   // MARK: - ProgressBar
                   if (unit.isUnlocked)

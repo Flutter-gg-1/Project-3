@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kidlearn/reusable_components/theme_progress_view.dart';
+import 'package:kidlearn/reusable_components/progress_view.dart';
 import '../../../../constants/color_ext.dart';
 import '../../../../constants/img_ext.dart';
 import '../../../../model/unit.dart';
@@ -44,6 +44,10 @@ class UnitCardView extends StatelessWidget {
                             ),
                             const SizedBox(height: 16),
                             // MARK: - Progress Bar
+                            ProgressView(
+                              value: unit.completedChapters,
+                              total: unit.totalChapters,
+                            ),
                           ],
                         ),
                       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../../../constants/color_ext.dart';
+import '../../../constants/svg.dart';
 import '../../../model/course.dart';
 
 class CourseTitle extends StatelessWidget {
@@ -19,16 +19,12 @@ class CourseTitle extends StatelessWidget {
             textAlign: TextAlign.start,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.w400),
+            style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w400),
           ),
           const Spacer(),
           Row(
             children: [
-              const Icon(
-                Icons.square,
-                color: ThemeColors.crownYellow,
-                size: 32,
-              ),
+              Svg.crown,
               Text(
                   '${course.crowns.toString()}/${course.totalCrowns.toString()}',
                   style: const TextStyle(

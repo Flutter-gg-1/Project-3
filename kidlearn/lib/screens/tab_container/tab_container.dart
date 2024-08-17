@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:kidlearn/screens/challenges/challenges_screen.dart';
 import 'package:kidlearn/screens/home/home_screen.dart';
 import 'package:kidlearn/screens/profile/profile_screen.dart';
 import 'package:kidlearn/screens/settings/settings_screen.dart';
-
 import '../../constants/color_ext.dart';
 import '../../mock_data/mock_data.dart';
 
 class TabContainer extends StatefulWidget {
+  const TabContainer({super.key});
+
   @override
   _TabContainerState createState() => _TabContainerState();
 }
@@ -23,8 +25,14 @@ class _TabContainerState extends State<TabContainer> {
   }
 
   // Function to get the color based on the selected index
-  Color _getSelectedColor() {
-    switch (_selectedIndex) {
+  Color _getSelectedColor(int index) {
+    return index == _selectedIndex
+        ? _getColorForIndex(index)
+        : ThemeColors.iconGrey;
+  }
+
+  Color _getColorForIndex(int index) {
+    switch (index) {
       case 0:
         return ThemeColors.iconGreen;
       case 1:
@@ -32,7 +40,7 @@ class _TabContainerState extends State<TabContainer> {
       case 2:
         return ThemeColors.iconLavender;
       case 3:
-        return ThemeColors.iconDarkGreen;
+        return ThemeColors.blue;
       default:
         return Colors.orange;
     }
@@ -55,14 +63,41 @@ class _TabContainerState extends State<TabContainer> {
           color: ThemeColors.courseCardBG,
           child: TabBar(
             padding: const EdgeInsets.all(16),
-            tabs: const [
-              Tab(icon: Icon(Icons.home, size: 40)),
-              Tab(icon: Icon(Icons.circle, size: 40)),
-              Tab(icon: Icon(Icons.people, size: 40)),
-              Tab(icon: Icon(Icons.settings, size: 40)),
+            tabs: [
+              Tab(
+                icon: SvgPicture.asset(
+                  'assets/icons/home.svg',
+                  height: 35,
+                  colorFilter:
+                      ColorFilter.mode(_getSelectedColor(0), BlendMode.srcIn),
+                ),
+              ),
+              Tab(
+                icon: SvgPicture.asset(
+                  'assets/icons/target.svg',
+                  height: 35,
+                  colorFilter:
+                      ColorFilter.mode(_getSelectedColor(1), BlendMode.srcIn),
+                ),
+              ),
+              Tab(
+                icon: SvgPicture.asset(
+                  'assets/icons/person.svg',
+                  height: 35,
+                  colorFilter:
+                      ColorFilter.mode(_getSelectedColor(2), BlendMode.srcIn),
+                ),
+              ),
+              Tab(
+                icon: SvgPicture.asset(
+                  'assets/icons/settings.svg',
+                  height: 35,
+                  colorFilter:
+                      ColorFilter.mode(_getSelectedColor(3), BlendMode.srcIn),
+                ),
+              ),
             ],
-            labelColor: _getSelectedColor(),
-            unselectedLabelColor: Colors.grey,
+            unselectedLabelColor: ThemeColors.iconGrey,
             indicator: const BoxDecoration(color: Colors.transparent),
             dividerColor: Colors.transparent,
             onTap: _onItemTapped,

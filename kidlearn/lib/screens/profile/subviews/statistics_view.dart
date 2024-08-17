@@ -29,7 +29,7 @@ class StatisticsView extends StatelessWidget {
                 title: '${user.stats.streak}', subTitle: 'Day Streak'),
             StatisticCardView(title: '${user.stats.xp}', subTitle: 'Total XP'),
             StatisticCardView(
-                title: '${user.stats.medalName()}', subTitle: 'Current League'),
+                title: user.stats.medalName(), subTitle: 'Current League'),
             StatisticCardView(
                 title: '${user.stats.top3finishes}',
                 subTitle: 'Top 3 Finished'),

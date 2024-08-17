@@ -17,11 +17,12 @@ class ThemeScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ThemeColors.bg,
+      appBar: null,
       body: SafeArea(
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 75, bottom: (hasHeader) ? 0 : 40),
+              padding: EdgeInsets.only(top: 48, bottom: (hasHeader) ? 0 : 40),
               child: SizedBox(
                 height: 71,
                 child: Row(
