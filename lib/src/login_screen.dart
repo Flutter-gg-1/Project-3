@@ -1,6 +1,6 @@
+import 'package:educational_kids_game/src/home_screen.dart';
 import 'package:educational_kids_game/widget/costom_textfeild.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -46,7 +46,12 @@ class LoginScreen extends StatelessWidget {
               width: 316,
               height: 58,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () => Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeScreen(),
+                    ),
+                    (route) => false),
                 style: const ButtonStyle(
                     backgroundColor:
                         MaterialStatePropertyAll(Color(0xFFEB9F4A))),
