@@ -273,6 +273,37 @@ class ProfileClass extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 15),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  border:
+                      Border.all(color: ColorPallete.colorDarkGrey, width: 2),
+                  color: ColorPallete.colorWhite,
+                ),
+                width: 377,
+                height: 200,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset('assets/cat.png'),
+                        const Text(
+                            "Invite your friends Tell\n your friends it’s free\n and fun to learn\n on Mental up!"),
+                      ],
+                    ),
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: ColorPallete.colorBlue,
+                        ),
+                        onPressed: () {},
+                        child: const Text('INVITE FRIENDS',
+                            style:
+                                TextStyle(fontSize: 20, color: Colors.white))),
+                  ],
+                ),
+              ),
+              const Text(''),
             ],
           ),
         ),
