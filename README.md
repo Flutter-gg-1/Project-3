@@ -21,9 +21,10 @@ The education app screens are implemented using flutter framework, it has visual
 - Used a package called GetWidget that contains GFProgressBar widget, used in Topic Screen for the progress bar
 
 - Issues and things to improve:
-1- Navigation: used pushReplacement so when user moves to another page, the previous page gets disposed.
-2- Could not place crown on top of GFProgressBar as shown in UI.
-3- The colors of Navigation Bar images are lighter than in design.
+
+*Navigation: used pushReplacement so when user moves to another page, the previous page gets disposed.*
+*Could not place crown on top of GFProgressBar as shown in UI.*
+*The colors of Navigation Bar images are lighter than in design.*
 
 
 ## UI
@@ -32,7 +33,7 @@ The education app screens are implemented using flutter framework, it has visual
 
 **Login Screen: The first page of the app, colorful and welcoming**
 
-![Login](./assets/images/screenshots/1.png)
+<img src="./assets/images/screenshots/1.png" width="510" height="1120">
 
 **Home Screen: The topics screen, where users can choose the topic they are interested in.**
 **It also contains details of the crowns and xp collected**
