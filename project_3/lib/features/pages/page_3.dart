@@ -29,7 +29,35 @@ class VerbalSkills extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 25),
-            myContainer(),
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  width: 211,
+                  height: 128,
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
+                    color: ColorPallete.colorDarkGrey,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Expanded(child: Text(' ')),
+                      const Text('Unit 1', style: TextStyle(fontSize: 20)),
+                      const SizedBox(height: 15),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('assets/t.png'),
+                          myLoadingIndicator(value: 0.5),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                // Image.asset('assets/horse.png'),
+              ],
+            ),
           ],
         ),
       ),
