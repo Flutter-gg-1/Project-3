@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import '/core/all_files.dart';
 
-class VerbalSkills extends StatelessWidget {
+class VerbalSkills extends StatefulWidget {
   const VerbalSkills({super.key});
 
+  @override
+  State<VerbalSkills> createState() => _VerbalSkillsState();
+}
+
+class _VerbalSkillsState extends State<VerbalSkills> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +47,7 @@ class VerbalSkills extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Expanded(child: Text(' ')),
+                      const SizedBox(height: 55),
                       const Text('Unit 1', style: TextStyle(fontSize: 20)),
                       const SizedBox(height: 15),
                       Row(
@@ -55,7 +60,7 @@ class VerbalSkills extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Image.asset('assets/horse.png'),
+                Positioned(top: -50, child: Image.asset('assets/horse.png')),
               ],
             ),
           ],
