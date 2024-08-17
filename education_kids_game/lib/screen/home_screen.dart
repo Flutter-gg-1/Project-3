@@ -1,4 +1,4 @@
-import 'package:education_kids_game/verbal_skills_screen.dart';
+import 'package:education_kids_game/screen/verbal_skills_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

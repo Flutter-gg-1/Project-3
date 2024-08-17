@@ -1,7 +1,7 @@
-import 'package:education_kids_game/challenges_screen.dart';
-import 'package:education_kids_game/home_screen.dart';
-import 'package:education_kids_game/profile_screen.dart';
-import 'package:education_kids_game/settings_screen.dart';
+import 'package:education_kids_game/screen/challenges_screen.dart';
+import 'package:education_kids_game/screen/home_screen.dart';
+import 'package:education_kids_game/screen/profile_screen.dart';
+import 'package:education_kids_game/screen/settings_screen.dart';
 import 'package:flutter/material.dart';
 
 class ButtomNavBar extends StatefulWidget {

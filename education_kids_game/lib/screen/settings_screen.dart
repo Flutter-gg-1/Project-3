@@ -1,4 +1,4 @@
-import 'package:education_kids_game/login_screen.dart';
+import 'package:education_kids_game/screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatelessWidget {
