@@ -64,12 +64,15 @@ class _YourScoreState extends State<YourScore> {
                       const SizedBox(height: 10),
                       Row(
                         children: [
-                          myContainer(
-                            title: 'Unit 1',
-                            listWidget: [
-                              Image.asset('assets/t.png'),
-                              myLoadingIndicator(value: score[i]),
-                            ],
+                          InkWell(
+                            onTap: () {},
+                            child: myContainer(
+                              title: 'Unit 1',
+                              listWidget: [
+                                Image.asset('assets/t.png'),
+                                myLoadingIndicator(value: score[i]),
+                              ],
+                            ),
                           ),
                           const SizedBox(width: 5),
                           myContainerImage(),
