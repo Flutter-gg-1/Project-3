@@ -11,37 +11,46 @@ class SkillsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: const Text(""),
+        backgroundColor: const Color(0xFFe9e8e8),
+        bottom: PreferredSize(
+          preferredSize: const Size(double.infinity, 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Verbal skills"),
+              Flexible(
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width / 3,
+                  child: const ListTile(
+                    leading:
+                        Icon(color: Color(0xffECC055), FontAwesomeIcons.crown),
+                    title:
+                        Text(style: TextStyle(color: Color(0xffEB9F4A)), "3"),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width / 3,
+                  child: const ListTile(
+                    leading:
+                        Icon(color: Color(0xff338F9B), FontAwesomeIcons.gem),
+                    title: Text(
+                        style: TextStyle(color: Color(0xff338F9B)), "234XP"),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       backgroundColor: const Color(0xfffbf5f2),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              color: const Color(0xFFe9e8e8),
-              width: double.infinity,
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Verbal skills"),
-                  Flexible(
-                    child: ListTile(
-                      leading: Icon(
-                          color: Color(0xffECC055), FontAwesomeIcons.crown),
-                      title:
-                          Text(style: TextStyle(color: Color(0xffEB9F4A)), "3"),
-                    ),
-                  ),
-                  Flexible(
-                    child: ListTile(
-                      leading:
-                          Icon(color: Color(0xff338F9B), FontAwesomeIcons.gem),
-                      title: Text(
-                          style: TextStyle(color: Color(0xff338F9B)), "234XP"),
-                    ),
-                  ),
-                ],
-              ),
-            ),
             const SizedBox(
               height: 4,
             ),

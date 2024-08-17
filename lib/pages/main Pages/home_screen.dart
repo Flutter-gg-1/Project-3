@@ -8,13 +8,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Container(
-          color: const Color(0xFFe9e8e8),
-          width: double.infinity,
-          child: const Row(
+    return Scaffold(
+      appBar: AppBar(
+        leading: const Text(""),
+        backgroundColor: const Color(0xFFe9e8e8),
+        bottom: const PreferredSize(
+          preferredSize: Size(double.infinity, 30),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Flexible(
@@ -42,98 +42,104 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
         ),
-        Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                        style: TextStyle(fontSize: 18), "Logical reasoning"),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width / 3,
-                      child: const ListTile(
-                        leading: Icon(
-                          FontAwesomeIcons.crown,
-                          color: Colors.yellowAccent,
-                          size: 14,
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                          style: TextStyle(fontSize: 18), "Logical reasoning"),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 3,
+                        child: const ListTile(
+                          leading: Icon(
+                            FontAwesomeIcons.crown,
+                            color: Colors.yellowAccent,
+                            size: 14,
+                          ),
+                          title: Text(style: TextStyle(fontSize: 12), "18/40"),
                         ),
-                        title: Text(style: TextStyle(fontSize: 12), "18/40"),
                       ),
-                    ),
-                  ],
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    UnitOne(),
-                    UnitTwo(),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                        style: TextStyle(fontSize: 18), "Artistic thinking"),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width / 3,
-                      child: const ListTile(
-                        leading: Icon(
-                          FontAwesomeIcons.crown,
-                          color: Colors.yellowAccent,
-                          size: 14,
+                    ],
+                  ),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      UnitOne(),
+                      UnitTwo(),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                          style: TextStyle(fontSize: 18), "Artistic thinking"),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 3,
+                        child: const ListTile(
+                          leading: Icon(
+                            FontAwesomeIcons.crown,
+                            color: Colors.yellowAccent,
+                            size: 14,
+                          ),
+                          title: Text(style: TextStyle(fontSize: 12), "35/40"),
                         ),
-                        title: Text(style: TextStyle(fontSize: 12), "35/40"),
                       ),
-                    ),
-                  ],
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    UnitOne(),
-                    UnitTwo(),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(style: TextStyle(fontSize: 18), "Verbal skills"),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width / 3,
-                      child: const ListTile(
-                        leading: Icon(
-                          FontAwesomeIcons.crown,
-                          color: Colors.yellowAccent,
-                          size: 14,
+                    ],
+                  ),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      UnitOne(),
+                      UnitTwo(),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                          style: TextStyle(fontSize: 18), "Verbal skills"),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 3,
+                        child: const ListTile(
+                          leading: Icon(
+                            FontAwesomeIcons.crown,
+                            color: Colors.yellowAccent,
+                            size: 14,
+                          ),
+                          title: Text(style: TextStyle(fontSize: 12), "3/40"),
                         ),
-                        title: Text(style: TextStyle(fontSize: 12), "3/40"),
                       ),
-                    ),
-                  ],
-                ),
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    UnitOne(),
-                    UnitTwo(),
-                  ],
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-              ],
+                    ],
+                  ),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      UnitOne(),
+                      UnitTwo(),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
