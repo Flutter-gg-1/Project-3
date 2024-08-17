@@ -6,8 +6,9 @@ class TopicHeader extends StatelessWidget {
     'assets/images/crown.png',
     'assets/images/diamond.png'
   ];
-  final List<String> text;
-  const TopicHeader({super.key, required this.pageName, required this.text});
+  final List<String>? points;
+  final bool isTopicPage;
+  const TopicHeader({super.key, required this.pageName, this.points, this.isTopicPage=true});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class TopicHeader extends StatelessWidget {
       height: 80,
       color: const Color.fromRGBO(196, 196, 196, 0.4),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: isTopicPage ? MainAxisAlignment.spaceBetween : MainAxisAlignment.center,
         children: [
           Text(
             pageName,
@@ -25,6 +26,7 @@ class TopicHeader extends StatelessWidget {
                 fontSize: 30,
                 fontWeight: FontWeight.w400),
           ),
+          if(isTopicPage)
           Row(
             children: [
               Image.asset(
@@ -36,7 +38,7 @@ class TopicHeader extends StatelessWidget {
                 width: 5,
               ),
               Text(
-                text[0],
+                points![0],
                 style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -54,7 +56,7 @@ class TopicHeader extends StatelessWidget {
                 width: 5,
               ),
               Text(
-                text[1],
+                points![1],
                 style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,

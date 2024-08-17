@@ -13,7 +13,7 @@ class TopicScreen extends StatelessWidget {
         body: Padding(
             padding: const EdgeInsets.only(top: 70),
             child: Column(children: [
-              const TopicHeader(pageName: 'Verbal Skills', text: ['3', '213']),
+              const TopicHeader(pageName: 'Verbal Skills', points: ['3', '213']),
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(

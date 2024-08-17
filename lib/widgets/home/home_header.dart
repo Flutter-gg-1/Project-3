@@ -11,9 +11,9 @@ class HomeHeader extends StatelessWidget {
     const Color.fromRGBO(51, 143, 155, 1),
     const Color.fromRGBO(220, 63, 0, 1)
   ];
-  final List<String> text;
+  final List<String> points;
 
-  const HomeHeader({super.key, required this.text});
+  const HomeHeader({super.key, required this.points});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class HomeHeader extends StatelessWidget {
             width: 5,
           ),
           Text(
-            text[0],
+            points[0],
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.w500, color: colors[0]),
           ),
@@ -49,7 +49,7 @@ class HomeHeader extends StatelessWidget {
             width: 5,
           ),
           Text(
-            text[1],
+            points[1],
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.w500, color: colors[1]),
           ),
@@ -65,7 +65,7 @@ class HomeHeader extends StatelessWidget {
             width: 5,
           ),
           Text(
-            text[2],
+            points[2],
             style: TextStyle(
                 fontSize: 20, fontWeight: FontWeight.w500, color: colors[2]),
           ),

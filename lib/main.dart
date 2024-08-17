@@ -1,5 +1,6 @@
 import 'package:education_app/screens/login_screen.dart';
 import 'package:education_app/screens/home_screen.dart';
+import 'package:education_app/screens/profile_screen.dart';
 import 'package:education_app/screens/topic_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Roboto'),
-        home: const TopicScreen(score: 3,));
+        home: const ProfileScreen());
   }
 }

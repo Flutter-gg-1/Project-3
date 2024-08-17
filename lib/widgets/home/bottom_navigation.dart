@@ -1,3 +1,4 @@
+import 'package:education_app/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../screens/home_screen.dart';
@@ -30,7 +31,7 @@ class BottomNavigation extends StatelessWidget {
               height: 29.07,
               color: active == 1
                   ? const Color.fromRGBO(65, 172, 120, 1)
-                  : Colors.black,
+                  : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
           InkWell(
@@ -44,14 +45,14 @@ class BottomNavigation extends StatelessWidget {
               width: 35.19,
               height: 29.07,
               color: active == 2
-                  ? const Color.fromRGBO(65, 172, 120, 1)
-                  : Colors.black,
+                  ? const Color.fromRGBO(220, 63, 0, 1)
+                  : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
           InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (contex) {
-                return const HomeScreen();
+                return const ProfileScreen();
               }));
             },
             child: Image.asset(
@@ -59,8 +60,8 @@ class BottomNavigation extends StatelessWidget {
               width: 35.19,
               height: 29.07,
               color: active == 3
-                  ? const Color.fromRGBO(65, 172, 120, 1)
-                  : Colors.black,
+                  ? const Color.fromRGBO(171, 112, 223, 1)
+                  : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
           InkWell(
@@ -75,7 +76,7 @@ class BottomNavigation extends StatelessWidget {
               height: 29.07,
               color: active == 4
                   ? const Color.fromRGBO(65, 172, 120, 1)
-                  : Colors.black,
+                  : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
         ]);

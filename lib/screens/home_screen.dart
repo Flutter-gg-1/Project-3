@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
             padding: EdgeInsets.only(top: 70),
             child: Column(
               children: [
-                HomeHeader(text: ['3', '1432 XP', '\u221E']),
+                HomeHeader(points: ['3', '1432 XP', '\u221E']),
                 SizedBox(
                   height: 10,
                 ),
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.all(12),
                     child: SingleChildScrollView(
                       child: Padding(
-                        padding: EdgeInsets.all(0),
+                        padding: EdgeInsets.only(bottom: 100),
                         child: Column(
                           children: [
                             UnitsCard(
