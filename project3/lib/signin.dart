@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Homepage.dart';
 
 class Signin extends StatelessWidget {
   const Signin({super.key});
@@ -14,7 +15,7 @@ class Signin extends StatelessWidget {
            const SizedBox(height: 10),
             Image.asset("assets/logo/logo.png", scale: 1.2,),
             Padding(
-              padding: const EdgeInsets.all(50),
+              padding: const EdgeInsets.fromLTRB(50, 20, 50, 0),
               child: Column(
               children: [
             TextField(     
@@ -52,7 +53,7 @@ class Signin extends StatelessWidget {
                  minimumSize: const Size.fromHeight(40),),
             onPressed: () {
               Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const Signin()),
+              MaterialPageRoute(builder: (context) => const Homepage()),
             );
           }, child: const Text("GO", style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromARGB(255, 255, 255, 255), fontSize: 18))),
             const SizedBox(height: 10),
