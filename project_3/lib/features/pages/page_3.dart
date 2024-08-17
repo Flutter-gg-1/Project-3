@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import '/core/all_files.dart';
 
-class VerbalSkills extends StatefulWidget {
+class VerbalSkills extends StatelessWidget {
   const VerbalSkills({super.key});
 
-  @override
-  State<VerbalSkills> createState() => _VerbalSkillsState();
-}
-
-class _VerbalSkillsState extends State<VerbalSkills> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +58,8 @@ class _VerbalSkillsState extends State<VerbalSkills> {
                 Positioned(top: -50, child: Image.asset('assets/horse.png')),
               ],
             ),
+            const SizedBox(height: 25),
+            myAvatar(imagePath: 'assets/horse.png'),
           ],
         ),
       ),

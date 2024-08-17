@@ -132,3 +132,21 @@ Widget myContainerInput({
     ),
   );
 }
+
+Widget myAvatar({required String imagePath}) {
+  return Stack(alignment: Alignment.center, children: [
+    const CircleAvatar(
+      radius: 140 / 2,
+      backgroundColor: ColorPallete.colorDarkGrey,
+    ),
+    const CircleAvatar(
+      radius: 125 / 2,
+      backgroundColor: ColorPallete.colorWhite,
+    ),
+    CircleAvatar(
+      radius: 110 / 2,
+      backgroundColor: ColorPallete.colorDarkGreen,
+      child: Image.asset(imagePath),
+    ),
+  ]);
+}
