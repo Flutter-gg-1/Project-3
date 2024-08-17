@@ -1,61 +1,88 @@
-# Flutter UI Implementation Project
-
-## Overview
-Greetings to the Flutter UI Implementation project! In this project, you will be working with the Flutter framework to implement a set of user interfaces using a specific list of widgets. The goal is to enhance your proficiency in Flutter development and UI implementation.
-
-
-## UI to Implement
-You are required to implement the following Figma design user interfaces:
-
-- [Figma Design - Educational Kids Game](https://www.figma.com/file/hr7vmPgtKJd95quaTZr5bt/Educational-kids-game-(Community)?type=design&node-id=0%3A1&mode=design&t=z9KUqxH5qF2QA9xp-1)
+## Project-3 (education kids game) :
+The projrct is an education kids game that provaide different types of subjects each of them consists of units, to finish the units it keep track of kids progress in each skills in that unit. kids can have thire profile and add friends, and try the  challenges.  
 
 
 
-## Mandatory List of Widgets
-You must use the following list of widgets in your implementations:
-- Column
-- Row
-- ListView or related widgets
-- AppBar 
-- TextField
-- Icon
-- Button
-- Image
+
+## project Details:
+
+#### - SignInScreen:
+ It was created useing column to view the logo image than the TextsFilds for username and password, texts, image. the ElevatedButton that will navgite to next page (HomeScreen) and SizedBox() to spreate between them
+
+#### - HomeScreen:
+
+- Appbar bottom: with Container as a child to orgnaze and show the appBar element 
+
+for the body i useed column and three custom widgets
+
+- CourseTitle : to show the course title and it' detiels
+
+- UnitWidget : styled Container to show the unit detiels. the last unit will navgite to CoursePage
+
+- LockUnit : to show lock units
+
+I also used SingleChildScrollView() widget to scroll 
+
+#### - CourseScreen:
+starting with the same Appbar in HomeScreen but with differnet elements,
+
+for the body i useed column, stack and custom widget
+- stack: to orgnaize the view of the unit Container, i used stack to handel overlap image.
+
+- SkillWidget: desgined Container take the skill title and image url to view the skill.
+
+I also used SingleChildScrollView() widget to scroll 
+
+#### - ChallengesScreen:
+
+You can navgatie to this page using the AppNavicationBar.
+
+same Appbar in HomeScreen but with page title only,
+
+for the body i used ListView, column and custom widget
+- ListView: to make page scrollable and add padding.
+
+- AchievementsCardWidget: desgined Container take the achievements title, subtitle and image url to view the achievements.
+
+#### - ProfileScreen:
+
+You can navgatie to this page using the AppNavicationBar.
+
+same Appbar in HomeScreen but with page title only,
+- before the Scaffold i used DefaultTabController to add tabBar later
+
+for the body i used Column, Stack, ListTile, CustomCardWidget and tapBar
+
+- Stack: to orgnaize the view of the profile, i used stack to handel each element position.
+- CustomCardWidget: to show the statStatistics i used rowa to organize them.
+
+- Container with tabBar: desgined Container with column as a child, it will take tabBar and ListTile as children .
+
+- last is Container with texts widgets desgin in colmun and row than an styled ElevatedButton.
+
+#### - Additional pages:
+- CurrentPage: to manage the navigation between main pages.
+
+- CustomIcons: added custom icones 
+
+## project output:
+
+#### - SignInScreen:
+<img width="200"  alt="Screenshot 2024-08-13 at 4 06 57 PM" src="README_Assets/signUp_page.png">
+
+#### - HomeScreen:
+<img width="200"  alt="Screenshot 2024-08-13 at 4 06 57 PM" src="README_Assets\home_page.png">
+
+#### - CourseScreen:
+<img width="200"  alt="Screenshot 2024-08-13 at 4 06 57 PM" src="README_Assets\course_page.png">
+
+#### - ChallengesScreen:
+<img width="200"  alt="Screenshot 2024-08-13 at 4 06 57 PM" src="README_Assets\challenges_page.png">
+
+#### - ProfileScreen:
+<img width="200"  alt="Screenshot 2024-08-13 at 4 06 57 PM" src="README_Assets\profile_page.png">
 
 
 
-## Requirements
-1. **Code Organization:**
-    - Organize your Flutter project in a clean and structured manner.
-    
-2. **Widget Usage:**
-    - Ensure that you use the specified list of widgets for UI implementation.
-    
-3. **Navigation:**
-    - Include navigation between different screens or sections within your app.
-
-
-
-## Submission Guidelines
-You will submit your project on GitHub by following these guidelines:
-1. Fork the Repository & Clone it
-2. Create a New Branch with your name, in this format: (First name - Last name), i.e. Nasser-GH
-3. Commit the changes frequently and push it
-4. Finally, create a pull request to the original repository
-
-**Note:**
-- This is an individual assignment, collaboration is not allowed, and each student should submit their unique work.
-- Be sure to include screenshots of the implemented UIs in your README file in your project
-- Make sure to apply the exact given UI as specified in the assignment. Do not add any additional elements or remove any existing ones. The UI should match the provided design precisely.
-
-
-
-## Deadline 
-The deadline for submitting the project is 2024 Aug 18 at 9:59 AM
-
-
-## Additional Notes
-- Reach out for clarification or assistance if needed.
-- Have an enjoyable coding journey!
-
-Best of luck!
+## Author:
+Rahaf Alghamdi
