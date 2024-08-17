@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:p_1_kids_game/src/app.dart';
+import 'package:p_1_kids_game/src/screens/home_screen.dart';
+import 'package:p_1_kids_game/src/screens/login_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +12,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      // To hide debug banner
+      debugShowCheckedModeBanner: false,
+
+      title: 'Educational Kids Game',
+      initialRoute: '/',
+
+      // Routes
+      routes: {
+        '/': (context) => const LoginScreen(),
+        '/home': (context) => const HomeScreen(),
+      },
     );
   }
 }
