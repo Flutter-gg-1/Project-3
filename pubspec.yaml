@@ -64,6 +64,8 @@ flutter:
   assets:
     - asset/loginPage/
     - asset/skillPage/
+    - asset/skillInfoPage/
+    - asset/ProfilePage/
 
   #   - images/a_dot_ham.jpeg
 

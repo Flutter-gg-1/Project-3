@@ -3,10 +3,11 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:icons_plus/icons_plus.dart';
+import 'package:project_3/widget/bottom_navigation_bar_widget.dart';
 import 'package:project_3/widget/card_skill_widget.dart';
 import 'package:project_3/widget/title_skill_card_widget.dart';
 
@@ -16,29 +17,9 @@ class SkillsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        fixedColor: Color(0xff41AC78),
-        backgroundColor: Color(0xffE5E5E5).withOpacity(0.8),
 
-        items: [
-          BottomNavigationBarItem(label: "", icon: IconButton(icon:Icon(FontAwesome.house_solid) ,onPressed: () {
-            
-          },)),
-           BottomNavigationBarItem(label: "", icon: IconButton(icon:Icon(FontAwesome.bullseye_solid) ,onPressed: () {
-            
-          },))
-
-          ,BottomNavigationBarItem(label: "", icon: IconButton(icon:Icon(FontAwesome.people_group_solid) ,onPressed: () {
-            
-          },)),
-           BottomNavigationBarItem(label: "", icon: IconButton(icon:Icon(FontAwesome.gear_solid) ,onPressed: () {
-            
-          },)),
-
-          
-        ],
-      ),
+      backgroundColor: const Color(0xffFBF5F2),
+      bottomNavigationBar: const BottomNavigationBarWidget(index: 0, color: Color(0xff41AC78),),
 
       body: SafeArea(child: 
       
@@ -75,16 +56,16 @@ class SkillsPage extends StatelessWidget {
 
            , const TitleSkillCardWidget(title: "Logical reasoning",complit: "18",),
 
-           const CardSkillWidget(complit: "18",)
+           const CardSkillWidget(complit: "18",title:"Logical reasoning" ,)
 
 
            ,const TitleSkillCardWidget(title: "Artistic thinking",complit: "35",),
 
-           const CardSkillWidget(complit: "35",)
+           const CardSkillWidget(complit: "35",title: "Artistic thinking",)
 
            ,const TitleSkillCardWidget(title: "Verbal skills",complit: "3",),
 
-           const CardSkillWidget(complit: "3",)
+           const CardSkillWidget(complit: "3", title: "Verbal skills",)
 
 
 
@@ -95,6 +76,39 @@ class SkillsPage extends StatelessWidget {
           ],
         ),
       )),
+    );
+  }
+}
+
+class bottom_navigation_bar extends StatelessWidget {
+  const bottom_navigation_bar({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      fixedColor: const Color(0xff41AC78),
+      backgroundColor: const Color(0xffE5E5E5).withOpacity(0.8),
+    
+      items: [
+        BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.house_solid) ,onPressed: () {
+          
+        },)),
+         BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.bullseye_solid) ,onPressed: () {
+          
+        },))
+    
+        ,BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.people_group_solid) ,onPressed: () {
+          
+        },)),
+         BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.gear_solid) ,onPressed: () {
+          
+        },)),
+    
+        
+      ],
     );
   }
 }
