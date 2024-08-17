@@ -65,7 +65,9 @@ class _YourScoreState extends State<YourScore> {
                       Row(
                         children: [
                           InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              (context).goTo(const VerbalSkills());
+                            },
                             child: myContainer(
                               title: 'Unit 1',
                               listWidget: [
