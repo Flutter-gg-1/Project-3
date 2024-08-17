@@ -1,5 +1,3 @@
-Certainly! Here's an updated README template focusing on the design aspect of your Flutter project:
-
 ---
 
 # Mental Up - Mobile App (Design Only)
@@ -35,8 +33,10 @@ This project demonstrates the UI/UX design of a mental training app. It includes
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/trt14/Project-3/education_kids_game.git
+    git clone https://github.com/trt14/Project-3.git
+    cd Project-3
     cd education_kids_game
+    code .
     ```
 
 2. **Install dependencies:**
