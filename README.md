@@ -86,3 +86,7 @@ for the body i used Column, Stack, ListTile, CustomCardWidget and tapBar
 
 ## Author:
 Rahaf Alghamdi
+
+## note:
+there is a video for the output in the README_Assets file
+
