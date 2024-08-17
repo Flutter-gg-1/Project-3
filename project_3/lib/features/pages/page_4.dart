@@ -21,15 +21,33 @@ class ProfileClass extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Nidhi Pandya'),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Nidhi Pandya', style: TextStyle(fontSize: 30)),
+                      Text('Nidhi12',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: ColorPallete.colorLightBlack)),
+                      Row(
+                        children: [
+                          Icon(Icons.watch_later, color: Colors.grey),
+                          Text('  Joined March 2022',
+                              style: TextStyle(fontSize: 15)),
+                        ],
+                      ),
+                    ],
+                  ),
                   CircleAvatar(
                     radius: 90 / 2,
                     backgroundImage: NetworkImage(
-                        'https://i.ibb.co/9b0GqLW/WhatsApp-Image-2022-07-11-12-54-23.jpg'),
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_zrGcaJgQScgv3rKD7mrj9GCGEhYOI3XNUSUnH9D1Tk7g_nYNvnZdsZz2v5EgdqsZCII&usqp=CAU'),
                   )
                 ],
               ),
             ),
+            const SizedBox(height: 15),
+            const Divider(),
           ],
         ),
       )),
