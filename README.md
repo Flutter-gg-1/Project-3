@@ -1,61 +1,77 @@
-# Flutter UI Implementation Project
+![My Image](./assets/TuwaiqAcademy.png)
 
-## Overview
-Greetings to the Flutter UI Implementation project! In this project, you will be working with the Flutter framework to implement a set of user interfaces using a specific list of widgets. The goal is to enhance your proficiency in Flutter development and UI implementation.
+# Mobile Application Educational Kids Game
 
+This project is a basic mobile application with a login screen and a home screen. It's currently under development, but this README provides an overview of the functionalities.
 
-## UI to Implement
-You are required to implement the following Figma design user interfaces:
+# Application Structure
 
-- [Figma Design - Educational Kids Game](https://www.figma.com/file/hr7vmPgtKJd95quaTZr5bt/Educational-kids-game-(Community)?type=design&node-id=0%3A1&mode=design&t=z9KUqxH5qF2QA9xp-1)
+The application consists of two main screens:
 
+# Login Screen (home_screen.dart)
 
+<ul>
+<li>Allows users to enter username and password.
+</li>
+<li>Includes buttons for login (currently empty functionality) and "Forgot password?" (currently empty functionality).
+</li>
+</ul>
 
-## Mandatory List of Widgets
-You must use the following list of widgets in your implementations:
-- Column
-- Row
-- ListView or related widgets
-- AppBar 
-- TextField
-- Icon
-- Button
-- Image
+# Home Screen (second_screen.dart)
 
-
-
-## Requirements
-1. **Code Organization:**
-    - Organize your Flutter project in a clean and structured manner.
-    
-2. **Widget Usage:**
-    - Ensure that you use the specified list of widgets for UI implementation.
-    
-3. **Navigation:**
-    - Include navigation between different screens or sections within your app.
+<ul>
+<li>Displays application logo and potentially user information.
+</li>
+<li>Offers navigation buttons at the bottom.
+</li>
+<li>Shows app title and progress information in the header.
+</li>
+<li>Provides scrollable content area.
+</li>
+</ul>
 
 
 
-## Submission Guidelines
-You will submit your project on GitHub by following these guidelines:
-1. Fork the Repository & Clone it
-2. Create a New Branch with your name, in this format: (First name - Last name), i.e. Nasser-GH
-3. Commit the changes frequently and push it
-4. Finally, create a pull request to the original repository
+# *Important! 
+I understand that the dimensions of the widgets in my project may not perfectly match the provided examples. However, this discrepancy is due to the use of a different emulator on my end. And i tried to use the provided dimensions in *Figma*
 
-**Note:**
-- This is an individual assignment, collaboration is not allowed, and each student should submit their unique work.
-- Be sure to include screenshots of the implemented UIs in your README file in your project
-- Make sure to apply the exact given UI as specified in the assignment. Do not add any additional elements or remove any existing ones. The UI should match the provided design precisely.
+ But don't worry, I know how to make things fit perfectly using those SizedBox and Padding things. I used them a bunch in my code, so I can totally change the sizes if you need me to.
+
+ Plus I understand that the bottom navigation bar is stacking pages ontop of each other , hence this is not the right way to do it . But I asked and i was told we need to use the navigator push method . 
+
+# Getting Started 
+
+1- Login Screen 
+![My Image](./assets/ScreenShots/loginScreen.png)
+
+2- Home Screen 
+![My Image](./assets/ScreenShots/HomeScreen.png)
+
+3- Verbal Skills Screen
+![My Image](./assets/ScreenShots/SkillsScreen.png)
+
+4- Challenges Screen
+![My Image](./assets/ScreenShots/ChallengesScreen.png)
+
+5- Profile Screen
+![My Image](./assets/ScreenShots/ProfileScreen.png)
+
+6- Settings Screen *(Under Development)* - I used a cool visual effect in that page too ^^
+![My Image](./assets/ScreenShots/SettingsScreen.png)
 
 
 
-## Deadline 
-The deadline for submitting the project is 2024 Aug 18 at 9:59 AM
+# Closure 
+I put a lot of time into this project—over 20 hours! I learned a ton while working on it. Feel free to point out anything you think I could improve. I know my code might not be perfect (Best Practice), but I did my best.
 
 
-## Additional Notes
-- Reach out for clarification or assistance if needed.
-- Have an enjoyable coding journey!
 
-Best of luck!
+# Additional Notes
+<ul>
+<li>This is a simple example, and functionalities are currently under development.
+</li>
+<li>The provided technologies section needs to be updated based on the actual development framework used.
+</li>
+<li>Feel free to extend the README with further details about specific functionalities or deployment instructions as development progresses.
+</li>
+</ul>
