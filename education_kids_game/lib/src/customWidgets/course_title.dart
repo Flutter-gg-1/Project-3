@@ -1,3 +1,4 @@
+import 'package:education_kids_game/src/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
 
 class CourseTitle extends StatelessWidget {
@@ -21,9 +22,7 @@ class CourseTitle extends StatelessWidget {
           style: const TextStyle(fontSize: 35),
         ),
         SizedBox(width: space),
-        Image.asset(
-          "assets/icons/crown_icon.png",
-        ),
+        const Icon(CustomIcons.crown, color: Color(0xffECC055)),
         Text(
           rate,
           textAlign: TextAlign.end,

@@ -1,3 +1,4 @@
+import 'package:education_kids_game/src/custom_icons_icons.dart';
 import 'package:flutter/material.dart';
 
 class UnitWidget extends StatelessWidget {
@@ -25,22 +26,29 @@ class UnitWidget extends StatelessWidget {
             const SizedBox(height: 120),
             Row(
               children: [
-                Image.asset("assets/icons/crown_icon.png"),
+                const Icon(
+                  CustomIcons.crown,
+                  color: Color(0xffECC055),
+                ),
+                const SizedBox(width: 3),
                 Container(
                   alignment: Alignment.centerLeft,
                   height: 14,
                   width: 120,
                   margin: const EdgeInsets.only(top: 12),
-                  decoration: BoxDecoration(
-                      color: const Color(0xffC4C4C4),
-                      borderRadius: BorderRadius.circular(30)),
+                  decoration: const BoxDecoration(
+                      color: Color(0xffC4C4C4),
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(30),
+                          bottomRight: Radius.circular(30))),
                   child: Container(
-                    width: prograss,
-                    height: 14,
-                    decoration: BoxDecoration(
-                        color: const Color(0xffECC055),
-                        borderRadius: BorderRadius.circular(30)),
-                  ),
+                      width: prograss,
+                      height: 14,
+                      decoration: const BoxDecoration(
+                          color: Color(0xffECC055),
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(30),
+                              bottomRight: Radius.circular(30)))),
                 )
               ],
             ),
@@ -64,6 +72,6 @@ class LockUnit extends StatelessWidget {
         alignment: Alignment.center,
         height: 227,
         width: 179,
-        child: Image.asset("assets/icons/lock_icon.png"));
+        child: Image.asset("assets/lock.png"));
   }
 }
