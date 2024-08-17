@@ -50,10 +50,11 @@ class SkillWidget extends StatelessWidget {
           )),
       Positioned(
           top: 150,
-          left: 50,
+          left: 40,
           child: Text(
             title,
-            style: const TextStyle(fontSize: 20),
+            style: const TextStyle(
+                fontSize: 20, fontFamily: "fonts/Roboto-Regular.ttf"),
           ))
     ]);
   }

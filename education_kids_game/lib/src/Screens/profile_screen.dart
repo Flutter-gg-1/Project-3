@@ -11,7 +11,7 @@ class ProfileScreen extends StatelessWidget {
       length: 2,
       child: Scaffold(
           appBar: AppBar(
-            leading: const Text(""),
+            automaticallyImplyLeading: false,
             bottom: PreferredSize(
               preferredSize: const Size(double.infinity, 71),
               child: Container(
@@ -22,7 +22,8 @@ class ProfileScreen extends StatelessWidget {
                 color: const Color(0xffE5E5E5),
                 child: const Text(
                   "Profile",
-                  style: TextStyle(fontSize: 30),
+                  style: TextStyle(
+                      fontSize: 30, fontFamily: "fonts/Roboto-Regular.ttf"),
                 ),
               ),
             ),
@@ -33,10 +34,14 @@ class ProfileScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 const Stack(clipBehavior: Clip.none, children: [
                   ListTile(
-                    titleTextStyle:
-                        TextStyle(fontSize: 30, color: Colors.black),
-                    subtitleTextStyle:
-                        TextStyle(fontSize: 20, color: Colors.black54),
+                    titleTextStyle: TextStyle(
+                        fontSize: 30,
+                        color: Colors.black,
+                        fontFamily: "fonts/Roboto-Regular.ttf"),
+                    subtitleTextStyle: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black54,
+                        fontFamily: "fonts/Roboto-Regular.ttf"),
                     title: Text("Nidhi Pandya"),
                     subtitle: Text("Nidhi12"),
                   ),
@@ -53,7 +58,9 @@ class ProfileScreen extends StatelessWidget {
                         SizedBox(width: 8),
                         Text(
                           "Joined March 2022",
-                          style: TextStyle(fontSize: 15),
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontFamily: "fonts/Roboto-Regular.ttf"),
                         )
                       ],
                     ),
@@ -79,7 +86,9 @@ class ProfileScreen extends StatelessWidget {
                   child: ListTile(
                     leading: Image.asset("assets/celebrate.png"),
                     title: const Text("Friends update",
-                        style: TextStyle(fontSize: 20)),
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: "fonts/Roboto-Regular.ttf")),
                     trailing: const Icon(
                       Icons.arrow_forward_ios_outlined,
                       color: Colors.black26,
@@ -92,8 +101,8 @@ class ProfileScreen extends StatelessWidget {
                   margin: const EdgeInsets.only(left: 30),
                   child: const Text("Statistics",
                       style: TextStyle(
-                        fontSize: 30,
-                      )),
+                          fontSize: 30,
+                          fontFamily: "fonts/Roboto-Regular.ttf")),
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -137,12 +146,13 @@ class ProfileScreen extends StatelessWidget {
                     children: [
                       Text("Friends",
                           style: TextStyle(
-                            fontSize: 30,
-                          )),
+                              fontSize: 30,
+                              fontFamily: "fonts/Roboto-Regular.ttf")),
                       Text(
                         "ADD FRIENDS",
                         style: TextStyle(
                             fontSize: 20,
+                            fontFamily: "fonts/Roboto-Regular.ttf",
                             fontWeight: FontWeight.w600,
                             color: Color(0xff02A1FB)),
                       )
@@ -163,15 +173,15 @@ class ProfileScreen extends StatelessWidget {
                         indicatorSize: TabBarIndicatorSize.tab,
                         indicatorWeight: 3,
                         unselectedLabelStyle: TextStyle(
-                          color: Colors.black45,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                        ),
+                            color: Colors.black45,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "fonts/Roboto-Regular.ttf"),
                         labelStyle: TextStyle(
-                          color: Color(0xff02A1FB),
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
-                        ),
+                            color: Color(0xff02A1FB),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "fonts/Roboto-Regular.ttf"),
                         tabs: [
                           Tab(
                             text: "FOLLOWING",
@@ -190,12 +200,16 @@ class ProfileScreen extends StatelessWidget {
                               Image(image: AssetImage("assets/account_h.png")),
                           title: Text(
                             "Hardi",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: "fonts/Roboto-Regular.ttf"),
                           ),
                           subtitle: Text(
                             "4367 XP",
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black54,
+                                fontFamily: "fonts/Roboto-Regular.ttf"),
                           ),
                           trailing: Icon(
                             Icons.arrow_forward_ios_outlined,
@@ -209,12 +223,16 @@ class ProfileScreen extends StatelessWidget {
                               Image(image: AssetImage("assets/account_k.png")),
                           title: Text(
                             "Krishna",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontFamily: "fonts/Roboto-Regular.ttf"),
                           ),
                           subtitle: Text(
                             "2334 XP",
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black54,
+                                fontFamily: "fonts/Roboto-Regular.ttf"),
                           ),
                           trailing: Icon(
                             Icons.arrow_forward_ios_outlined,

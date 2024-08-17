@@ -21,7 +21,8 @@ class UnitWidget extends StatelessWidget {
           children: [
             const Text(
               "Unit 1",
-              style: TextStyle(fontSize: 30),
+              style: TextStyle(
+                  fontSize: 30, fontFamily: "fonts/Roboto-Regular.ttf"),
             ),
             const SizedBox(height: 120),
             Row(

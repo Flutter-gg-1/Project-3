@@ -26,7 +26,8 @@ class CourseTitle extends StatelessWidget {
         Text(
           rate,
           textAlign: TextAlign.end,
-          style: const TextStyle(fontSize: 20),
+          style: const TextStyle(
+              fontSize: 20, fontFamily: "fonts/Roboto-Regular.ttf"),
         ),
         const SizedBox(width: 10)
       ],

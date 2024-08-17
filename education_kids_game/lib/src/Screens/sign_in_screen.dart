@@ -27,7 +27,9 @@ class SignIn extends StatelessWidget {
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                   hintText: "  Username",
-                  hintStyle: TextStyle(color: Colors.grey),
+                  hintStyle: TextStyle(
+                      color: Colors.grey,
+                      fontFamily: "fonts/Roboto-Regular.ttf"),
                 ),
               ),
             ),
@@ -43,7 +45,9 @@ class SignIn extends StatelessWidget {
                       borderSide: BorderSide.none,
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                   hintText: "  Password",
-                  hintStyle: TextStyle(color: Colors.grey),
+                  hintStyle: TextStyle(
+                      color: Colors.grey,
+                      fontFamily: "fonts/Roboto-Regular.ttf"),
                 ),
               ),
             ),
@@ -56,9 +60,10 @@ class SignIn extends StatelessWidget {
                     "Forget Password?",
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black),
+                        color: Colors.black,
+                        fontFamily: "fonts/Roboto-Regular.ttf"),
                   )),
             ),
             ElevatedButton(
@@ -74,7 +79,10 @@ class SignIn extends StatelessWidget {
                 },
                 child: const Text(
                   "GO",
-                  style: TextStyle(color: Colors.white, fontSize: 25),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontFamily: "fonts/Roboto-Regular.ttf"),
                 )),
             const SizedBox(
               height: 20,
@@ -85,24 +93,28 @@ class SignIn extends StatelessWidget {
                 const Text(
                   "Don't have account yet?",
                   style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                      color: Colors.black,
+                      fontFamily: "fonts/Roboto-Regular.ttf"),
                 ),
                 TextButton(
                     onPressed: () {},
                     child: const Text(
                       "Sign Up",
                       style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xff77B29F)),
+                          color: Color(0xff77B29F),
+                          fontFamily: "fonts/Roboto-Regular.ttf"),
                     ))
               ],
             ),
             const SizedBox(height: 40),
-            Image.asset(
-              "assets/sign_up_img.png",
+            Expanded(
+              child: Image.asset(
+                "assets/sign_up_img.png",
+              ),
             )
           ],
         ),

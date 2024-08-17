@@ -9,7 +9,7 @@ class CourseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          leading: const Text(""),
+          automaticallyImplyLeading: false,
           bottom: PreferredSize(
             preferredSize: const Size(double.infinity, 71),
             child: Container(
@@ -20,7 +20,10 @@ class CourseScreen extends StatelessWidget {
               color: const Color(0xffE5E5E5),
               child: const Row(
                 children: [
-                  Text("Verbal skills", style: TextStyle(fontSize: 35)),
+                  Text("Verbal skills",
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: "fonts/Roboto-Regular.ttf")),
                   SizedBox(width: 20),
                   Expanded(
                       child: Icon(CustomIcons.crown, color: Color(0xffECC055))),
@@ -29,7 +32,7 @@ class CourseScreen extends StatelessWidget {
                     "3",
                     style: TextStyle(fontSize: 25, color: Color(0xffECC055)),
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: 20),
                   Expanded(
                       child:
                           Icon(CustomIcons.diamond, color: Color(0xff02A1FB))),
@@ -74,7 +77,9 @@ class CourseScreen extends StatelessWidget {
                     children: [
                       const Text(
                         "Uint 1",
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: "fonts/Roboto-Regular.ttf"),
                       ),
                       Row(
                         children: [
@@ -107,7 +112,9 @@ class CourseScreen extends StatelessWidget {
                           ),
                           const Text(
                             " 3/40",
-                            style: TextStyle(fontSize: 15),
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: "fonts/Roboto-Regular.ttf"),
                           )
                         ],
                       ),
