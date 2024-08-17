@@ -51,7 +51,11 @@ class VerbalSkills extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Image.asset('assets/t.png'),
-                            myLoadingIndicator(value: 0.5),
+                            myLoadingIndicator(value: 0.3),
+                            const Text('3/40',
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    color: ColorPallete.colorLightBlack)),
                           ],
                         ),
                       ],
