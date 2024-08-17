@@ -1,7 +1,9 @@
+import 'package:education_app/screens/challenges_screen.dart';
 import 'package:education_app/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../screens/home_screen.dart';
+import '../../screens/settings_screen.dart';
 
 class BottomNavigation extends StatelessWidget {
   static final List<String> imagePaths = [
@@ -37,7 +39,7 @@ class BottomNavigation extends StatelessWidget {
           InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (contex) {
-                return const HomeScreen();
+                return const ChallengesScreen();
               }));
             },
             child: Image.asset(
@@ -45,7 +47,7 @@ class BottomNavigation extends StatelessWidget {
               width: 35.19,
               height: 29.07,
               color: active == 2
-                  ? const Color.fromRGBO(220, 63, 0, 1)
+                  ?  Colors.redAccent[700]
                   : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
@@ -60,14 +62,14 @@ class BottomNavigation extends StatelessWidget {
               width: 35.19,
               height: 29.07,
               color: active == 3
-                  ? const Color.fromRGBO(171, 112, 223, 1)
+                  ?  Colors.purpleAccent[700]
                   : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
           InkWell(
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (contex) {
-                return const HomeScreen();
+                return const SettingsScreen();
               }));
             },
             child: Image.asset(
@@ -75,7 +77,7 @@ class BottomNavigation extends StatelessWidget {
               width: 35.19,
               height: 29.07,
               color: active == 4
-                  ? const Color.fromRGBO(65, 172, 120, 1)
+                  ? Colors.orange
                   : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),

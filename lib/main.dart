@@ -1,3 +1,4 @@
+import 'package:education_app/screens/challenges_screen.dart';
 import 'package:education_app/screens/login_screen.dart';
 import 'package:education_app/screens/home_screen.dart';
 import 'package:education_app/screens/profile_screen.dart';
@@ -16,6 +17,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Roboto'),
-        home: const ProfileScreen());
+        home: const ChallengesScreen());
   }
 }

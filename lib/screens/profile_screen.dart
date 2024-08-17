@@ -1,7 +1,7 @@
-import 'package:education_app/widgets/friends_section.dart';
-import 'package:education_app/widgets/invite_friends_card.dart';
-import 'package:education_app/widgets/profile_card.dart';
-import 'package:education_app/widgets/statistics_section.dart';
+import 'package:education_app/widgets/profile/friends_section.dart';
+import 'package:education_app/widgets/profile/invite_friends_card.dart';
+import 'package:education_app/widgets/profile/profile_card.dart';
+import 'package:education_app/widgets/profile/statistics_section.dart';
 import 'package:education_app/widgets/topic/topic_header.dart';
 import 'package:flutter/material.dart';
 
