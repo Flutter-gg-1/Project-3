@@ -32,10 +32,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const YourScore()),
-                  );
+                  (context).goTo(const YourScore());
                 },
                 style: ElevatedButton.styleFrom(
                     minimumSize: const Size(316, 58),
