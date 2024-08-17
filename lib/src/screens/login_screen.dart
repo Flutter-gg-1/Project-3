@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:p_1_kids_game/src/theme/my_color.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -8,9 +9,9 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xffFBF5F2),
+          backgroundColor: MyColor.primaryBG,
         ),
-        backgroundColor: const Color(0xffFBF5F2),
+        backgroundColor: MyColor.primaryBG,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -97,16 +98,16 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
 
                   // Sign Up link
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don’t have account yet?"),
+                      const Text("Don’t have account yet?"),
                       TextButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'Sign Up',
                           style: TextStyle(color: Colors.green),
                         ),
@@ -117,7 +118,7 @@ class LoginScreen extends StatelessWidget {
               ),
 
               // Image
-              // TODO to make image
+              // TODO to make image fill all height
               Expanded(
                 child: SizedBox(
                   // width: 1000,
