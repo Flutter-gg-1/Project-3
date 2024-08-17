@@ -83,12 +83,19 @@ class _YourScoreState extends State<YourScore> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Goals'),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Personal'),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Settings'),
+      bottomNavigationBar: myRowContainer(
+        addItem: [
+          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.home, size: 35)),
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_outward, size: 35)),
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.person, size: 35)),
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.settings, size: 35)),
+          ]),
         ],
       ),
     );
