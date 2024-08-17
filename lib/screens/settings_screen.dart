@@ -1,6 +1,4 @@
-import 'package:education_app/widgets/topic/topic_header.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/home/bottom_navigation.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -8,15 +6,14 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(top: 70),
-        child: TopicHeader(
-          pageName: 'Settings',
-          isTopicPage: false,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Settings',
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
       ),
-      bottomSheet: BottomNavigation(active: 4),
+      bottomSheet: const BottomNavigation(active: 4),
     );
   }
 }

@@ -28,21 +28,21 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             UnitsCard(
                               activityName: 'Logical Reasoning',
-                              score: 18,
+                              crowns: 18,
                             ),
                             SizedBox(
                               height: 30,
                             ),
                             UnitsCard(
                               activityName: 'Artistic Thinking',
-                              score: 35,
+                              crowns: 35,
                             ),
                             SizedBox(
                               height: 30,
                             ),
                             UnitsCard(
                               activityName: 'Verbal Skills',
-                              score: 3,
+                              crowns: 3,
                             ),
                           ],
                         ),

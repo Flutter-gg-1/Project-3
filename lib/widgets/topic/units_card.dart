@@ -4,12 +4,12 @@ import '../../screens/topic_screen.dart';
 
 class UnitsCard extends StatelessWidget {
   final String activityName;
-  final int score;
+  final int crowns;
 
   const UnitsCard({
     super.key,
     required this.activityName,
-    required this.score,
+    required this.crowns,
   });
 
   @override
@@ -38,7 +38,7 @@ class UnitsCard extends StatelessWidget {
                   width: 5,
                 ),
                 Text(
-                  '$score/40',
+                  '$crowns/40',
                   style: const TextStyle(
                       fontSize: 20, color: Color.fromRGBO(0, 0, 0, 0.6)),
                 ),
@@ -52,13 +52,13 @@ class UnitsCard extends StatelessWidget {
         Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
           InkWell(
             onTap: () {
-              if (activityName == 'Verbal Skills') {
-                Navigator.push(context, MaterialPageRoute(builder: (contex) {
-                  return TopicScreen(
-                    score: score,
-                  );
-                }));
-              }
+              Navigator.push(context, MaterialPageRoute(builder: (contex) {
+                return TopicScreen(
+                  topicName: activityName,
+                  crowns: crowns,
+                  diamonds: 213,
+                );
+              }));
             },
             child: Container(
               height: 215,
@@ -76,8 +76,10 @@ class UnitsCard extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       child: GFProgressBar(
-                        leading: Image.asset('assets/images/crown.png'),
-                        percentage: score / 40,
+                        leading: Image.asset(
+                          'assets/images/crown.png',
+                        ),
+                        percentage: crowns / 40,
                         progressBarColor: const Color.fromRGBO(236, 192, 85, 1),
                         lineHeight: 15,
                       ),

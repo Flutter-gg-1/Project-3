@@ -2,26 +2,40 @@ import 'package:flutter/material.dart';
 
 import 'friends_card.dart';
 
-class FriendsSection extends StatelessWidget {
+class FriendsSection extends StatefulWidget {
   const FriendsSection({super.key});
 
+  @override
+  State<FriendsSection> createState() => _FriendsSectionState();
+}
+
+class _FriendsSectionState extends State<FriendsSection> {
+  bool isFollowing = true;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
+            const Text(
               'Friends',
               style: TextStyle(fontSize: 30),
             ),
-            Text(
-              'ADD FRIENDS',
-              style: TextStyle(
-                  fontSize: 20, color: Color.fromRGBO(2, 161, 251, 1)),
+            InkWell(
+              onTap: () {},
+              child: const Text(
+                'ADD FRIENDS',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromRGBO(2, 161, 251, 1)),
+              ),
             ),
           ],
+        ),
+        const SizedBox(
+          height: 8,
         ),
         Container(
           decoration: BoxDecoration(
@@ -29,41 +43,88 @@ class FriendsSection extends StatelessWidget {
             border:
                 Border.all(width: 3, color: const Color.fromRGBO(0, 0, 0, 0.1)),
           ),
-          child: const Column(
+          child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
-                    'FOLLOWING',
-                    style: TextStyle(fontSize: 15),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        isFollowing = true;
+                      });
+                    },
+                    child: Text(
+                      'FOLLOWING',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: isFollowing
+                              ? const Color.fromRGBO(2, 161, 251, 1)
+                              : null),
+                    ),
                   ),
-                  Text(
-                    'FOLLOWERS',
-                    style: TextStyle(fontSize: 15),
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        isFollowing = false;
+                      });
+                    },
+                    child: Text(
+                      'FOLLOWERS',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: !isFollowing
+                              ? const Color.fromRGBO(2, 161, 251, 1)
+                              : null),
+                    ),
                   ),
                 ],
               ),
-              Divider(
-                thickness: 3,
-                color: Color.fromRGBO(2, 161, 251, 1),
+              Container(
+                color: Colors.grey,
+                height: 3,
+                child: Divider(
+                  endIndent: isFollowing ? 178 : null,
+                  indent: !isFollowing ? 178 : null,
+                  thickness: 3,
+                  color: Color.fromRGBO(2, 161, 251, 1),
+                ),
               ),
-              FriendsCard(
-                abbrev: 'H',
-                name: 'Hardi',
-                points: '4367',
-                color: Color.fromRGBO(171, 112, 223, 1),
-              ),
-              Divider(
-          thickness: 3,
-          color: Color.fromRGBO(0, 0, 0, 0.1),
-        ),
-              FriendsCard(
-                abbrev: 'K',
-                name: 'Krishna',
-                points: '2334',
-                color: Color.fromRGBO(223, 112, 112, 1),
-              ),
+              if (isFollowing) ...[
+                const FriendsCard(
+                  abbrev: 'H',
+                  name: 'Hardi',
+                  points: '4367',
+                  color: Color.fromRGBO(171, 112, 223, 1),
+                ),
+                const Divider(
+                  thickness: 3,
+                  color: Color.fromRGBO(0, 0, 0, 0.1),
+                ),
+                const FriendsCard(
+                  abbrev: 'K',
+                  name: 'Krishna',
+                  points: '2334',
+                  color: Color.fromRGBO(223, 112, 112, 1),
+                )
+              ] else ...[
+                const FriendsCard(
+                  abbrev: 'A',
+                  name: 'Abdulaziz',
+                  points: '1000',
+                  color: Color.fromRGBO(171, 112, 223, 1),
+                ),
+                const Divider(
+                  thickness: 3,
+                  color: Color.fromRGBO(0, 0, 0, 0.1),
+                ),
+                const FriendsCard(
+                  abbrev: 'K',
+                  name: 'Khalid',
+                  points: '2024',
+                  color: Color.fromRGBO(223, 112, 112, 1),
+                )
+              ],
             ],
           ),
         )

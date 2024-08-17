@@ -17,6 +17,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(fontFamily: 'Roboto'),
-        home: const ChallengesScreen());
+        home: const LoginScreen());
   }
 }

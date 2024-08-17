@@ -6,27 +6,29 @@ class TopicHeader extends StatelessWidget {
     'assets/images/crown.png',
     'assets/images/diamond.png'
   ];
-  final List<String>? points;
-  final bool isTopicPage;
-  const TopicHeader({super.key, required this.pageName, this.points, this.isTopicPage=true});
+  final List<int>? points;
+  const TopicHeader({super.key, required this.pageName, this.points});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 21, horizontal: 25),
       height: 80,
+      width: 428,
       color: const Color.fromRGBO(196, 196, 196, 0.4),
       child: Row(
-        mainAxisAlignment: isTopicPage ? MainAxisAlignment.spaceBetween : MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            pageName,
-            style: const TextStyle(
-                color: Color.fromRGBO(0, 0, 0, 0.9),
-                fontSize: 30,
-                fontWeight: FontWeight.w400),
+          Expanded(
+            child: Text(
+              pageName,
+              style: const TextStyle(
+                  color: Color.fromRGBO(0, 0, 0, 0.9),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w400),
+            ),
           ),
-          if(isTopicPage)
           Row(
             children: [
               Image.asset(
@@ -38,7 +40,7 @@ class TopicHeader extends StatelessWidget {
                 width: 5,
               ),
               Text(
-                points![0],
+                '${points![0]}',
                 style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -56,7 +58,7 @@ class TopicHeader extends StatelessWidget {
                 width: 5,
               ),
               Text(
-                points![1],
+                '${points![1]}',
                 style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,

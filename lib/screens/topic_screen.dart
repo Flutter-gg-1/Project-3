@@ -4,62 +4,70 @@ import 'package:education_app/widgets/topic/topic_header.dart';
 import 'package:flutter/material.dart';
 
 class TopicScreen extends StatelessWidget {
-  final int score;
-  const TopicScreen({super.key, required this.score});
+  final String topicName;
+  final int crowns;
+  final int diamonds;
+
+  const TopicScreen({super.key,required this.topicName, required this.crowns, required this.diamonds});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(251, 245, 242, 1),
         body: Padding(
             padding: const EdgeInsets.only(top: 70),
             child: Column(children: [
-              const TopicHeader(pageName: 'Verbal Skills', points: ['3', '213']),
+               TopicHeader(
+                  pageName: topicName, points: [crowns, diamonds]),
               Expanded(
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      SubjectCard(score: score),
-                      const SubjectCircle(
-                          imagePath: 'assets/images/pencil.png',
-                          label: 'Intro'),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SubjectCircle(
-                              imagePath: 'assets/images/book.png',
-                              label: 'Phrases'),
-                          SizedBox(
-                            width: 17,
-                          ),
-                          SubjectCircle(
-                              imagePath: 'assets/images/bike.png',
-                              label: 'Travel'),
-                        ],
-                      ),
-                      const SubjectCircle(
-                        isLocked: true,
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SubjectCircle(
-                            isLocked: true,
-                          ),
-                          SizedBox(
-                            width: 17,
-                          ),
-                          SubjectCircle(
-                            isLocked: true,
-                          ),
-                        ],
-                      )
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 100),
+                    child: Column(
+                      children: [
+                        SubjectCard(crowns: crowns),
+                        const SubjectCircle(
+                            imagePath: 'assets/images/pencil.png',
+                            label: 'Intro'),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SubjectCircle(
+                                imagePath: 'assets/images/book.png',
+                                label: 'Phrases'),
+                            SizedBox(
+                              width: 17,
+                            ),
+                            SubjectCircle(
+                                imagePath: 'assets/images/bike.png',
+                                label: 'Travel'),
+                          ],
+                        ),
+                        const SubjectCircle(
+                          isLocked: true,
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SubjectCircle(
+                              isLocked: true,
+                            ),
+                            SizedBox(
+                              width: 17,
+                            ),
+                            SubjectCircle(
+                              isLocked: true,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               )

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
 class SubjectCard extends StatelessWidget {
-  final int score;
-  const SubjectCard({super.key, required this.score});
+  final int crowns;
+  const SubjectCard({super.key, required this.crowns});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class SubjectCard extends StatelessWidget {
                           Expanded(
                             child: GFProgressBar(
                               leading: Image.asset('assets/images/crown.png'),
-                              percentage: score / 40,
+                              percentage: crowns / 40,
                               progressBarColor:
                                   const Color.fromRGBO(236, 192, 85, 1),
                               lineHeight: 15,
@@ -42,7 +42,7 @@ class SubjectCard extends StatelessWidget {
                             width: 10,
                           ),
                           Text(
-                            '$score/40',
+                            '$crowns/40',
                             style: const TextStyle(
                                 fontSize: 15,
                                 color: Color.fromRGBO(0, 0, 0, 0.6)),

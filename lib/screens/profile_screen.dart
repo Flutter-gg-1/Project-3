@@ -17,10 +17,21 @@ class ProfileScreen extends StatelessWidget {
         body: Padding(
             padding: const EdgeInsets.only(top: 70),
             child: Column(children: [
-              const TopicHeader(
-                pageName: 'Profile',
-                isTopicPage: false,
-              ),
+              Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 21, horizontal: 25),
+                  height: 80,
+                  width: 428,
+                  color: const Color.fromRGBO(196, 196, 196, 0.4),
+                  child: const Center(
+                    child: Text(
+                      'Profile',
+                      style: TextStyle(
+                          color: Color.fromRGBO(0, 0, 0, 0.9),
+                          fontSize: 30,
+                          fontWeight: FontWeight.w400),
+                    ),
+                  )),
               const ProfileCard(
                   name: 'Nidhi Pandya',
                   username: 'Nidhi12',
@@ -63,7 +74,7 @@ class ProfileScreen extends StatelessWidget {
                           ),
                           const StatisticsSection(),
                           const SizedBox(
-                            height: 10,
+                            height: 20,
                           ),
                           const FriendsSection(),
                           const SizedBox(
