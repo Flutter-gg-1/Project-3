@@ -105,7 +105,7 @@ class _YourScoreState extends State<YourScore> {
                     size: 35, color: ColorPallete.colorLightRed)),
             IconButton(
                 onPressed: () {
-                  (context).goTo(const YourScore());
+                  (context).goTo(const ProfileClass());
                 },
                 icon: const Icon(Icons.person,
                     size: 35, color: ColorPallete.colorPurple)),
