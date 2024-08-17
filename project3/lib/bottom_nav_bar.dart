@@ -52,18 +52,4 @@ class BottomNavBarItem {
   });
 }
 
- // جمعت كل كومنت هنا 
- 
-// تم إنشاء فئة CustomBottomNavBar كـ StatelessWidget لعرض شريط التنقل السفلي المخصص
-// يتم تمرير currentIndex لتحديد العنصر النشط حالياً في شريط التنقل
 
-
-// داخل دالة build، يتم استخدام BottomNavigationBar كعنصر رئيسي لعرض شريط التنقل السفلي
-
-// يتم تحويل قائمة items إلى قائمة BottomNavigationBarItem باستخدام map
-// لكل عنصر في items، يتم عرض الأيقونة باستخدام SvgPicture.asset مع ضبط اللون بناءً على ما إذا كان العنصر نشطاً أم لا
-// يتم تعيين selectedItemColor لتحديد لون العنصر النشط
-// يتم تعيين unselectedItemColor لتحديد لون العناصر غير النشطة
-// يتم تفعيل عرض النصوص لكل من العناصر النشطة وغير النشطة عن طريق  showUnselectedLabels و showSelectedLabels
-
-// يتضمن كل عنصر مسار الأيقونة (iconPath) والعنوان (label) والألوان (selectedColor و unselectedColor) لكل من الحالات النشطة وغير النشطة
