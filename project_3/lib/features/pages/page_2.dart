@@ -26,17 +26,20 @@ class _YourScoreState extends State<YourScore> {
             Column(
               children: [
                 const SizedBox(height: 25),
-                myRowContainer(addItem: [
-                  Image.asset('assets/fire.png'),
-                  Image.asset('assets/xp.png'),
-                  Image.asset('assets/heart.png'),
-                ], mainAxisAlignment: MainAxisAlignment.spaceEvenly),
+                myRowContainer(
+                  addItem: [
+                    Image.asset('assets/fire.png'),
+                    Image.asset('assets/xp.png'),
+                    Image.asset('assets/heart.png'),
+                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                ),
                 const SizedBox(height: 25),
                 for (int i = 0; i < titleName.length; i++)
                   Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
+                        padding: const EdgeInsets.symmetric(horizontal: 1),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -89,6 +92,7 @@ class _YourScoreState extends State<YourScore> {
         ),
       ),
       bottomNavigationBar: myRowContainer(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         addItem: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             IconButton(

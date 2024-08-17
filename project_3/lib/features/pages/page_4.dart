@@ -208,6 +208,71 @@ class ProfileClass extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 15),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text('Friends', style: TextStyle(fontSize: 30)),
+                  Text('ADD FRIENDS',
+                      style: TextStyle(
+                          fontSize: 20, color: ColorPallete.colorBlue)),
+                ],
+              ),
+              const SizedBox(height: 15),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  border:
+                      Border.all(color: ColorPallete.colorDarkGrey, width: 2),
+                  color: ColorPallete.colorWhite,
+                ),
+                width: 377,
+                height: 210,
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25 / 2),
+                  child: Column(
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text('FOLLOWING',
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: ColorPallete.colorBlue,
+                                      fontWeight: FontWeight.bold)),
+                              Text('FOLLOWERS', style: TextStyle(fontSize: 15)),
+                            ],
+                          ),
+                          Divider(),
+                          ListTile(
+                              leading: CircleAvatar(
+                                radius: 20,
+                                backgroundImage: NetworkImage(
+                                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'),
+                              ),
+                              title: Text('Krishna',
+                                  style: TextStyle(fontSize: 20)),
+                              subtitle: Text('2334 XP'),
+                              trailing: Icon(Icons.arrow_forward_ios)),
+                          Divider(),
+                          ListTile(
+                              leading: CircleAvatar(
+                                radius: 20,
+                                backgroundImage: NetworkImage(
+                                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'),
+                              ),
+                              title:
+                                  Text('Hardi', style: TextStyle(fontSize: 20)),
+                              subtitle: Text('4367 XP'),
+                              trailing: Icon(Icons.arrow_forward_ios)),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 15),
             ],
           ),
         ),
