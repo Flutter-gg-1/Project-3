@@ -22,7 +22,7 @@ class BottomNavigation extends StatelessWidget {
         destinations: [
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (contex) {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (contex) {
                 return const HomeScreen();
               }));
             },
@@ -37,7 +37,7 @@ class BottomNavigation extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (contex) {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (contex) {
                 return const ChallengesScreen();
               }));
             },
@@ -52,7 +52,7 @@ class BottomNavigation extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (contex) {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (contex) {
                 return const ProfileScreen();
               }));
             },
@@ -67,7 +67,7 @@ class BottomNavigation extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (contex) {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (contex) {
                 return const SettingsScreen();
               }));
             },
