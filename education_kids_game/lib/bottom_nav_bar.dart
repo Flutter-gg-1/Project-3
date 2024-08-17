@@ -17,7 +17,7 @@ class _ButtomNavBarState extends State<ButtomNavBar> {
   List<Widget> myWidget = [
     const HomeScreen(),
     const ChallengesScreen(),
-    ProfileScreen(),
+    const ProfileScreen(),
     const SettingsScreen()
   ];
   @override
