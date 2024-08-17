@@ -92,14 +92,28 @@ class _YourScoreState extends State<YourScore> {
         addItem: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.home, size: 35)),
+                onPressed: () {
+                  (context).goTo(const YourScore());
+                },
+                icon: const Icon(Icons.home,
+                    size: 35, color: ColorPallete.colorLightGreen)),
             IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_outward, size: 35)),
+                onPressed: () {
+                  (context).goTo(const VerbalSkills());
+                },
+                icon: const Icon(Icons.arrow_outward,
+                    size: 35, color: ColorPallete.colorLightRed)),
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.person, size: 35)),
+                onPressed: () {
+                  (context).goTo(const YourScore());
+                },
+                icon: const Icon(Icons.person,
+                    size: 35, color: ColorPallete.colorPurple)),
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.settings, size: 35)),
+                onPressed: () {
+                  (context).goTo(const YourScore());
+                },
+                icon: const Icon(Icons.settings, size: 35)),
           ]),
         ],
       ),
