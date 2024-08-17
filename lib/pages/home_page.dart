@@ -1,4 +1,4 @@
-import 'package:educational_kids_project/pages/verbal_skills.dart';
+import 'package:educational_kids_project/pages/verbal_skills_page.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 
