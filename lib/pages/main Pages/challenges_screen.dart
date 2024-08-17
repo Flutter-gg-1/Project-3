@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ChallengesScreen extends StatelessWidget {
   const ChallengesScreen({super.key});
@@ -26,10 +25,10 @@ class ChallengesScreen extends StatelessWidget {
             ),
             borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
-          child: const ListTile(
-            leading: CircleAvatar(),
-            title: Text("Complete 1000 word streak"),
-            subtitle: Text("Win 1000XP along with 300 diamonds."),
+          child: ListTile(
+            leading: Image.asset("assets/Group.png"),
+            title: const Text("Complete 1000 word streak"),
+            subtitle: const Text("Win 1000XP along with 300 diamonds."),
           ),
         ),
         const Row(
@@ -46,10 +45,11 @@ class ChallengesScreen extends StatelessWidget {
             ),
             borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
-          child: const ListTile(
-            leading: CircleAvatar(),
-            title: Text("Lorem Ipsum "),
-            subtitle: Text(
+          child: ListTile(
+            leading:
+                Image.asset("assets/Stuck at Home Vertical Painting 1.png"),
+            title: const Text("Lorem Ipsum "),
+            subtitle: const Text(
                 "is simply dummy text of the printing and typesetting industry."),
           ),
         ),
@@ -63,10 +63,10 @@ class ChallengesScreen extends StatelessWidget {
             ),
             borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
-          child: const ListTile(
-            leading: CircleAvatar(),
-            title: Text("Lorem Ipsum "),
-            subtitle: Text(
+          child: ListTile(
+            leading: Image.asset("assets/Pebble People Plant 2.png"),
+            title: const Text("Lorem Ipsum "),
+            subtitle: const Text(
                 "is simply dummy text of the printing and typesetting industry."),
           ),
         ),
@@ -80,10 +80,10 @@ class ChallengesScreen extends StatelessWidget {
             ),
             borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
-          child: const ListTile(
-            leading: CircleAvatar(),
-            title: Text("Lorem Ipsum "),
-            subtitle: Text(
+          child: ListTile(
+            leading: Image.asset("assets/Pebble People Basketball.png"),
+            title: const Text("Lorem Ipsum "),
+            subtitle: const Text(
                 "is simply dummy text of the printing and typesetting industry."),
           ),
         ),
