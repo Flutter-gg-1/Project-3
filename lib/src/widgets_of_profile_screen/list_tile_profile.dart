@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ListTileProfileWidget extends StatelessWidget {
-  final Text title;
-  final Text subtitle;
-  final Icon icon;
+  final String title;
+  final String subtitle;
+  final Image icon;
   const ListTileProfileWidget({super.key, required this.icon, required this.subtitle, required this.title});
 
   @override
@@ -14,10 +15,11 @@ class ListTileProfileWidget extends StatelessWidget {
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
                 border: Border.all(color: const Color(0xffE5E5E5), width: 3)),
                 child: ListTile(
-                  leading: icon,
-                  title: title,
-                  // style: TextStyle(fontSize: 18, color: Color.fromARGB(255, 0, 0, 0))),
-                  subtitle: subtitle,
+                  leading: FittedBox(
+                    fit: BoxFit.none,
+                    child: icon),
+                  title: Text(title, style:GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20)),),
+                  subtitle: Text(subtitle, style: GoogleFonts.roboto(textStyle: const TextStyle(fontSize: 10))),
                 ),
               );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'widgets_of_verbal_skill_screen/circle_containers.dart';
 
@@ -8,119 +9,168 @@ class VerbalSkillScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfffbf5f2),
-      appBar: AppBar(
-          automaticallyImplyLeading: false,
-          backgroundColor: Colors.transparent,
-          bottom: PreferredSize(
-              preferredSize: const Size.fromHeight(75),
-              child: Container(
-                height: 71,
-                width: 428,
-                color: const Color(0xffE5E5E5),
-                child: Row(
-                  children: [
-                    const Padding(padding: EdgeInsets.only(left: 47)),
-                    const Text(
-                      "Verbal skills",
-                      style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 24),
-                    ),
-                    const Padding(padding: EdgeInsets.only(left: 60)),
-                    Image.asset(
-                      'assets/home_screen_icons/crown.png',
-                      width: 25,
-                    ),
-                    const Padding(padding: EdgeInsets.only(left: 10)),
-                    const Text(
-                      "3",
-                      style: TextStyle(color: Color(0xffEB9F4A), fontSize: 20),
-                    ),
-                    const Padding(padding: EdgeInsets.only(left: 10)),
-                    const Icon(
-                      Icons.diamond,
-                      color: Color(0xff02A1FB),
-                      size: 35,
-                    ),
-                    const Padding(padding: EdgeInsets.only(left: 10)),
-                    const Text(
-                      "213",
-                      style: TextStyle(color: Color(0xff02A1FB), fontSize: 20),
-                    ),
-                  ],
-                ),
-              ))),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Stack(
-                alignment: Alignment.topCenter,
-                children: [
-                  Container(
-                          width: 211,
-                          height: 128,
-                          decoration: BoxDecoration(
-                            color: const Color(0xffE5E5E5),
-                            borderRadius: BorderRadius.circular(20),
-                            border:  Border.all(color: const Color.fromARGB(255, 135, 133, 133), width: 3)
-                          ),
-                          margin: const EdgeInsets.symmetric(vertical: 70, horizontal: 100),
-                          padding: const EdgeInsets.only(top: 50),
-                          child: Column(
+        backgroundColor: const Color(0xfffbf5f2),
+        appBar: AppBar(
+            automaticallyImplyLeading: false,
+            backgroundColor: Colors.transparent,
+            bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(75),
+                child: Container(
+                  height: 71,
+                  width: 428,
+                  color: const Color(0xffE5E5E5),
+                  child: Row(
+                    children: [
+                      const Padding(padding: EdgeInsets.only(left: 47)),
+                      Text(
+                        "Verbal skills",
+                        style: GoogleFonts.roboto(textStyle: const TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0), fontSize: 26)),
+                      ),
+                      const Padding(padding: EdgeInsets.only(left: 60)),
+                      Image.asset(
+                        'assets/home_screen_icons/crown.png',
+                        width: 29,
+                        height: 27,
+                      ),
+                      const Padding(padding: EdgeInsets.only(left: 10)),
+                      Text(
+                        "3",
+                        style:
+                            GoogleFonts.roboto(textStyle:const TextStyle(color: Color(0xffEB9F4A), fontSize: 20),)
+                      ),
+                      const Padding(padding: EdgeInsets.only(left: 10)),
+                      const Icon(
+                        Icons.diamond,
+                        color: Color(0xff02A1FB),
+                        size: 35,
+                      ),
+                      const Padding(padding: EdgeInsets.only(left: 10)),
+                      Text(
+                        "213",
+                        style:
+                            GoogleFonts.roboto(textStyle:const TextStyle(color: Color(0xff02A1FB), fontSize: 20),)
+                      ),
+                    ],
+                  ),
+                ))),
+        body: SafeArea(
+            child: ListView(
+          children: [
+            Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                Container(
+                  width: 211,
+                  height: 128,
+                  decoration: BoxDecoration(
+                      color: const Color(0xffE5E5E5),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                          color: const Color.fromARGB(255, 135, 133, 133),
+                          width: 3)),
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 70, horizontal: 100),
+                  padding: const EdgeInsets.only(top: 50),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Unit 1",
+                        style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20)),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Stack(
+                            alignment: Alignment.bottomLeft,
                             children: [
-                              const Text("Unit 1", style: TextStyle(fontSize: 24),),
-                              //const Padding(padding: EdgeInsets.only(top: 5)),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Stack(
-                                    alignment: Alignment.bottomLeft,
-                                    children: [
-                                      ClipRRect(
-                                        borderRadius: BorderRadius.circular(30),
-                                        child: Container(
-                                          width: 100,
-                                          height: 14,
-                                          color: const Color(0xffC4C4C4),
-                                          child: const LinearProgressIndicator(
-                                            value: 0.2,
-                                            valueColor: AlwaysStoppedAnimation<Color>(Color(0xffECC055)),
-                                            backgroundColor: Color(0xffC4C4C4),
-                                          ),
-                                        ),
-                                      ),
-                                      Image.asset('assets/home_screen_icons/crown.png',width: 30, height: 30, alignment: const Alignment(-18,1),),
-                                    ],
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30),
+                                child: Container(
+                                  width: 100,
+                                  height: 14,
+                                  color: const Color(0xffC4C4C4),
+                                  child: const LinearProgressIndicator(
+                                    value: 0.2,
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                        Color(0xffECC055)),
+                                    backgroundColor: Color(0xffC4C4C4),
                                   ),
-                                  const Text("3/40", style: TextStyle(fontSize: 15)),
-                                ],
-                              )
+                                ),
+                              ),
+                              Image.asset(
+                                'assets/home_screen_icons/crown.png',
+                                width: 31,
+                                height: 27,
+                                alignment: const Alignment(5, 1),
+                              ),
                             ],
                           ),
-                        ),
-                        SizedBox(
-                          height: 140,
-                          child: Image.asset('assets/verbal_skill_icons/Horse.png')),
-                ],
-              ),
-              const CircleContainers(photoPath: 'assets/verbal_skill_icons/Pencil 1.png'),
-              const Text("Intro"),
-              const Row(
-                children: [
-                  Expanded(child: CircleContainers(photoPath: 'assets/verbal_skill_icons/Book.png')),
-                  Expanded(child: CircleContainers(photoPath: 'assets/verbal_skill_icons/Bike.png',)),
-                ],
-              ),
-              const CircleContainers(photoPath: 'assets/home_screen_icons/lock.png',),
-              const Row(
-                children: [
-                  Expanded(child: CircleContainers(photoPath: 'assets/home_screen_icons/lock.png')),
-                  Expanded(child: CircleContainers(photoPath: 'assets/home_screen_icons/lock.png')),
-                ],
-              )
-            ],
-          ),
-        ))
-    );
+                          Text("3/40",style: GoogleFonts.roboto(textStyle:  TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.5)))),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                    height: 140,
+                    child: Image.asset('assets/verbal_skill_icons/Horse.png')),
+            
+                    const Padding(
+                      padding: EdgeInsets.only(top: 250),
+                      child: CircleContainers(photoPath: 'assets/verbal_skill_icons/Pencil 1.png'),
+                    ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 430),
+                  child: Text("Intro", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20, color: Colors.black),),)
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 375, left: 110),
+                  child: Text("1", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 15),)),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 430),
+                  child: Row(
+                    children: [
+                      CircleContainers(photoPath: 'assets/verbal_skill_icons/Book.png'),
+                      CircleContainers(photoPath: 'assets/verbal_skill_icons/Bike.png',),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 610, right: 220),
+                  child: Text("Phrases", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20,color: Colors.black ),),)
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 555, left: 310),
+                  child: Text("1", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 15),),)
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 610, left: 210),
+                  child: Text("Travel", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20, color: Colors.black),),)
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 555, right: 110),
+                  child: Text("1", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 15),),)
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 606),
+                  child: CircleContainers(photoPath: 'assets/home_screen_icons/lock.png',),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 784),
+                  child: Row(
+                    children: [
+                      CircleContainers(photoPath: 'assets/home_screen_icons/lock.png'),
+                      CircleContainers(photoPath: 'assets/home_screen_icons/lock.png'),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ],
+        )));
   }
 }
+
+

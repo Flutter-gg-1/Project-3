@@ -11,12 +11,12 @@ class LockContainer extends StatelessWidget {
                     width: 179,
                     height: 227,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 217, 217, 217),
+                      color: const Color(0xffC4C4C4).withOpacity(0.4),
                       borderRadius: BorderRadius.circular(20)
                     ),
                     margin: const EdgeInsets.only(left: 24),
                     child: Center(
-                      child: Image.asset('assets/home_screen_icons/lock.png'),
+                      child: Image.asset('assets/home_screen_icons/lock.png', width: 47, height: 59,),
                     ),
                   )
                 ],

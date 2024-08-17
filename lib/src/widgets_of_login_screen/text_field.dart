@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TextFieldWidget extends StatelessWidget {
   final String hintMessege;
@@ -16,7 +17,7 @@ class TextFieldWidget extends StatelessWidget {
                     )
                   ),
                   filled: true,
-                  label:  Text(hintMessege, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                  label:  Text(hintMessege, style: GoogleFonts.roboto(textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
                   labelStyle: const TextStyle(color: Color(0xff999999)),
                   fillColor: const Color(0xffFFFFFF)
 

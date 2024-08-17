@@ -21,10 +21,10 @@ class _ButtomNavigationBarScreenState extends State<ButtomNavigationBarScreen> {
   ];
 
   final _iconColors = [
-    Color(0xff41AC78),
-    Color(0xffDC3F00),
-    Color(0xffAB70DF),
-    Color(0xff6884F6)
+    const Color(0xff41AC78),
+    const Color(0xffDC3F00),
+    const Color(0xffAB70DF),
+    const Color(0xff6884F6)
   ];
 
   void _onItemTapped(int index) {

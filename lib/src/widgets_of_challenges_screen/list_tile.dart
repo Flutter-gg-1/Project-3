@@ -10,7 +10,7 @@ class ListTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
               margin: const EdgeInsets.only(left: 24, right: 26),
-              alignment: Alignment.center,
+              padding: const EdgeInsets.only(left: 50, right: 20),
               height: 116,
               width: 378,
               decoration: BoxDecoration(
@@ -18,7 +18,10 @@ class ListTileWidget extends StatelessWidget {
                   color: Colors.transparent,
                   border: Border.all(color: const Color(0xffE5E5E5), width: 3)),
               child: ListTile(
-                leading: photo,
+                leading: FittedBox(
+                  alignment: const Alignment(1, 0), 
+                  fit: BoxFit.none,
+                  child: photo),
                 title: title,
                 subtitle: subtitle,
               ),

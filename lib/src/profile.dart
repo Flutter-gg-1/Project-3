@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
-import 'package:icons_plus/icons_plus.dart';
+import 'widgets_of_profile_screen/friends_list_tile.dart';
+import 'widgets_of_profile_screen/invite_friends.dart';
 import 'widgets_of_profile_screen/list_tile_profile.dart';
+import 'widgets_of_profile_screen/profile_info.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -31,45 +33,7 @@ class Profile extends StatelessWidget {
           child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 151,
-              width: 428,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        "Nidhi Pandya",
-                        style: TextStyle(fontSize: 26, color: Colors.black),
-                      ),
-                      Text(
-                        "Nidhi12",
-                        style: TextStyle(
-                            fontSize: 16, color: Colors.black.withOpacity(0.5)),
-                      ),
-                      const Row(
-                        children: [
-                          Icon(
-                            Icons.watch_later,
-                            color: Color.fromARGB(255, 116, 114, 114),
-                            size: 15,
-                          ),
-                          Padding(padding: EdgeInsets.only(left: 6)),
-                          Text("Joined March 2022",
-                              style:
-                                  TextStyle(fontSize: 11, color: Colors.black))
-                        ],
-                      )
-                    ],
-                  ),
-                  Image.asset('assets/profile_icons/profilePic.png'),
-                ],
-              ),
-            ),
+            const ProfileInfo(),
             const Divider(),
             Container(
               height: 69,
@@ -94,34 +58,34 @@ class Profile extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 12,),
-            const Row(
+             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ListTileProfileWidget(
-                  title: Text("3", style: TextStyle(fontSize: 20),),
-                  icon: Icon(HeroIcons.fire, color: Color(0xffEB9F4A), size: 40,) ,
-                  subtitle: Text("Day Streak", style: TextStyle(fontSize: 12),),
+                  title: "3",
+                  icon: Image.asset('assets/home_screen_icons/fire.png'),
+                  subtitle: "Day Streak"
                 ),
                 ListTileProfileWidget(
-                  title: Text("1432", style: TextStyle(fontSize: 20),),
-                  icon: Icon(Icons.bolt_outlined, color: Color(0xffECC055), size: 40,),
-                  subtitle: Text("Total XP", style: TextStyle(fontSize: 12),),
+                  title: "1432",
+                  icon: Image.asset('assets/profile_icons/bolt.png'),
+                  subtitle: "Total XP",
                 ),
               ],
             ),
             const Padding(padding: EdgeInsets.only(bottom: 16)),
-            const Row(
+             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ListTileProfileWidget(
-                  title: Text("Bronze", style: TextStyle(fontSize: 20),),
-                  icon: Icon(FontAwesome.medal_solid),
-                  subtitle: Text("Current League", style: TextStyle(fontSize: 12),),
+                  title: "Bronze",
+                  icon: Image.asset('assets/profile_icons/noto_3rd-place-medal.png'),
+                  subtitle: "Current League",
                 ),
                 ListTileProfileWidget(
-                  title: Text("0", style: TextStyle(fontSize: 20),),
-                  icon: Icon(FontAwesome.medal_solid),
-                  subtitle: Text("Top 3 Finishes", style: TextStyle(fontSize: 12),),
+                  title: "0",
+                  icon: Image.asset('assets/profile_icons/bx_medal.png'),
+                  subtitle: "Top 3 Finishes",
                 ),
               ],
             ),
@@ -156,114 +120,26 @@ class Profile extends StatelessWidget {
                   views: const [
                     Column(
                       children: [
-                        ListTile(
-                          leading: CircleAvatar(
-                            backgroundColor: Color(0xffAB70DF),
-                            child: Text('H', style: TextStyle(color: Color(0xffffffff), fontSize: 15),),
-                          ),
-                          title: Text("Hardi",
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Color.fromARGB(255, 0, 0, 0))),
-                          subtitle: Text("4367 XP"),
-                          trailing: Icon(Icons.arrow_forward_ios_rounded),
-                        ),
+                        FriendsListTile(letter: 'H', subtitle: '4367 XP', title: 'Hardi', color: Color(0xffAB70DF),),
                         Divider(),
-                        ListTile(
-                          leading: CircleAvatar(
-                            backgroundColor: Color(0xffDF7070),
-                            child: Text('K', style: TextStyle(color: Color(0xffffffff), fontSize: 15)),
-                          ),
-                          title: Text("Krishna",
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  color: Color.fromARGB(255, 0, 0, 0))),
-                                  subtitle: Text("2334 XP"),
-                          trailing: Icon(Icons.arrow_forward_ios_rounded),
-                        ),
+                        FriendsListTile(letter: 'K', subtitle: '2334 XP', title: 'Krishna', color: Color(0xffDF7070),),
                       ],
                     ),
                     Column(
                       children: [
-                        ListTile(
-                          leading: CircleAvatar(
-                            backgroundColor: Color(0xffAB70DF),
-                            child: Text('H', style: TextStyle(color: Color(0xffffffff), fontSize: 15),),
-                          ),
-                          title: Text("Hardi",
-                              style: TextStyle(
-                                  fontSize: 24,
-                                  color: Color.fromARGB(255, 0, 0, 0))),
-                          subtitle: Text("4367 XP"),
-                          trailing: Icon(Icons.arrow_forward_ios_rounded),
-                        ),
+                        FriendsListTile(letter: 'H', subtitle: '4367 XP', title: 'Hardi', color: Color(0xffAB70DF),),
                         Divider(),
-                        ListTile(
-                          leading: CircleAvatar(
-                            backgroundColor: Color(0xffDF7070),
-                            child: Text('K', style: TextStyle(color: Color(0xffffffff), fontSize: 15)),
-                          ),
-                          title: Text("Krishna",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  color: Color.fromARGB(255, 0, 0, 0))),
-                                  subtitle: Text("2334 XP"),
-                          trailing: Icon(Icons.arrow_forward_ios_rounded),
-                        ),
+                        FriendsListTile(letter: 'K', subtitle: '2334 XP', title: 'Krishna', color: Color(0xffDF7070),),
                       ],
                     ),
                   ],
-                  onChange: (index) => print(index),
                 ),
               ),
             ),
             const SizedBox(
               height: 28,
             ),
-            Container(
-              height: 228,
-              width: 378,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: const Color(0xffE5E5E5), width: 3)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ListTile(
-                    leading: Image.asset('assets/profile_icons/Cat.png', width: 120,height: 116, fit: BoxFit.fill,),
-                    title: const Text("Invite your friends",
-                        style: TextStyle(
-                            fontSize: 20, color: Color.fromARGB(255, 0, 0, 0), fontWeight: FontWeight.w500)),
-                    subtitle: const Text(
-                        "Tell your friends it’s free and fun to learn on Mental up!", style: TextStyle(
-                            fontSize: 20, color: Color.fromARGB(255, 0, 0, 0))),
-                  ),
-                  Container(
-                    height: 47,
-                    width: 321,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: const Color(0xff02A1FB), 
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Color(0xff02A1FB),
-                            blurRadius: 4,
-                            offset: Offset(0, 2)
-                          )
-                        ]),
-                    child: const Center(
-                      child: Text(
-                        "INVITE FRIENDS",
-                        style: TextStyle(
-                            color: Color(0xffFFFFFF),
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
+            const InviteFriends(),
           ],
         ),
       )),

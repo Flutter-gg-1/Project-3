@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'widgets_of_home_screen/unit1.dart';
 
@@ -26,9 +27,9 @@ class HomeScreen extends StatelessWidget {
                       width: 25,
                     ),
                     const Padding(padding: EdgeInsets.only(left: 10)),
-                    const Text(
+                     Text(
                       "3",
-                      style: TextStyle(color: Color(0xffEB9F4A), fontSize: 20),
+                      style: GoogleFonts.roboto(textStyle:const TextStyle(color: Color(0xffEB9F4A), fontSize: 20)),
                     ),
                     const Padding(padding: EdgeInsets.only(left: 50)),
                     Image.asset(
@@ -36,9 +37,9 @@ class HomeScreen extends StatelessWidget {
                       width: 25,
                     ),
                     const Padding(padding: EdgeInsets.only(left: 10)),
-                    const Text(
+                    Text(
                       "1432 XP",
-                      style: TextStyle(color: Color(0xff338F9B), fontSize: 20),
+                      style: GoogleFonts.roboto(textStyle:const TextStyle(color: Color(0xff338F9B), fontSize: 20)),
                     ),
                     const Padding(padding: EdgeInsets.only(left: 50)),
                     const Icon(
@@ -58,38 +59,44 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              const SizedBox(height: 53,),
               Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Padding(padding: EdgeInsets.only(top: 80, left: 10)),
-                const Text("Logical reasoning" , style: TextStyle(fontSize: 30),),
+                const SizedBox(width: 20,),
+                Text("Logical reasoning" , style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 30),)),
                 const Padding(padding: EdgeInsets.only(left: 30, right: 20)),
                 Image.asset('assets/home_screen_icons/crown.png', width: 25,),
-                const Text("18/40", style: TextStyle(fontSize: 15)),
+                Text("18/40", style:GoogleFonts.roboto(textStyle: TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.6)))),
                 const Padding(padding: EdgeInsets.only(left: 30,)),
               ],),
+              const SizedBox(height: 10,),
               const Unit1(value: 0.45,),
+              const SizedBox(height: 30,),
               Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Padding(padding: EdgeInsets.only(top: 80, left: 10)),
-                const Text("Artistic thinking" , style: TextStyle(fontSize: 30),),
+                const SizedBox(width: 10,),
+                Text("Artistic thinking" , style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 30),)),
                 const Padding(padding: EdgeInsets.only(left: 30, right: 20)),
                 Image.asset('assets/home_screen_icons/crown.png', width: 25,),
-                const Text("35/40", style: TextStyle(fontSize: 15)),
+                Text("35/40", style: GoogleFonts.roboto(textStyle:TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.6)))),
                 const Padding(padding: EdgeInsets.only(left: 30,)),
               ],),
+              const SizedBox(height: 10,),
               const Unit1(value: 0.8,),
+              const SizedBox(height: 35,),
               Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const Padding(padding: EdgeInsets.only(top: 80, left: 10)),
-                const Text("Verbal skills" , style: TextStyle(fontSize: 30),),
+                const SizedBox(width: 10,),
+                Text("Verbal skills" , style:GoogleFonts.roboto(textStyle: const TextStyle(fontSize: 30),)),
                 const Padding(padding: EdgeInsets.only(left: 60, right: 40)),
                 Image.asset('assets/home_screen_icons/crown.png', width: 25,),
-                const Text("3/40", style: TextStyle(fontSize: 15)),
+                Text("3/40", style: GoogleFonts.roboto(textStyle:TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.6)))),
                 const Padding(padding: EdgeInsets.only(left: 30,)),
               ],),
+              const SizedBox(height: 10,),
               const Unit1(value: 0.2,),
             ],
           ),

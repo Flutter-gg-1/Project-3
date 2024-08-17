@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:project3/src/buttom_navigation_bar_screen.dart';
 import 'package:project3/src/widgets_of_login_screen/rich_text.dart';
 import 'package:project3/src/widgets_of_login_screen/text_field.dart';
@@ -32,9 +33,9 @@ class LogInScreen extends StatelessWidget {
             const Padding(padding: EdgeInsets.only(top: 25)),
             Container(
               margin: const EdgeInsets.only(left: 170),
-              child: const Text(
+              child: Text(
                 "Forgot Password?",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: GoogleFonts.roboto(textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               ),
             ),
             const Padding(padding: EdgeInsets.only(top: 24)),
@@ -50,24 +51,24 @@ class LogInScreen extends StatelessWidget {
                 style: ButtonStyle(
                     backgroundColor:
                         WidgetStateProperty.all(const Color(0xffEB9F4A))),
-                child: const Text(
+                child: Text(
                   "Go",
-                  style: TextStyle(
+                  style: GoogleFonts.roboto(textStyle:const TextStyle(
                       color: Color(0xffFFFFFF),
                       fontSize: 24,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.bold)),
                 ),
               ),
             ),
             const Padding(padding: EdgeInsets.only(top: 41)),
             RichText(
-                text: const TextSpan(children: [
+                text: TextSpan(children: [
               TextSpan(
                   text: 'Don’t have account yet?',
-                  style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold)),
+                  style: GoogleFonts.roboto(textStyle:const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold)),),
                   TextSpan(
                   text: ' Sign Up',
-                  style: TextStyle(color: Color(0xff77B29F), fontSize: 14, fontWeight: FontWeight.bold)),
+                  style: GoogleFonts.roboto(textStyle:const TextStyle(color: Color(0xff77B29F), fontSize: 16, fontWeight: FontWeight.bold)),)
             ])),
             Expanded(
                 child: Image.asset('assets/logo.png')),
