@@ -258,7 +258,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ])),
                   SizedBox(
                     width: size.width * 0.9,
-                    height: size.width * 0.3,
+                    height: size.width * 0.31,
                     child: ListView(
                         padding: const EdgeInsets.only(bottom: 10),
                         children: [

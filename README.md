@@ -1,61 +1,92 @@
-# Flutter UI Implementation Project
+Certainly! Here's an updated README template focusing on the design aspect of your Flutter project:
+
+---
+
+# Mental Up - Mobile App (Design Only)
+
+**Mental Up** is a Flutter-based mobile application design prototype aimed at enhancing cognitive skills through various exercises and challenges. This project focuses on the UI/UX design without any functional backend or state management.
+
+## Screenshots
+
+![Mental Up Screenshot](./education_kids_game/assets/screen.gif)
 
 ## Overview
-Greetings to the Flutter UI Implementation project! In this project, you will be working with the Flutter framework to implement a set of user interfaces using a specific list of widgets. The goal is to enhance your proficiency in Flutter development and UI implementation.
+
+This project demonstrates the UI/UX design of a mental training app. It includes several screens that are part of the user journey, such as the login screen, skill-building units, progress tracking, and user profile.
+
+### Features (Design Only)
+
+- **Login Screen:** Clean and user-friendly login interface.
+- **Home Screen:** Displays categories like Logical Reasoning, Artistic Thinking, and Verbal Skills.
+- **Unit Details:** Visual representation of progress and locked/unlocked units.
+- **Profile Screen:** Shows user statistics, friends list, and achievements.
+- **Challenges and Achievements:** Designed sections for displaying user challenges and achievements.
+
+## Getting Started
+
+### Prerequisites
+
+- Flutter SDK: [Install Flutter](https://flutter.dev/docs/get-started/install)
+- Dart: Included with Flutter SDK
+- IDE: Android Studio, VS Code, or any other IDE with Flutter support
+
+### Installation
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/yourusername/mental_up_design.git
+    cd education_kids_game
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    flutter pub get
+    ```
+
+3. **Run the app:**
+
+    Connect your device or start an emulator, then run:
+
+    ```bash
+    flutter run
+    ```
+
+### Folder Structure
+
+```bash
+mental_up_design/
+|- lib/
+   |- screens/
+   |- bottom_nav_bar.dart
+   |- main.dart
+|- assets/
+   |- images/
+   |- icons/
+   |- logo/
+|- pubspec.yaml
+```
+
+- **lib/screens/**: Contains all the screen UI files like login, profile, and home screens.
+- **bottom_nav_bar.dart**: Bottom navigation bar that allows users to switch between different screens (Home, Challenges, Profile, Settings) with dynamic color changes based on the selected tab.
+- **main.dart**: The entry point of the app, routing between screens.
+
+### Customization
+
+- **Icons & Images**: Update assets in the `assets/` directory.
+
+## Contributing
+
+Since this is a design-focused project, contributions can include improvements to the UI, adding new screens, or refining existing components. Fork the repository and create a pull request with your changes.
 
 
-## UI to Implement
-You are required to implement the following Figma design user interfaces:
+## Contact
 
-- [Figma Design - Educational Kids Game](https://www.figma.com/file/hr7vmPgtKJd95quaTZr5bt/Educational-kids-game-(Community)?type=design&node-id=0%3A1&mode=design&t=z9KUqxH5qF2QA9xp-1)
+For any inquiries or suggestions, please contact:
 
+- Name: Ali Altarouty
+- Email: tarooti14@gmail.com
 
+---
 
-## Mandatory List of Widgets
-You must use the following list of widgets in your implementations:
-- Column
-- Row
-- ListView or related widgets
-- AppBar 
-- TextField
-- Icon
-- Button
-- Image
-
-
-
-## Requirements
-1. **Code Organization:**
-    - Organize your Flutter project in a clean and structured manner.
-    
-2. **Widget Usage:**
-    - Ensure that you use the specified list of widgets for UI implementation.
-    
-3. **Navigation:**
-    - Include navigation between different screens or sections within your app.
-
-
-
-## Submission Guidelines
-You will submit your project on GitHub by following these guidelines:
-1. Fork the Repository & Clone it
-2. Create a New Branch with your name, in this format: (First name - Last name), i.e. Nasser-GH
-3. Commit the changes frequently and push it
-4. Finally, create a pull request to the original repository
-
-**Note:**
-- This is an individual assignment, collaboration is not allowed, and each student should submit their unique work.
-- Be sure to include screenshots of the implemented UIs in your README file in your project
-- Make sure to apply the exact given UI as specified in the assignment. Do not add any additional elements or remove any existing ones. The UI should match the provided design precisely.
-
-
-
-## Deadline 
-The deadline for submitting the project is 2024 Aug 18 at 9:59 AM
-
-
-## Additional Notes
-- Reach out for clarification or assistance if needed.
-- Have an enjoyable coding journey!
-
-Best of luck!

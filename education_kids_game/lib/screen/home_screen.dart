@@ -99,16 +99,10 @@ class HomeScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Container(
-                              alignment: Alignment.topCenter,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                      width: 1, color: Colors.white)),
-                              child: Image.asset(
-                                "assets/icons/icon1.png",
-                                width: 31,
-                                height: 27,
-                              ),
+                            Image.asset(
+                              "assets/icons/icon1.png",
+                              width: 31,
+                              height: 27,
                             ),
                             Container(
                               width: 130,
