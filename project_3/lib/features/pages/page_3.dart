@@ -13,6 +13,8 @@ class VerbalSkills extends StatelessWidget {
             const Text('Verbal skills', style: TextStyle(fontSize: 30)),
             const SizedBox(width: 20),
             Image.asset('assets/t.png'),
+            const SizedBox(width: 20),
+            Image.asset('assets/diamond.png'),
           ],
         ),
       ),
