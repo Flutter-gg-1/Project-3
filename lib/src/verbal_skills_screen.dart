@@ -1,4 +1,3 @@
-import 'package:educational_kids_game/src/colored_text.dart';
 import 'package:educational_kids_game/src/verbal_skills_levels.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +29,7 @@ class _VerbalSkillsScreenState extends State<VerbalSkillsScreen> {
                           Text(
                             "Verbal skills",
                             style: TextStyle(
-                              fontSize: 30,
+                              fontSize: 28,
                             ),
                           ),
                           SizedBox(

@@ -1,6 +1,9 @@
 import 'package:educational_kids_game/src/Locked_container.dart';
 import 'package:educational_kids_game/src/Verbal_skills_screen.dart';
+import 'package:educational_kids_game/src/bottom_navigation_bar.dart';
+import 'package:educational_kids_game/src/challenge_screen.dart';
 import 'package:educational_kids_game/src/completon_container.dart';
+import 'package:educational_kids_game/src/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
@@ -17,6 +20,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,7 +97,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Text(
                   " 18/40",
-                  style: TextStyle(fontSize: 18, color:  Color.fromRGBO(0, 0, 0, 0.5)),
+                  style: TextStyle(
+                      fontSize: 18, color: Color.fromRGBO(0, 0, 0, 0.5)),
                 )
               ],
             ),
@@ -124,7 +130,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Text(
                   " 35/40",
-                  style: TextStyle(fontSize: 18, color: Color.fromRGBO(0, 0, 0, 0.5)),
+                  style: TextStyle(
+                      fontSize: 18, color: Color.fromRGBO(0, 0, 0, 0.5)),
                 )
               ],
             ),
@@ -156,7 +163,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Text(
                   " 3/40",
-                  style: TextStyle(fontSize: 18, color:  Color.fromRGBO(0, 0, 0, 0.5)),
+                  style: TextStyle(
+                      fontSize: 18, color: Color.fromRGBO(0, 0, 0, 0.5)),
                 )
               ],
             ),
@@ -173,66 +181,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 lockedContainer(),
               ],
             ),
+            
           ]),
         ),
 
         //BottomNavigationBar
-        bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: const Color(0xffE5E5E5),
-            type: BottomNavigationBarType.fixed,
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(
-                  FluentIcons.home_12_regular,
-                  color:  Color.fromRGBO(0, 0, 0, 0.5),
-                  size: 40,
-                ),
-                activeIcon: Icon(
-                  FluentIcons.home_12_filled,
-                  color: Color(0xff41AC78),
-                  size: 40,
-                ),
-                label: "",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  FluentIcons.target_arrow_16_regular,
-                  color:  Color.fromRGBO(0, 0, 0, 0.5),
-                  size: 40,
-                ),
-                activeIcon: Icon(
-                  FluentIcons.target_arrow_16_filled,
-                  color: Color(0xffDC3F00),
-                  size: 40,
-                ),
-                label: "",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  FluentIcons.people_12_regular,
-                  color:  Color.fromRGBO(0, 0, 0, 0.5),
-                  size: 40,
-                ),
-                activeIcon: Icon(
-                  FluentIcons.people_12_filled,
-                  color: Color(0xffAB70DF),
-                  size: 40,
-                ),
-                label: "",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  FluentIcons.settings_20_regular,
-                  color:  Color.fromRGBO(0, 0, 0, 0.5),
-                  size: 40,
-                ),
-                activeIcon: Icon(
-                  FluentIcons.settings_20_filled,
-                  color: Color(0xff6884F6),
-                  size: 40,
-                ),
-                label: "",
-              ),
-            ]));
+       
+      );
   }
 }

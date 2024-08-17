@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: const Color(0xffFBF5F2),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.only(top: 124),
+          padding: const EdgeInsets.only(top: 100),
           child: Column(
             children: [
               Row(
@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 children: coloredText("MENTAL ^up^"),
               ),
               const SizedBox(
-                height: 60,
+                height: 40,
               ),
               Form(
                   key: formKey,
