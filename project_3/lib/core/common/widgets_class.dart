@@ -48,6 +48,7 @@ Widget myContainer({
   String? imagePath,
   double? width = 179,
   double? height = 227,
+  Color? color = ColorPallete.colorDarkGrey,
 }) {
   return Center(
     child: Container(
@@ -56,9 +57,10 @@ Widget myContainer({
       padding: const EdgeInsets.all(10),
       alignment: Alignment.center,
       margin: const EdgeInsets.only(left: 5, right: 5),
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(20)),
-        color: ColorPallete.colorDarkGrey,
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
+        border: Border.all(color: ColorPallete.colorDarkGrey, width: 2),
+        color: color,
       ),
       child: Center(
         child: Column(
