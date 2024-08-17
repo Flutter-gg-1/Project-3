@@ -133,7 +133,7 @@ Widget myContainerInput({
   );
 }
 
-Widget myAvatar({required String imagePath}) {
+Widget myAvatar({required String imagePath, required String imagePath2}) {
   return Stack(alignment: Alignment.center, children: [
     const CircleAvatar(
       radius: 140 / 2,
@@ -147,6 +147,11 @@ Widget myAvatar({required String imagePath}) {
       radius: 110 / 2,
       backgroundColor: ColorPallete.colorDarkGreen,
       child: Image.asset(imagePath),
+    ),
+    Positioned(
+      right: -1,
+      bottom: 25,
+      child: Image.asset(imagePath2),
     ),
   ]);
 }
