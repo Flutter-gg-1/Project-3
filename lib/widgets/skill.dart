@@ -18,8 +18,8 @@ class Skill extends StatelessWidget {
           children: [
             Container(
             alignment: Alignment.center,
-              width: 110,
-              height: 110,
+              width: 140,
+              height: 140,
               decoration: MultiBorderDecoration(
                   color: const Color(0xff72BFC7),
                   boxShape: BoxShape.circle,
@@ -30,7 +30,7 @@ class Skill extends StatelessWidget {
               child: Image.asset(assetImage,width: imageWidth, height: imageHeight,)),
         Padding(
           padding: const EdgeInsets.only(top:50),
-          child: Stack(alignment: Alignment.bottomCenter,children: [Image.asset('assets/images/crown.png', height: 27,width: 31), Text(level?.toString() ?? "", style: TextStyle(fontSize: 15),)]),
+          child: Stack(alignment: Alignment.bottomCenter,children: [Image.asset('assets/images/crown.png', height: 27,width: 31), Text(level?.toString() ?? "", style: const TextStyle(fontSize: 15),)]),
         )
       ]),
             Text(skillName ?? "", style: const TextStyle(fontSize: 20),)
