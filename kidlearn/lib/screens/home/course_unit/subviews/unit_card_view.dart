@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearn/reusable_components/theme_progress_view.dart';
-import '../../../constants/color_ext.dart';
-import '../../../constants/img_ext.dart';
-import '../../../model/unit.dart';
+import '../../../../constants/color_ext.dart';
+import '../../../../constants/img_ext.dart';
+import '../../../../model/unit.dart';
 
 class UnitCardView extends StatelessWidget {
   const UnitCardView({super.key, required this.unit});
@@ -40,7 +40,7 @@ class UnitCardView extends StatelessWidget {
                             const Spacer(),
                             Text(
                               'Unit ${unit.unitNum}',
-                              style: TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 18),
                             ),
                             const SizedBox(height: 16),
                             // MARK: - Progress Bar

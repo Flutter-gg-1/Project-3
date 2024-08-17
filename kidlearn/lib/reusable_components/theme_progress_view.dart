@@ -7,9 +7,7 @@ class ProgressView extends StatelessWidget {
   final int value;
   final int total;
 
-  double progressValue() {
-    return value / total;
-  }
+  double progressValue() => value / total;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +15,7 @@ class ProgressView extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 2),
+          padding: const EdgeInsets.only(left: 12.0, right: 8, bottom: 2),
           child: LinearProgressIndicator(
             value: progressValue(),
             borderRadius: BorderRadius.circular(16),

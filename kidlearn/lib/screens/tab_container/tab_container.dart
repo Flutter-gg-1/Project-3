@@ -47,7 +47,7 @@ class _TabContainerState extends State<TabContainer> {
           children: [
             const HomeScreen(),
             ChallengesScreen(challenge: MockData.shared.challenges.first),
-            const ProfileScreen(),
+            ProfileScreen(),
             const SettingsScreen(),
           ],
         ),

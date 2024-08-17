@@ -3,7 +3,7 @@ import '../../../constants/color_ext.dart';
 import '../../../model/course.dart';
 import '../../../model/unit.dart';
 import '../../../reusable_components/theme_progress_view.dart';
-import '../../course_unit/course_unit_screen.dart';
+import '../course_unit/course_unit_screen.dart';
 
 class CourseUnits extends StatelessWidget {
   const CourseUnits({super.key, required this.course});

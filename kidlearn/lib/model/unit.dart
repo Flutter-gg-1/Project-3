@@ -15,7 +15,7 @@ class Unit {
     required this.unitNum,
     Image? img,
     required this.chapters,
-    this.completedChapters = 3,
-    this.totalChapters = 20,
+    this.completedChapters = 0,
+    this.totalChapters = 0,
   }) : img = const AssetImage('horse.png');
 }

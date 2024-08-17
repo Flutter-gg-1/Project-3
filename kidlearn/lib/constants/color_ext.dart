@@ -18,6 +18,9 @@ extension ThemeColors on Color {
   // Chapter circle
   static const Color chapterGreen = Color(0xFF72BFC7);
   static const Color chapterBorder = Color(0xFFC4C4C4);
+  // Borders
+  static const Color borderLight = Color(0xFFE2DCDA);
+
   // Crown & progress bar
   static const Color crownYellow = Color(0xFFECBF55);
   // Followers Card

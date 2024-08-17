@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearn/constants/text_ext.dart';
-
-import '../../../constants/color_ext.dart';
+import '../../../../constants/color_ext.dart';
 
 class CourseContentHeaderView extends StatelessWidget {
   const CourseContentHeaderView({super.key, required this.title});

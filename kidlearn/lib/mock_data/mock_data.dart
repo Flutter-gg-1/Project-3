@@ -28,16 +28,17 @@ class MockData {
     achievements = _createAchievements();
     challenges = _createChallenges();
     chapters = _createChapters();
+    addRemainingChapters();
     units = _createUnits();
     courses = _creteCourses();
     stats = _createStats();
     users = _createUsers();
-
-    print(courses.first.units.length);
+    _assignFollowers();
 
     currentUser = users.first;
   }
 
+  // Challenge
   List<Achievement> _createAchievements() => [
         Achievement(
             id: 'C1',
@@ -67,22 +68,44 @@ class MockData {
           achievements: achievements,
         )
       ];
-  List<Unit> _createUnits() => [
-        Unit(id: 'C1U1', unitNum: 1, chapters: chapters, completedChapters: 18),
-        Unit(id: 'C1U2', unitNum: 2, chapters: chapters, completedChapters: 0),
-        Unit(id: 'C2U1', unitNum: 1, chapters: chapters, completedChapters: 15),
-        Unit(id: 'C2U2', unitNum: 2, chapters: chapters, completedChapters: 0),
-        Unit(id: 'C3U1', unitNum: 1, chapters: chapters, completedChapters: 6),
-        Unit(id: 'C3U2', unitNum: 2, chapters: chapters, completedChapters: 0),
-      ];
+  // Chapter
   List<Chapter> _createChapters() => [
         Chapter(id: '1', name: 'Intro', completed: true, img: Img.pencil),
         Chapter(id: '2', name: 'Phrases', completed: true, img: Img.book),
         Chapter(id: '3', name: 'Travel', completed: true, img: Img.bicycle),
-        Chapter(id: '4'),
-        Chapter(id: '5'),
-        Chapter(id: '6'),
       ];
+  void addRemainingChapters() {
+    // Add remaining chapters with only an id
+    for (int i = 4; i <= 40; i++) {
+      chapters.add(Chapter(id: i.toString()));
+    }
+  }
+
+  // Unit
+  List<Unit> _createUnits() => [
+        Unit(
+            id: 'C1U1',
+            unitNum: 1,
+            chapters: chapters,
+            completedChapters: 18,
+            totalChapters: chapters.length),
+        Unit(id: 'C1U2', unitNum: 2, chapters: chapters),
+        Unit(
+            id: 'C2U1',
+            unitNum: 1,
+            chapters: chapters,
+            completedChapters: 35,
+            totalChapters: chapters.length),
+        Unit(id: 'C2U2', unitNum: 2, chapters: chapters),
+        Unit(
+            id: 'C3U1',
+            unitNum: 1,
+            chapters: chapters,
+            completedChapters: 3,
+            totalChapters: chapters.length),
+        Unit(id: 'C3U2', unitNum: 2, chapters: chapters),
+      ];
+  // Course
   List<Course> _creteCourses() => [
         Course(
           id: 'C1',
@@ -100,6 +123,7 @@ class MockData {
           units: units.where((unit) => unit.id.contains('C3')).toList(),
         ),
       ];
+  // User
   List<Stats> _createStats() => [
         Stats(
           id: '1',
@@ -131,8 +155,6 @@ class MockData {
           avatar: Img.avatar,
           joinDate: DateTime(2022, 3),
           stats: stats.firstWhere((stat) => stat.id == '1'),
-          followers: users.where((user) => user.name != '1').toList(),
-          following: users.where((user) => user.name != '1').toList(),
         ),
         User(
           id: '2',
@@ -140,8 +162,6 @@ class MockData {
           username: 'Hardi55',
           joinDate: DateTime(2022, 4),
           stats: stats.firstWhere((stat) => stat.id == '2'),
-          followers: users.where((user) => user.name != '2').toList(),
-          following: users.where((user) => user.name != '2').toList(),
         ),
         User(
           id: '3',
@@ -149,8 +169,13 @@ class MockData {
           username: 'Krishna97',
           joinDate: DateTime(2023, 1),
           stats: stats.firstWhere((stat) => stat.id == '3'),
-          followers: users.where((user) => user.name != '3').toList(),
-          following: users.where((user) => user.name != '3').toList(),
         )
       ];
+
+  void _assignFollowers() {
+    users.map((user) {
+      user.followers = users.where((e) => user.id != e.id).toList();
+      user.following = users.where((e) => user.id != e.id).toList();
+    });
+  }
 }

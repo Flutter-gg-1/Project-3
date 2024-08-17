@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants/color_ext.dart';
-import '../../../constants/img_ext.dart';
-import '../../../model/chapter.dart';
-import '../../../model/unit.dart';
+import '../../../../constants/color_ext.dart';
+import '../../../../constants/img_ext.dart';
+import '../../../../model/chapter.dart';
+import '../../../../model/unit.dart';
 
 class UnitChaptersView extends StatelessWidget {
   const UnitChaptersView({super.key, required this.unit});
@@ -94,8 +94,8 @@ class _ChapterCard extends StatelessWidget {
                       size: 36,
                     ),
                     Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 12.0, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0, vertical: 4),
                       child: Text(
                         chapter.completed ? '1' : '',
                         style:

@@ -52,7 +52,7 @@ class ThemeScaffold extends StatelessWidget {
             body,
             if (!hasHeader)
               Expanded(
-                  child: Container(
+                  child: SizedBox(
                 width: double.infinity,
                 child: Image(
                   image: Img.dino,

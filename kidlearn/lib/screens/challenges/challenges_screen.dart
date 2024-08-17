@@ -27,7 +27,7 @@ class ChallengesScreen extends StatelessWidget {
             child: Column(
               children: [
                 ChallengeCard(
-                  assetImage: Img.reading,
+                  assetImage: challenge.img,
                   title: challenge.title,
                   description: challenge.description,
                 ),
