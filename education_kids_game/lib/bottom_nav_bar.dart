@@ -1,5 +1,6 @@
 import 'package:education_kids_game/challenges_screen.dart';
 import 'package:education_kids_game/home_screen.dart';
+import 'package:education_kids_game/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class ButtomNavBar extends StatefulWidget {
@@ -12,7 +13,11 @@ class ButtomNavBar extends StatefulWidget {
 class _ButtomNavBarState extends State<ButtomNavBar> {
   int currentIndex = 0;
   Color selectedColor = const Color(0xff41AC78);
-  List<Widget> myWidget = [const HomeScreen(), const ChallengesScreen()];
+  List<Widget> myWidget = [
+    const HomeScreen(),
+    ChallengesScreen(),
+    ProfileScreen()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

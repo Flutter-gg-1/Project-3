@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ChallengesScreen extends StatefulWidget {
+class ChallengesScreen extends StatelessWidget {
   const ChallengesScreen({super.key});
 
-  @override
-  State<ChallengesScreen> createState() => _ChallengesScreenState();
-}
-
-class _ChallengesScreenState extends State<ChallengesScreen> {
-  int currentIndex = 1;
-  Color selectedColor = const Color(0xffDC3F00);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -40,12 +33,10 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
             ),
             Container(
               width: size.width * 0.9,
-              height: size.height * 0.17,
-              // margin: EdgeInsets.only(left: 30, right: 30),
+              height: size.height * 0.18,
               decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.10),
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black87)),
+                  border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
                   "assets/image2.png",
@@ -71,12 +62,10 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
             ),
             Container(
               width: size.width * 0.9,
-              height: size.height * 0.17,
-              // margin: EdgeInsets.only(left: 30, right: 30),
+              height: size.height * 0.18,
               decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.10),
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black87)),
+                  border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
                   "assets/image3.png",
@@ -97,12 +86,10 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
             ),
             Container(
               width: size.width * 0.9,
-              height: size.height * 0.17,
-              // margin: EdgeInsets.only(left: 30, right: 30),
+              height: size.height * 0.18,
               decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.10),
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black87)),
+                  border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
                   "assets/image4.png",
@@ -123,12 +110,10 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
             ),
             Container(
               width: size.width * 0.9,
-              height: size.height * 0.17,
-              // margin: EdgeInsets.only(left: 30, right: 30),
+              height: size.height * 0.18,
               decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.10),
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black87)),
+                  border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
                   "assets/image5.png",
