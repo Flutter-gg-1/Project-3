@@ -8,71 +8,139 @@ class ProfileClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-              const SizedBox(height: 35),
-              myRowContainer(
-                addItem: [
-                  const Text('Profile', style: TextStyle(fontSize: 30))
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const SizedBox(height: 35),
+            myRowContainer(
+              addItem: [const Text('Profile', style: TextStyle(fontSize: 30))],
+            ),
+            const SizedBox(height: 15),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Nidhi Pandya', style: TextStyle(fontSize: 30)),
+                      Text('Nidhi12',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: ColorPallete.colorLightBlack)),
+                      Row(
+                        children: [
+                          Icon(Icons.watch_later, color: Colors.grey),
+                          Text('  Joined March 2022',
+                              style: TextStyle(fontSize: 15)),
+                        ],
+                      ),
+                    ],
+                  ),
+                  CircleAvatar(
+                    radius: 90 / 2,
+                    backgroundImage: NetworkImage(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_zrGcaJgQScgv3rKD7mrj9GCGEhYOI3XNUSUnH9D1Tk7g_nYNvnZdsZz2v5EgdqsZCII&usqp=CAU'),
+                  )
                 ],
               ),
-              const SizedBox(height: 15),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Nidhi Pandya', style: TextStyle(fontSize: 30)),
-                        Text('Nidhi12',
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: ColorPallete.colorLightBlack)),
-                        Row(
-                          children: [
-                            Icon(Icons.watch_later, color: Colors.grey),
-                            Text('  Joined March 2022',
-                                style: TextStyle(fontSize: 15)),
-                          ],
-                        ),
-                      ],
-                    ),
-                    CircleAvatar(
-                      radius: 90 / 2,
-                      backgroundImage: NetworkImage(
-                          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_zrGcaJgQScgv3rKD7mrj9GCGEhYOI3XNUSUnH9D1Tk7g_nYNvnZdsZz2v5EgdqsZCII&usqp=CAU'),
-                    )
-                  ],
-                ),
+            ),
+            const SizedBox(height: 15),
+            const Divider(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: myContainer(
+                color: ColorPallete.colorWhite,
+                width: 378,
+                height: 73,
+                listWidget: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Image.asset('assets/happy.png'),
+                      const SizedBox(width: 10),
+                      const Text('Friends updates'),
+                      const SizedBox(width: 120),
+                      const Icon(Icons.arrow_forward_ios,
+                          size: 20, color: Colors.grey),
+                    ],
+                  ),
+                ],
               ),
-              const SizedBox(height: 15),
-              const Divider(),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: myContainer(
-                  color: ColorPallete.colorWhite,
-                  width: 378,
-                  height: 73,
-                  listWidget: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Image.asset('assets/happy.png'),
-                        const SizedBox(width: 10),
-                        const Text('Friends updates'),
-                        const SizedBox(width: 120),
-                        const Icon(Icons.arrow_forward_ios,
-                            size: 20, color: Colors.grey),
-                      ],
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+            ),
+            const SizedBox(height: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 25 / 2),
+              child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Statistics', style: TextStyle(fontSize: 30))),
+            ),
+            for (int i = 0; i < 2; i++)
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      myContainer(
+                        padding: const EdgeInsets.only(left: 25 / 2),
+                        alignment: Alignment.centerLeft,
+                        color: ColorPallete.colorWhite,
+                        width: 175,
+                        height: 85,
+                        listWidget: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset('assets/fire.png'),
+                              const Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('3', style: TextStyle(fontSize: 20)),
+                                  Text('day Streak',
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          color: ColorPallete.colorLightBlack)),
+                                  Text(''),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 15),
+                      myContainer(
+                        padding: const EdgeInsets.only(left: 25 / 2),
+                        alignment: Alignment.centerLeft,
+                        color: ColorPallete.colorWhite,
+                        width: 175,
+                        height: 85,
+                        listWidget: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset('assets/fire.png'),
+                              const Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('3', style: TextStyle(fontSize: 20)),
+                                  Text('day Streak',
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                          color: ColorPallete.colorLightBlack)),
+                                  Text(''),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 15),
+                ],
+              ),
+          ],
         ),
       ),
       bottomNavigationBar: myRowContainer(

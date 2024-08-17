@@ -49,14 +49,16 @@ Widget myContainer({
   double? width = 179,
   double? height = 227,
   Color? color = ColorPallete.colorDarkGrey,
+  EdgeInsets padding = const EdgeInsets.all(5),
+  margin = const EdgeInsets.only(left: 0, right: 0),
+  AlignmentGeometry? alignment = Alignment.center,
 }) {
   return Center(
     child: Container(
       width: width,
       height: height,
-      padding: const EdgeInsets.all(10),
-      alignment: Alignment.center,
-      margin: const EdgeInsets.only(left: 5, right: 5),
+      padding: padding,
+      alignment: alignment,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         border: Border.all(color: ColorPallete.colorDarkGrey, width: 2),
@@ -64,7 +66,6 @@ Widget myContainer({
       ),
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
                 child: Text(title ?? '',
