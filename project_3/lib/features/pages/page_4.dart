@@ -55,10 +55,18 @@ class ProfileClass extends StatelessWidget {
                 child: myContainer(
                   color: ColorPallete.colorWhite,
                   width: 378,
-                  height: 69,
+                  height: 73,
                   listWidget: [
-                    const Row(
-                      children: [],
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset('assets/happy.png'),
+                        const SizedBox(width: 10),
+                        const Text('Friends updates'),
+                        const SizedBox(width: 120),
+                        const Icon(Icons.arrow_forward_ios,
+                            size: 20, color: Colors.grey),
+                      ],
                     ),
                   ],
                 ),
