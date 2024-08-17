@@ -35,7 +35,7 @@ This project demonstrates the UI/UX design of a mental training app. It includes
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/mental_up_design.git
+    git clone https://github.com/trt14/Project-3/education_kids_game.git
     cd education_kids_game
     ```
 
