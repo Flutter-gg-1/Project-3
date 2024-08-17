@@ -8,7 +8,7 @@ class InviteFriends extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
               height: 228,
-              width: 378,
+              width: 400,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: const Color(0xffE5E5E5), width: 3)),

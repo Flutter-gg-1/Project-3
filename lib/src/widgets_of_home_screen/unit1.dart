@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../verbal_skill_screen.dart';
+import '../verbal_skills_screen.dart';
 import 'lock_container.dart';
 
 class Unit1 extends StatelessWidget {
@@ -53,7 +52,7 @@ class Unit1 extends StatelessWidget {
                     ),
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                        return const VerbalSkillScreen();
+                        return const VerbalSkillsScreen();
                       }));
                     },
                   ),

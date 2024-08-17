@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'widgets_of_verbal_skill_screen/circle_containers.dart';
+import 'widget_of_verbal_skill_screen/circle_containers.dart';
 
-class VerbalSkillScreen extends StatelessWidget {
-  const VerbalSkillScreen({super.key});
+class VerbalSkillsScreen extends StatelessWidget {
+  const VerbalSkillsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

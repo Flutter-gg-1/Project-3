@@ -35,18 +35,19 @@ class Profile extends StatelessWidget {
           children: [
             const ProfileInfo(),
             const Divider(),
+            SizedBox(height: 16,),
             Container(
               height: 69,
-              width: 378,
+              width: 400,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: const Color(0xffE5E5E5), width: 3)),
-              child: const ListTile(
-                leading: Icon(Icons.celebration, color: Colors.red, size: 40,),
-                title: Text("Friends updates",
+              child: ListTile(
+                leading:  Image.asset('assets/profile_icons/🎊.png'),
+                title: const Text("Friends updates",
                     style: TextStyle(
                         fontSize: 20, color: Colors.black, fontWeight: FontWeight.w500)),
-                trailing: Icon(Icons.arrow_forward_ios_rounded, color: Color.fromARGB(255, 192, 190, 190),),
+                trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Color.fromARGB(255, 192, 190, 190),),
               ),
             ),
             const SizedBox(height: 16),
@@ -97,16 +98,17 @@ class Profile extends StatelessWidget {
                   "Friends",
                   style: TextStyle(fontSize: 26, color: Colors.black),
                 ),
+                SizedBox(width: 28,),
                 Text(
                   "ADD FRIENDS",
-                  style: TextStyle(fontSize: 26, color: Color(0xff02A1FB), fontWeight: FontWeight.w600),
+                  style: TextStyle(fontSize: 22, color: Color(0xff02A1FB), fontWeight: FontWeight.w600),
                 ),
               ],
             ),
             const SizedBox(height: 16,),
             Container(
               height: 230,
-              width: 377,
+              width: 400,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: const Color(0xffE5E5E5), width: 3)),

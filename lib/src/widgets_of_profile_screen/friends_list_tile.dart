@@ -20,7 +20,7 @@ class FriendsListTile extends StatelessWidget {
                                   fontSize: 18,
                                   color: Color.fromARGB(255, 0, 0, 0)))),
                           subtitle: Text(subtitle, style:GoogleFonts.roboto()),
-                          trailing: const Icon(Icons.arrow_forward_ios_rounded),
+                          trailing: Icon(Icons.arrow_forward_ios_rounded, color: Colors.black.withOpacity(0.2),),
                         );
   }
 }

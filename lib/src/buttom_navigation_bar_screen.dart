@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'challenges.dart';
+import 'challenges_screen.dart';
 import 'home_screen.dart';
-import 'profile.dart';
-import 'setting.dart';
+import 'profile_screen.dart';
+import 'setting_screen.dart';
 
 class ButtomNavigationBarScreen extends StatefulWidget {
   const ButtomNavigationBarScreen({super.key});

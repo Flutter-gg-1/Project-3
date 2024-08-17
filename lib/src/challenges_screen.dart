@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'widgets_of_challenges_screen/list_tile.dart';
+import 'widget_of_challenges_screen/list_tile.dart';
 
 class Challenges extends StatelessWidget {
   const Challenges({super.key});
