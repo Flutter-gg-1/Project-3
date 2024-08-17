@@ -10,7 +10,7 @@ class ChallengesPage extends StatelessWidget {
       body: Expanded(child: ListView(
         children: [
           const SizedBox(
-            height: 70,
+            height: 40,
           ),
           Container(
             color: const Color(0xffE5E5E5),
