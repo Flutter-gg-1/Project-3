@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project3/src/home_screen.dart';
+import 'package:project3/src/buttom_navigation_bar_screen.dart';
 import 'package:project3/src/widgets_of_login_screen/rich_text.dart';
 import 'package:project3/src/widgets_of_login_screen/text_field.dart';
 
@@ -44,7 +44,7 @@ class LogInScreen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    return const HomeScreen();
+                    return const ButtomNavigationBarScreen();
                   }));
                 },
                 style: ButtonStyle(

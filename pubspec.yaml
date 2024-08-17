@@ -22,4 +22,6 @@ flutter:
   assets:
     - assets/
     - assets/home_screen_icons/
+    - assets/verball_skill_screen_icons/
+    - assets/verbal_skill_icons/
     - google_fonts/

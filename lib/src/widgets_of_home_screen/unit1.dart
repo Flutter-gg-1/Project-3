@@ -24,21 +24,24 @@ class Unit1 extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           const Text("Unit 1", style: TextStyle(fontSize: 24),),
-                          const Padding(padding: EdgeInsets.only(top: 70)),
-                          Row(
+                          const Padding(padding: EdgeInsets.only(top: 10,)),
+                          Stack(
+                            alignment: Alignment.bottomLeft,
                             children: [
-                              const Padding(padding: EdgeInsets.all(5)),
-                              Image.asset('assets/home_screen_icons/crown.png'),
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(30),
-                                child: Container(
-                                  width: 125,
-                                  height: 14,
-                                  color: const Color(0xffC4C4C4),
-                                  child: LinearProgressIndicator(
-                                    value: value,
-                                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xffECC055)),
-                                    backgroundColor: const Color(0xffC4C4C4),
+                              Image.asset('assets/home_screen_icons/crown.png', width: 100, height: 100, alignment: const Alignment(-1.4, 1),),
+                              Positioned(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(30),
+                                  child: Container(
+                                    width: 125,
+                                    height: 14,
+                                    color: const Color(0xffC4C4C4),
+                                    child: LinearProgressIndicator(
+                                      value: value,
+                                      valueColor: const AlwaysStoppedAnimation<Color>(Color(0xffECC055)),
+                                      backgroundColor: const Color(0xffC4C4C4),
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
                                   ),
                                 ),
                               ),
