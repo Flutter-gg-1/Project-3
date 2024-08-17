@@ -39,7 +39,7 @@ class ChallengesScreen extends StatelessWidget {
                   border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
-                  "assets/image2.png",
+                  "assets/images/image2.png",
                   fit: BoxFit.fitHeight,
                 ),
                 title: const Text(
@@ -68,7 +68,7 @@ class ChallengesScreen extends StatelessWidget {
                   border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
-                  "assets/image3.png",
+                  "assets/images/image3.png",
                   fit: BoxFit.fitHeight,
                 ),
                 title: const Text(
@@ -92,7 +92,7 @@ class ChallengesScreen extends StatelessWidget {
                   border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
-                  "assets/image4.png",
+                  "assets/images/image4.png",
                   fit: BoxFit.fitHeight,
                 ),
                 title: const Text(
@@ -116,7 +116,7 @@ class ChallengesScreen extends StatelessWidget {
                   border: Border.all(color: Colors.black12, width: 3)),
               child: ListTile(
                 leading: Image.asset(
-                  "assets/image5.png",
+                  "assets/images/image5.png",
                   fit: BoxFit.fitHeight,
                 ),
                 title: const Text(

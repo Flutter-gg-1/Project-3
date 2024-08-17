@@ -81,7 +81,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     width: 100,
                     height: 100,
                     child: CircleAvatar(
-                      child: Image.asset("assets/image6.png"),
+                      child: Image.asset("assets/images/image6.png"),
                     ),
                   ),
                 ],
@@ -334,7 +334,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Column(
                 children: [
                   ListTile(
-                    leading: Image.asset("assets/image7.png"),
+                    leading: Image.asset("assets/images/image7.png"),
                     title: const Text(
                       "Invite your friends",
                       style:

@@ -121,7 +121,7 @@ class VerbalSkillsScreen extends StatelessWidget {
                 Positioned(
                   top: 20,
                   child: Image.asset(
-                    "assets/image8.png",
+                    "assets/images/image8.png",
                     fit: BoxFit.cover,
                     height: 100,
                     width: 125,
@@ -149,7 +149,7 @@ class VerbalSkillsScreen extends StatelessWidget {
                           0xffC4C4C4,
                         ),
                         strokeAlign: 2)),
-                child: Image.asset("assets/image9.png"),
+                child: Image.asset("assets/images/image9.png"),
               ),
               Container(
                 padding: const EdgeInsets.only(left: 120, top: 50),
@@ -191,7 +191,7 @@ class VerbalSkillsScreen extends StatelessWidget {
                                   0xffC4C4C4,
                                 ),
                                 strokeAlign: 2)),
-                        child: Image.asset("assets/image10.png"),
+                        child: Image.asset("assets/images/image10.png"),
                       ),
                       Container(
                         padding: const EdgeInsets.only(left: 120, top: 50),
@@ -232,7 +232,7 @@ class VerbalSkillsScreen extends StatelessWidget {
                                   0xffC4C4C4,
                                 ),
                                 strokeAlign: 2)),
-                        child: Image.asset("assets/image11.png"),
+                        child: Image.asset("assets/images/image11.png"),
                       ),
                       Container(
                         padding: const EdgeInsets.only(left: 120, top: 50),
