@@ -266,6 +266,13 @@ class ProfileScreen extends StatelessWidget {
                         Icon(FontAwesomeIcons.arrowRight)
                       ],
                     ),
+                        Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color(0xFFe2ddda),
+                        ),
+                      ),
+                    ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width / 1.2,
                       height: 115,
