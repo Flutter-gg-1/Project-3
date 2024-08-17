@@ -59,7 +59,19 @@ class VerbalSkills extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 25),
-            myAvatar(imagePath: 'assets/horse.png'),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                myAvatar(imagePath: 'assets/pencil.png'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    myAvatar(imagePath: 'assets/book.png'),
+                    myAvatar(imagePath: 'assets/bike.png'),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       ),
