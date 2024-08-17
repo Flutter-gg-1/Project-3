@@ -60,12 +60,9 @@ class VerbalSkillScreen extends StatelessWidget {
                           width: 211,
                           height: 128,
                           decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 217, 217, 217),
+                            color: const Color(0xffE5E5E5),
                             borderRadius: BorderRadius.circular(20),
-                            border: const Border(top: BorderSide(width: 2,),
-                            bottom: BorderSide(width: 2, ),
-                            left: BorderSide(width: 2),
-                            right: BorderSide(width: 2))
+                            border:  Border.all(color: const Color.fromARGB(255, 135, 133, 133), width: 3)
                           ),
                           margin: const EdgeInsets.symmetric(vertical: 70, horizontal: 100),
                           padding: const EdgeInsets.only(top: 50),
@@ -92,7 +89,7 @@ class VerbalSkillScreen extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      Image.asset('assets/home_screen_icons/crown.png',width: 30, height: 30, alignment: Alignment(-18,1),),
+                                      Image.asset('assets/home_screen_icons/crown.png',width: 30, height: 30, alignment: const Alignment(-18,1),),
                                     ],
                                   ),
                                   const Text("3/40", style: TextStyle(fontSize: 15)),
@@ -103,11 +100,11 @@ class VerbalSkillScreen extends StatelessWidget {
                         ),
                         SizedBox(
                           height: 140,
-                          child: Image.asset('assets/verball_skill_screen_icons/Horse.png')),
+                          child: Image.asset('assets/verbal_skill_icons/Horse.png')),
                 ],
               ),
               const CircleContainers(photoPath: 'assets/verbal_skill_icons/Pencil 1.png'),
-              Text("Intro"),
+              const Text("Intro"),
               const Row(
                 children: [
                   Expanded(child: CircleContainers(photoPath: 'assets/verbal_skill_icons/Book.png')),
