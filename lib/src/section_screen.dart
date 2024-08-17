@@ -1,4 +1,6 @@
 
+import 'package:educational_kids_game/src/soon_screen.dart';
+import 'package:educational_kids_game/src/unit_screen.dart';
 import 'package:educational_kids_game/widget/costom_section.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -68,11 +70,11 @@ class SectionScreen extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 53,),
-                SectionOptions(title: 'Logical reasoning',currentSteps: '18',progress: 0.4,),
+                SectionOptions(title: 'Logical reasoning',currentSteps: '18',progress: 18/40,nextScreen: SoonScreen(),),
                 SizedBox(height: 35,),
-                SectionOptions(title: 'Artistic thinking',currentSteps: '35',progress: 0.8,),
+                SectionOptions(title: 'Artistic thinking',currentSteps: '35',progress: 35/40,nextScreen: SoonScreen(),),
                 SizedBox(height: 35,),
-                SectionOptions(title: 'Verbal skills      ',currentSteps: '3',progress: 0.1,),
+                SectionOptions(title: 'Verbal skills      ',currentSteps: '3',progress: 3/40,nextScreen: UnitScreen(),),
               ],
             ),
           ),
