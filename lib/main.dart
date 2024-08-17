@@ -1,4 +1,5 @@
 import 'package:educational_kids_project/pages/login_page.dart';
+import 'package:educational_kids_project/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: LoginPage()
+      home: Profile()
     );
   }
 }

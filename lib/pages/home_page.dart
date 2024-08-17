@@ -117,11 +117,11 @@ class HomePage extends StatelessWidget {
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(20))),
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Column(
                               children: [
                                 const Text("Unit 1"),
-                                SizedBox(
+                                const SizedBox(
                                   height: 130,
                                 ),
                                 Stack(
@@ -129,8 +129,8 @@ class HomePage extends StatelessWidget {
                                   children: [
                                     GFProgressBar(
                                       percentage: 18 / 40,
-                                      backgroundColor: Color(0xffC4C4C4),
-                                      progressBarColor: Color(0xffECC055),
+                                      backgroundColor: const Color(0xffC4C4C4),
+                                      progressBarColor: const Color(0xffECC055),
                                       lineHeight: 15,
                                     ),
                                     Positioned(
@@ -204,11 +204,11 @@ class HomePage extends StatelessWidget {
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(20))),
                           child: Padding(
-                            padding: EdgeInsets.all(10),
+                            padding: const EdgeInsets.all(10),
                             child: Column(
                               children: [
-                                Text("Unit 1"),
-                                SizedBox(
+                                const Text("Unit 1"),
+                                const SizedBox(
                                   height: 130,
                                 ),
                                 Stack(
@@ -216,8 +216,8 @@ class HomePage extends StatelessWidget {
                                   children: [
                                     GFProgressBar(
                                       percentage: 35 / 40,
-                                      backgroundColor: Color(0xffC4C4C4),
-                                      progressBarColor: Color(0xffECC055),
+                                      backgroundColor: const Color(0xffC4C4C4),
+                                      progressBarColor: const Color(0xffECC055),
                                       lineHeight: 15,
                                     ),
                                     Positioned(
@@ -298,11 +298,11 @@ class HomePage extends StatelessWidget {
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(20))),
                             child: Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               child: Column(
                                 children: [
-                                  Text("Unit 1"),
-                                  SizedBox(
+                                  const Text("Unit 1"),
+                                  const SizedBox(
                                     height: 130,
                                   ),
                                   Stack(
@@ -310,8 +310,8 @@ class HomePage extends StatelessWidget {
                                     children: [
                                       GFProgressBar(
                                         percentage: 9 / 40,
-                                        backgroundColor: Color(0xffC4C4C4),
-                                        progressBarColor: Color(0xffECC055),
+                                        backgroundColor: const Color(0xffC4C4C4),
+                                        progressBarColor: const Color(0xffECC055),
                                         lineHeight: 15,
                                       ),
                                       Positioned(
