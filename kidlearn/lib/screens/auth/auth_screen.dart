@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearn/reusable_components/theme_scaffold.dart';
 import '../../constants/color_ext.dart';
+import '../../constants/roboto_text_style.dart';
 import '../tab_container/tab_container.dart';
 import 'custom_text_field.dart';
 
@@ -28,13 +29,12 @@ class AuthScreen extends StatelessWidget {
                 const SizedBox(height: 24),
                 const CustomTextField(hint: 'Password'),
                 const SizedBox(height: 24),
-                const Row(
+                Row(
                   children: [
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       'Forgot Password?',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style: RobotoTextStyle.robotoBold(size: 18),
                     ),
                   ],
                 ),
@@ -47,35 +47,32 @@ class AuthScreen extends StatelessWidget {
                             WidgetStateProperty.all(ThemeColors.orange),
                       ),
                       onPressed: () => _navigateToHome(context),
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
                         child: Text(
                           'GO',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                              color: Colors.white),
+                          style: RobotoTextStyle.robotoBold(
+                              size: 24, color: Colors.white),
                         ),
                       ),
                     ),
                   ),
                 ]),
                 const SizedBox(height: 32),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "Don't have an account? ",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style: RobotoTextStyle.robotoBold(size: 18),
                     ),
-                    Text(
-                      'Sign Up',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18,
-                          color: ThemeColors.textGreen),
-                    ),
+                    TextButton(
+                      style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                      onPressed: () => (),
+                      child: Text('Sign Up',
+                          style: RobotoTextStyle.robotoBold(
+                              size: 18, color: ThemeColors.chapterGreen)),
+                    )
                   ],
                 ),
               ],

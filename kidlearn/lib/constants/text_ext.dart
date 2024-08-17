@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 
 extension CustomText on Text {
   Text headerText({Color color = Colors.black}) {
@@ -6,7 +7,7 @@ extension CustomText on Text {
       data!,
       maxLines: 1,
       overflow: TextOverflow.clip,
-      style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: color),
+      style: RobotoTextStyle.robotoRegular(size: 25, color: color),
     );
   }
 }

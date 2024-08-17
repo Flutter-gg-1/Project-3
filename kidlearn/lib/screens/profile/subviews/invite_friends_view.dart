@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 
 import '../../../constants/color_ext.dart';
 import '../../../constants/img_ext.dart';
@@ -34,32 +35,27 @@ class InviteFriendsView extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          Spacer(),
-                          const Expanded(
+                          const Spacer(),
+                          Expanded(
                               flex: 4,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     'Invite your friends',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                                    style: RobotoTextStyle.robotoMedium(),
                                   ),
-                                  SizedBox(height: 16),
+                                  const SizedBox(height: 8),
                                   Text(
                                     'Tell your friends it’s free and fun to learn on Mental up!',
-                                    style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                                    style:
+                                        RobotoTextStyle.robotoRegular(size: 16),
                                   ),
                                 ],
                               )),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Row(
                         children: [
                           Expanded(
@@ -74,7 +70,11 @@ class InviteFriendsView extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                               ),
-                              child: const Text('INVITE FRIENDS'),
+                              child: Text(
+                                'INVITE FRIENDS',
+                                style: RobotoTextStyle.robotoMedium(
+                                    size: 16, color: Colors.white),
+                              ),
                             ),
                           )
                         ],

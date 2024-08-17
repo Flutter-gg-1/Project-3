@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 import '../../constants/color_ext.dart';
 
 class ChallengeCard extends StatelessWidget {
@@ -46,14 +47,12 @@ class ChallengeCard extends StatelessWidget {
                         children: [
                           Text(
                             title,
-                            style: const TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w700),
+                            style: RobotoTextStyle.robotoBold(size: 18),
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 4),
                           Text(
                             description,
-                            style: const TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500),
+                            style: RobotoTextStyle.robotoRegular(size: 18),
                           ),
                         ],
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 import 'package:kidlearn/constants/text_ext.dart';
 import '../../constants/img_ext.dart';
 import '../../model/challenge.dart';
@@ -32,11 +33,12 @@ class ChallengesScreen extends StatelessWidget {
                   description: challenge.description,
                 ),
                 const SizedBox(height: 16),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text('Achievements', style: TextStyle(fontSize: 24)),
+                    child: Text('Achievements',
+                        style: RobotoTextStyle.robotoRegular(size: 25)),
                   ),
                 ),
                 ...challenge.achievements.map((achievement) {

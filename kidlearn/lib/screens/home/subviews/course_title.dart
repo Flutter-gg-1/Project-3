@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 import '../../../constants/color_ext.dart';
 import '../../../constants/svg.dart';
 import '../../../model/course.dart';
@@ -19,19 +20,17 @@ class CourseTitle extends StatelessWidget {
             textAlign: TextAlign.start,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w400),
+            style: RobotoTextStyle.robotoRegular(size: 30),
           ),
           const Spacer(),
           Row(
             children: [
               AppSvg.crown,
               Text(
-                  '${course.crowns.toString()}/${course.totalCrowns.toString()}',
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w500,
-                    color: ThemeColors.textGrey,
-                  )),
+                '${course.crowns.toString()}/${course.totalCrowns.toString()}',
+                style: RobotoTextStyle.robotoRegular(
+                    size: 20, color: ThemeColors.textGrey),
+              ),
             ],
           )
         ],

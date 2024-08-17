@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 import 'package:kidlearn/constants/svg.dart';
 import '../../../constants/color_ext.dart';
 import '../../../constants/img_ext.dart';
@@ -14,8 +15,10 @@ class StatisticsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(
-          children: [Text('Statistics', style: TextStyle(fontSize: 24))],
+        Row(
+          children: [
+            Text('Statistics', style: RobotoTextStyle.robotoRegular(size: 25))
+          ],
         ),
         const SizedBox(height: 8),
         GridView(
@@ -24,7 +27,7 @@ class StatisticsView extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
+            mainAxisSpacing: 12,
             childAspectRatio: 2.5,
           ),
           children: [
@@ -77,8 +80,11 @@ class StatisticCardView extends StatelessWidget {
         leading: assetImage != null ? Image(image: assetImage!) : svg,
         title: Text(title),
         subtitle: Text(subTitle),
-        subtitleTextStyle: TextStyle(fontSize: 12, color: ThemeColors.textGrey),
+        titleTextStyle: RobotoTextStyle.robotoRegular(size: 13),
+        subtitleTextStyle: RobotoTextStyle.robotoRegular(
+            size: 13, color: ThemeColors.textGrey),
         titleAlignment: ListTileTitleAlignment.titleHeight,
+        horizontalTitleGap: 4,
       ),
     );
   }

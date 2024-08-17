@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:kidlearn/constants/roboto_text_style.dart';
+import 'package:kidlearn/constants/svg.dart';
 import '../../../constants/color_ext.dart';
 import '../../../constants/img_ext.dart';
 import '../../../model/user.dart';
+import 'package:intl/intl.dart';
 
 class ProfileCardView extends StatelessWidget {
   const ProfileCardView({
@@ -21,18 +23,21 @@ class ProfileCardView extends StatelessWidget {
           children: [
             Text(
               user.name,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w400),
+              style: RobotoTextStyle.robotoRegular(size: 25),
             ),
-            Text(user.username,
-                style: TextStyle(fontSize: 14, color: ThemeColors.textGrey)),
+            Text(
+              user.username,
+              style: RobotoTextStyle.robotoRegular(
+                  size: 16, color: ThemeColors.textGrey),
+            ),
             const SizedBox(height: 12),
             Row(
               children: [
-                const Icon(Icons.time_to_leave, size: 15),
+                AppSvg.clock,
                 const SizedBox(width: 8),
                 Text(
-                  'joined ${user.joinDate.month} ${user.joinDate.year}',
-                  style: const TextStyle(fontSize: 12),
+                  'joined ${DateFormat.MMMM().format(user.joinDate)} ${user.joinDate.year}',
+                  style: RobotoTextStyle.robotoRegular(size: 12),
                 ),
               ],
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 
 import '../../../../constants/color_ext.dart';
 import '../../../../constants/img_ext.dart';
@@ -95,8 +96,7 @@ class _ChapterCard extends StatelessWidget {
                           horizontal: 12.0, vertical: 4),
                       child: Text(
                         chapter.completed ? '1' : '',
-                        style:
-                            const TextStyle(color: Colors.black, fontSize: 18),
+                        style: RobotoTextStyle.robotoRegular(size: 15),
                       ),
                     ),
                   ],
@@ -105,7 +105,11 @@ class _ChapterCard extends StatelessWidget {
             ],
           ),
         ),
-        Text(chapter.name),
+        const SizedBox(height: 8),
+        Text(
+          chapter.name,
+          style: RobotoTextStyle.robotoRegular(size: 16),
+        ),
       ],
     );
   }

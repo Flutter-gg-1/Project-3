@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 import 'package:kidlearn/constants/text_ext.dart';
 import '../../constants/color_ext.dart';
 import '../../reusable_components/theme_scaffold.dart';
@@ -23,10 +24,10 @@ class SettingsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(32.0),
           child: Column(
             children: [
-              const Expanded(
+              Expanded(
                 child: Text(
                   ' 🛠 Page under construction',
-                  style: TextStyle(fontSize: 18),
+                  style: RobotoTextStyle.robotoRegular(),
                 ),
               ),
               Row(
@@ -38,11 +39,11 @@ class SettingsScreen extends StatelessWidget {
                             WidgetStateProperty.all(ThemeColors.orange),
                       ),
                       onPressed: () => _popView(context),
-                      child: const Padding(
-                        padding: EdgeInsets.all(16.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
                         child: Text('Sign Out',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 18)),
+                            style: RobotoTextStyle.robotoMedium(
+                                color: Colors.white)),
                       ),
                     ),
                   ),

@@ -12,4 +12,5 @@ class AppSvg {
   static var thunder = SvgPicture.asset('assets/icons/thunder.svg');
   static var xp = SvgPicture.asset('assets/icons/xp.svg');
   static var diamond = SvgPicture.asset('assets/icons/diamond.svg');
+  static var clock = SvgPicture.asset('assets/icons/clock.svg');
 }

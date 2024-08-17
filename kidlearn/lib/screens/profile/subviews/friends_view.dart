@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../constants/color_ext.dart';
+import '../../../constants/roboto_text_style.dart';
 import '../../../model/user.dart';
 
 class FriendsView extends StatelessWidget {
@@ -7,18 +8,24 @@ class FriendsView extends StatelessWidget {
 
   final User user;
 
+  void _addFriend() => ();
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Friends', style: TextStyle(fontSize: 24)),
-            Text(
-              'ADD FRIENDS',
-              style: TextStyle(fontSize: 15, color: ThemeColors.blue),
-            ),
+            Text('Friends', style: RobotoTextStyle.robotoRegular(size: 25)),
+            TextButton(
+              onPressed: _addFriend,
+              child: Text(
+                'ADD FRIENDS',
+                style: RobotoTextStyle.robotoBold(
+                    size: 16, color: ThemeColors.blue),
+              ),
+            )
           ],
         ),
         const SizedBox(height: 8),
@@ -30,7 +37,7 @@ class FriendsView extends StatelessWidget {
           child: Column(
             children: [
               // MARK: - Headers
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 8.0),
                 child: Row(
                   children: [
@@ -38,16 +45,10 @@ class FriendsView extends StatelessWidget {
                         child: Center(
                       child: Column(
                         children: [
-                          Text(
-                            'FOLLOWING',
-                            style: TextStyle(
-                                color: ThemeColors.blue,
-                                fontWeight: FontWeight.w600),
-                          ),
-                          Divider(
-                            height: 12,
-                            color: ThemeColors.blue,
-                          ),
+                          Text('FOLLOWING',
+                              style: RobotoTextStyle.robotoBold(
+                                  size: 14, color: ThemeColors.blue)),
+                          const Divider(height: 12, color: ThemeColors.blue),
                         ],
                       ),
                     )),
@@ -55,13 +56,11 @@ class FriendsView extends StatelessWidget {
                         child: Center(
                             child: Column(
                       children: [
-                        Text(
-                          'FOLLOWERS',
-                          style: TextStyle(
-                              color: ThemeColors.textGrey,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        Divider(height: 12, color: ThemeColors.borderLight),
+                        Text('FOLLOWERS',
+                            style: RobotoTextStyle.robotoBold(
+                                size: 14, color: ThemeColors.textGrey)),
+                        const Divider(
+                            height: 12, color: ThemeColors.borderLight),
                       ],
                     ))),
                   ],
@@ -106,19 +105,19 @@ class _TableCellView extends StatelessWidget {
             children: [
               Stack(alignment: Alignment.center, children: [
                 Icon(Icons.circle, size: 34, color: user.preferredColor),
-                Text(
-                  user.initials(),
-                  style: const TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
+                Text(user.initials(),
+                    style: RobotoTextStyle.robotoRegular(
+                        size: 14, color: Colors.white)),
               ]),
               const SizedBox(width: 24),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(user.name),
-                  Text('${user.stats.xp} XP'),
+                  Text(user.name,
+                      style: RobotoTextStyle.robotoRegular(size: 14)),
+                  Text('${user.stats.xp} XP',
+                      style: RobotoTextStyle.robotoRegular(
+                          size: 14, color: ThemeColors.textGrey)),
                 ],
               ),
               const Spacer(),

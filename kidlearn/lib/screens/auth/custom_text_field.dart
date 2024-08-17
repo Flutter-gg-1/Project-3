@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../constants/color_ext.dart';
+import '../../constants/roboto_text_style.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key, required this.hint});
@@ -12,13 +14,15 @@ class CustomTextField extends StatelessWidget {
         filled: true,
         fillColor: Colors.white,
         hintText: hint,
+        hintStyle:
+            RobotoTextStyle.robotoBold(size: 18, color: ThemeColors.textGrey),
         contentPadding: const EdgeInsets.all(20),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide.none,
         ),
       ),
-      style: const TextStyle(fontSize: 18),
+      style: RobotoTextStyle.robotoBold(size: 18),
     );
   }
 }

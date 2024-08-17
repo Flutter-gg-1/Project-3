@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kidlearn/constants/roboto_text_style.dart';
 import 'package:kidlearn/reusable_components/progress_view.dart';
 import '../../../../constants/color_ext.dart';
 import '../../../../constants/img_ext.dart';
@@ -40,7 +41,7 @@ class UnitCardView extends StatelessWidget {
                             const Spacer(),
                             Text(
                               'Unit ${unit.unitNum}',
-                              style: const TextStyle(fontSize: 18),
+                              style: RobotoTextStyle.robotoRegular(),
                             ),
                             const SizedBox(height: 16),
                             // MARK: - Progress Bar
