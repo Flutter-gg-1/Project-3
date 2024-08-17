@@ -1,6 +1,7 @@
-import 'package:education_app/widgets/challenges_section.dart';
+import 'package:education_app/widgets/challenges/challenges_section.dart';
 import 'package:education_app/widgets/home/bottom_navigation.dart';
 import 'package:flutter/material.dart';
+
 class ChallengesScreen extends StatelessWidget {
   const ChallengesScreen({super.key});
 

@@ -1,4 +1,4 @@
-import 'package:education_app/widgets/challenge_card.dart';
+import 'package:education_app/widgets/challenges/challenge_card.dart';
 import 'package:flutter/material.dart';
 
 class ChallengesSection extends StatelessWidget {

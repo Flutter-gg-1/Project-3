@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'friends_card.dart';
 
 class FriendsSection extends StatefulWidget {
@@ -87,7 +86,7 @@ class _FriendsSectionState extends State<FriendsSection> {
                   endIndent: isFollowing ? 178 : null,
                   indent: !isFollowing ? 178 : null,
                   thickness: 3,
-                  color: Color.fromRGBO(2, 161, 251, 1),
+                  color: const Color.fromRGBO(2, 161, 251, 1),
                 ),
               ),
               if (isFollowing) ...[

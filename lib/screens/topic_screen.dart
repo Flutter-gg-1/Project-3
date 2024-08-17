@@ -8,17 +8,20 @@ class TopicScreen extends StatelessWidget {
   final int crowns;
   final int diamonds;
 
-  const TopicScreen({super.key,required this.topicName, required this.crowns, required this.diamonds});
+  const TopicScreen(
+      {super.key,
+      required this.topicName,
+      required this.crowns,
+      required this.diamonds});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(251, 245, 242, 1),
+        backgroundColor: const Color.fromRGBO(251, 245, 242, 1),
         body: Padding(
             padding: const EdgeInsets.only(top: 70),
             child: Column(children: [
-               TopicHeader(
-                  pageName: topicName, points: [crowns, diamonds]),
+              TopicHeader(pageName: topicName, points: [crowns, diamonds]),
               Expanded(
                 child: SingleChildScrollView(
                   child: Padding(

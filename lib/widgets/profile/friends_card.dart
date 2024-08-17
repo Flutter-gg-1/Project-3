@@ -9,7 +9,8 @@ class FriendsCard extends StatelessWidget {
       {super.key,
       required this.abbrev,
       required this.name,
-      required this.points, required this.color});
+      required this.points,
+      required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class FriendsCard extends StatelessWidget {
                   Container(
                     height: 31,
                     width: 31,
-                    decoration:  BoxDecoration(
+                    decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: color,
                     ),

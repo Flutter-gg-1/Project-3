@@ -21,12 +21,15 @@ class TopicHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            child: Text(
-              pageName,
-              style: const TextStyle(
-                  color: Color.fromRGBO(0, 0, 0, 0.9),
-                  fontSize: 30,
-                  fontWeight: FontWeight.w400),
+            child: Flexible(
+              child: Text(
+                pageName,
+                style: const TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 0.9),
+                    fontSize: 30,
+                    fontWeight: FontWeight.w400),
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ),
           Row(

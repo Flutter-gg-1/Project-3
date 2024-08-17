@@ -1,8 +1,4 @@
-import 'package:education_app/screens/challenges_screen.dart';
 import 'package:education_app/screens/login_screen.dart';
-import 'package:education_app/screens/home_screen.dart';
-import 'package:education_app/screens/profile_screen.dart';
-import 'package:education_app/screens/topic_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

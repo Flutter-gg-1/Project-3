@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'statistics_card.dart';
 
 class StatisticsSection extends StatelessWidget {

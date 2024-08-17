@@ -23,9 +23,12 @@ class ProfileCard extends StatelessWidget {
               Text(name, style: const TextStyle(fontSize: 30)),
               Text(
                 username,
-                style: const TextStyle(fontSize: 20, color: Color.fromRGBO(0, 0, 0, 0.5)),
+                style: const TextStyle(
+                    fontSize: 20, color: Color.fromRGBO(0, 0, 0, 0.5)),
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(
+                height: 10,
+              ),
               Row(
                 children: [
                   Image.asset('assets/images/clock.png'),

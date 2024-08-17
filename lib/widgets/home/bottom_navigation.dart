@@ -1,7 +1,6 @@
 import 'package:education_app/screens/challenges_screen.dart';
 import 'package:education_app/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
-
 import '../../screens/home_screen.dart';
 import '../../screens/settings_screen.dart';
 
@@ -47,7 +46,7 @@ class BottomNavigation extends StatelessWidget {
               width: 35.19,
               height: 29.07,
               color: active == 2
-                  ?  Colors.redAccent[700]
+                  ? Colors.redAccent[700]
                   : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
@@ -62,7 +61,7 @@ class BottomNavigation extends StatelessWidget {
               width: 35.19,
               height: 29.07,
               color: active == 3
-                  ?  Colors.purpleAccent[700]
+                  ? Colors.purpleAccent[700]
                   : const Color.fromRGBO(0, 0, 0, 0.7),
             ),
           ),
