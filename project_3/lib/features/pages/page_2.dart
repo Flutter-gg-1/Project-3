@@ -90,7 +90,7 @@ class _YourScoreState extends State<YourScore> {
       ),
       bottomNavigationBar: myRowContainer(
         addItem: [
-          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             IconButton(
                 onPressed: () {}, icon: const Icon(Icons.home, size: 35)),
             IconButton(

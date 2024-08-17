@@ -6,6 +6,16 @@ class VerbalSkills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SafeArea(
+        child: myRowContainer(
+          addItem: [
+            const Text('Verbal skills', style: TextStyle(fontSize: 30)),
+            const SizedBox(width: 20),
+            Image.asset('assets/t.png'),
+          ],
+        ),
+      ),
+    );
   }
 }
