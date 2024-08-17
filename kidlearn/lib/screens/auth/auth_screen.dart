@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearn/reusable_components/theme_scaffold.dart';
 import '../../constants/color_ext.dart';
-import '../home/home_screen.dart';
+import '../tab_container/tab_container.dart';
 import 'custom_text_field.dart';
 
 class AuthScreen extends StatelessWidget {
@@ -10,7 +10,7 @@ class AuthScreen extends StatelessWidget {
   void _navigateToHome(BuildContext context) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const HomeScreen(),
+        builder: (context) => TabContainer(),
       ),
     );
   }

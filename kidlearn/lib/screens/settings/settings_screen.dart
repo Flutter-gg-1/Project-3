@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kidlearn/constants/text_ext.dart';
-
 import '../../reusable_components/theme_scaffold.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +12,7 @@ class ProfileScreen extends StatelessWidget {
       headerContent: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Profile').headerText(),
+          Text('Settings').headerText(),
         ],
       ),
       body: Column(

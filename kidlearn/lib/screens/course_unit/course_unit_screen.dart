@@ -28,7 +28,8 @@ class CourseUnitScreen extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: Column(
               children: [
-                UnitCardView(unitNum: unit.unitNum),
+                UnitCardView(unit: unit),
+                SizedBox(height: 32),
                 UnitChaptersView(unit: unit),
               ],
             ),

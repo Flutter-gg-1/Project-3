@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'package:kidlearn/reusable_components/theme_progress_view.dart';
 import '../../../constants/color_ext.dart';
 import '../../../constants/img_ext.dart';
+import '../../../model/unit.dart';
 
 class UnitCardView extends StatelessWidget {
-  const UnitCardView({super.key, required this.unitNum});
+  const UnitCardView({super.key, required this.unit});
 
-  final int unitNum;
+  final Unit unit;
 
   @override
   Widget build(BuildContext context) {
@@ -36,13 +37,13 @@ class UnitCardView extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(vertical: 8),
                         child: Column(
                           children: [
-                            Spacer(),
+                            const Spacer(),
                             Text(
-                              'Unit ${unitNum}',
+                              'Unit ${unit.unitNum}',
                               style: TextStyle(fontSize: 18),
                             ),
-                            SizedBox(height: 16),
-                            // Missing progress bar!
+                            const SizedBox(height: 16),
+                            // MARK: - Progress Bar
                           ],
                         ),
                       ),
