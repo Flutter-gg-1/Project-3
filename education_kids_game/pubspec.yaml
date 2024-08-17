@@ -23,4 +23,11 @@ flutter:
       - family: CustomIcons
         fonts:
           - asset: fonts/CustomIcons.ttf
+      - family: Roboto
+        fonts:
+          - asset: fonts\CustomIcons.ttf
+          - asset: fonts\Roboto-Regular.ttf
+            
+          
+
   

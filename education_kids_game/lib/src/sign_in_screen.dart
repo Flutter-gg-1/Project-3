@@ -1,4 +1,3 @@
-import 'package:education_kids_game/src/home_screen.dart';
 import 'package:education_kids_game/src/current_page.dart';
 import 'package:flutter/material.dart';
 

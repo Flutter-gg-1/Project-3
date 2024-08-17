@@ -1,10 +1,7 @@
-import 'package:education_kids_game/src/challenges_screen.dart';
 import 'package:education_kids_game/src/course_screen.dart';
 import 'package:education_kids_game/src/customWidgets/course_title.dart';
 import 'package:education_kids_game/src/customWidgets/unit_widget.dart';
 import 'package:education_kids_game/src/customWidgets/custom_icons_icons.dart';
-import 'package:education_kids_game/src/profile_screen.dart';
-import 'package:education_kids_game/src/setting_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -19,37 +16,41 @@ class _MyWidgetState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          bottom: PreferredSize(
+        preferredSize: const Size(double.infinity, 71),
+        child: Container(
+          width: double.infinity,
+          height: 71,
+          padding: const EdgeInsets.symmetric(horizontal: 50),
+          color: const Color(0xffE5E5E5),
+          child: const Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(CustomIcons.fire, size: 30, color: Color(0xffEB9F4A)),
+              SizedBox(width: 10),
+              Text(
+                "3",
+                style: TextStyle(fontSize: 25, color: Color(0xffEB9F4A)),
+              ),
+              SizedBox(width: 40),
+              Icon(CustomIcons.box, size: 25, color: Color(0xff338F9B)),
+              SizedBox(width: 10),
+              Text(
+                "1432 XP",
+                style: TextStyle(fontSize: 25, color: Color(0xff338F9B)),
+              ),
+              SizedBox(width: 40),
+              Icon(CustomIcons.heart, size: 30, color: Color(0xffDC3F00)),
+              SizedBox(width: 10),
+              Icon(CustomIcons.infinity, size: 30, color: Color(0xffDC3F00))
+            ],
+          ),
+        ),
+      )),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 60),
-              width: double.infinity,
-              height: 71,
-              padding: const EdgeInsets.symmetric(horizontal: 50),
-              color: const Color(0xffE5E5E5),
-              child: const Row(
-                children: [
-                  Icon(CustomIcons.fire, size: 30, color: Color(0xffEB9F4A)),
-                  SizedBox(width: 10),
-                  Text(
-                    "3",
-                    style: TextStyle(fontSize: 25, color: Color(0xffEB9F4A)),
-                  ),
-                  SizedBox(width: 40),
-                  Icon(CustomIcons.box, size: 25, color: Color(0xff338F9B)),
-                  SizedBox(width: 10),
-                  Text(
-                    "1432 XP",
-                    style: TextStyle(fontSize: 25, color: Color(0xff338F9B)),
-                  ),
-                  SizedBox(width: 40),
-                  Icon(CustomIcons.heart, size: 30, color: Color(0xffDC3F00)),
-                  SizedBox(width: 10),
-                  Icon(CustomIcons.infinity, size: 30, color: Color(0xffDC3F00))
-                ],
-              ),
-            ),
             const CourseTitle(
               title: "Logical reasoning",
               rate: " 18/40",
