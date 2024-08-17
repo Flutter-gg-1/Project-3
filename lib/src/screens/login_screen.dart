@@ -9,9 +9,9 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: MyColor.primaryBG,
+          backgroundColor: MyColor.primaryScreenBG,
         ),
-        backgroundColor: MyColor.primaryBG,
+        backgroundColor: MyColor.primaryScreenBG,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

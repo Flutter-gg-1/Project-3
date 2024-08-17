@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class App extends StatelessWidget {
   const App({super.key});
 
-  // TODO move this code to login screen
+  // TODO move this code to login screen and delete this file
   @override
   Widget build(BuildContext context) {
     return Scaffold(

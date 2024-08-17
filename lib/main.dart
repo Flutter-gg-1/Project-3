@@ -19,10 +19,14 @@ class MainApp extends StatelessWidget {
       title: 'Educational Kids Game',
       initialRoute: '/',
 
-      // Routes
+      // Routes TODO update Screens when you finished
       routes: {
         '/': (context) => const LoginScreen(),
         '/home': (context) => const HomeScreen(),
+        '/game': (context) => const HomeScreen(),
+        '/challenges': (context) => const HomeScreen(),
+        '/profile': (context) => const HomeScreen(),
+        '/settings': (context) => const HomeScreen(),
       },
     );
   }
