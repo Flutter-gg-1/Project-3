@@ -30,6 +30,7 @@ class VerbalSkills extends StatelessWidget {
             ),
             const SizedBox(height: 25),
             Stack(
+              clipBehavior: Clip.none,
               alignment: Alignment.topCenter,
               children: [
                 Container(
