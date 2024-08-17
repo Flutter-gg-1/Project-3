@@ -1,4 +1,3 @@
-import 'package:educational_kids_project/pages/login_page.dart';
 import 'package:educational_kids_project/pages/profile.dart';
 import 'package:flutter/material.dart';
 

@@ -22,3 +22,4 @@ flutter:
     - lib/assets/login/
     - lib/assets/home/
     - lib/assets/verbal_skills/
+    - lib/assets/profile/
