@@ -46,11 +46,13 @@ Widget myContainer({
   String? title,
   double? fontSize,
   String? imagePath,
+  double? width = 179,
+  double? height = 227,
 }) {
   return Center(
     child: Container(
-      width: 179,
-      height: 227,
+      width: width,
+      height: height,
       padding: const EdgeInsets.all(10),
       alignment: Alignment.center,
       margin: const EdgeInsets.only(left: 5, right: 5),
