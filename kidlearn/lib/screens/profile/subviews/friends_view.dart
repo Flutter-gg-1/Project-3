@@ -12,7 +12,14 @@ class FriendsView extends StatelessWidget {
     return Column(
       children: [
         const Row(
-          children: [Text('Friends', style: TextStyle(fontSize: 24))],
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Friends', style: TextStyle(fontSize: 24)),
+            Text(
+              'ADD FRIENDS',
+              style: TextStyle(fontSize: 15, color: ThemeColors.blue),
+            ),
+          ],
         ),
         const SizedBox(height: 8),
         Container(
@@ -97,7 +104,15 @@ class _TableCellView extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Icon(Icons.person),
+              Stack(alignment: Alignment.center, children: [
+                Icon(Icons.circle, size: 34, color: user.preferredColor),
+                Text(
+                  user.initials(),
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ]),
               const SizedBox(width: 24),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

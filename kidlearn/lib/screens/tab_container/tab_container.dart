@@ -82,7 +82,7 @@ class _TabContainerState extends State<TabContainer> {
               ),
               Tab(
                 icon: SvgPicture.asset(
-                  'assets/icons/person.svg',
+                  'assets/icons/profile.svg',
                   height: 35,
                   colorFilter:
                       ColorFilter.mode(_getSelectedColor(2), BlendMode.srcIn),

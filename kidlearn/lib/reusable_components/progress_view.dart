@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../constants/color_ext.dart';
+import '../constants/svg.dart';
 
 class ProgressView extends StatelessWidget {
   const ProgressView({super.key, required this.value, required this.total});
@@ -24,24 +25,12 @@ class ProgressView extends StatelessWidget {
             color: ThemeColors.crownYellow,
           ),
         ),
-        const Row(
+        Row(
           children: [
             Stack(
               alignment: Alignment.bottomLeft,
               children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 3.0),
-                  child: Icon(
-                    Icons.square,
-                    size: 20,
-                    color: ThemeColors.courseCardBG,
-                  ),
-                ),
-                Icon(
-                  Icons.square,
-                  size: 20,
-                  color: ThemeColors.crownYellow,
-                ),
+                AppSvg.crown,
               ],
             ),
           ],

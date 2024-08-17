@@ -24,7 +24,7 @@ class CourseTitle extends StatelessWidget {
           const Spacer(),
           Row(
             children: [
-              Svg.crown,
+              AppSvg.crown,
               Text(
                   '${course.crowns.toString()}/${course.totalCrowns.toString()}',
                   style: const TextStyle(

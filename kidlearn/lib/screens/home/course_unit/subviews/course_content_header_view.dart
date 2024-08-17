@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:kidlearn/constants/text_ext.dart';
 import '../../../../constants/color_ext.dart';
+import '../../../../constants/svg.dart';
 
 class CourseContentHeaderView extends StatelessWidget {
   const CourseContentHeaderView({super.key, required this.title});
@@ -13,16 +15,16 @@ class CourseContentHeaderView extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(title).headerText(),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.0),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
             children: [
               _HeaderStatsItem(
-                  icon: Icons.kayaking,
+                  icon: AppSvg.crown,
                   iconColor: ThemeColors.crownYellow,
                   statNum: 3),
               _HeaderStatsItem(
-                  icon: Icons.diamond,
+                  icon: AppSvg.diamond,
                   iconColor: ThemeColors.blue,
                   statNum: 213),
             ],
@@ -40,7 +42,7 @@ class _HeaderStatsItem extends StatelessWidget {
     required this.statNum,
   });
 
-  final IconData icon;
+  final SvgPicture icon;
   final Color iconColor;
   final int statNum;
 
@@ -50,11 +52,7 @@ class _HeaderStatsItem extends StatelessWidget {
       padding: const EdgeInsets.all(4.0),
       child: Row(
         children: [
-          Icon(
-            icon,
-            size: 28,
-            color: iconColor,
-          ),
+          icon,
           const SizedBox(width: 4),
           Text(statNum.toString()).headerText(color: iconColor),
         ],

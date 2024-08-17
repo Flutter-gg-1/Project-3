@@ -17,4 +17,7 @@ extension Img on AssetImage {
   static AssetImage reading = const AssetImage('assets/images/reading.png');
   static AssetImage streak = const AssetImage('assets/images/streak.png');
   static AssetImage tree = const AssetImage('assets/images/tree.png');
+  static AssetImage celebrate = const AssetImage('assets/images/celebrate.png');
+  static AssetImage medal = const AssetImage('assets/images/medal.png');
+  static AssetImage topMedal = const AssetImage('assets/images/top_medal.png');
 }

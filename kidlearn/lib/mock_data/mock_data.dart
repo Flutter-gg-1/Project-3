@@ -1,3 +1,4 @@
+import '../constants/color_ext.dart';
 import '../constants/img_ext.dart';
 import '../model/achievement.dart';
 import '../model/challenge.dart';
@@ -155,13 +156,17 @@ class MockData {
           avatar: Img.avatar,
           joinDate: DateTime(2022, 3),
           stats: stats.firstWhere((stat) => stat.id == '1'),
+          preferredColor: ThemeColors.orange,
         ),
         User(
           id: '2',
           name: 'Hardi',
           username: 'Hardi55',
           joinDate: DateTime(2022, 4),
-          stats: stats.firstWhere((stat) => stat.id == '2'),
+          stats: stats.firstWhere(
+            (stat) => stat.id == '2',
+          ),
+          preferredColor: ThemeColors.iconLavender,
         ),
         User(
           id: '3',
@@ -169,6 +174,7 @@ class MockData {
           username: 'Krishna97',
           joinDate: DateTime(2023, 1),
           stats: stats.firstWhere((stat) => stat.id == '3'),
+          preferredColor: ThemeColors.berry,
         )
       ];
 

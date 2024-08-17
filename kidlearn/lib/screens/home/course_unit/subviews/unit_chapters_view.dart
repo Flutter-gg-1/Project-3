@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../constants/color_ext.dart';
 import '../../../../constants/img_ext.dart';
+import '../../../../constants/svg.dart';
 import '../../../../model/chapter.dart';
 import '../../../../model/unit.dart';
 
@@ -88,11 +89,7 @@ class _ChapterCard extends StatelessWidget {
                 alignment: Alignment.bottomRight,
                 child: Stack(
                   children: [
-                    const Icon(
-                      Icons.square,
-                      color: ThemeColors.crownYellow,
-                      size: 36,
-                    ),
+                    AppSvg.crown,
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 12.0, vertical: 4),

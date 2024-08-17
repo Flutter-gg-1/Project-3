@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants/color_ext.dart';
+import '../../../constants/img_ext.dart';
 
 class UpdatesBtnView extends StatelessWidget {
   const UpdatesBtnView({
@@ -16,7 +17,7 @@ class UpdatesBtnView extends StatelessWidget {
         borderRadius: BorderRadius.circular(16), // Set the corner radius
       ),
       child: ListTile(
-        leading: const Icon(Icons.party_mode),
+        leading: Image(image: Img.celebrate, fit: BoxFit.contain),
         title: const Text('Friends updates'),
         trailing: const Icon(
           Icons.chevron_right,
