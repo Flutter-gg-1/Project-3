@@ -18,10 +18,15 @@ class StatsBar extends StatelessWidget {
         children: List.generate(data.length, (index) {
           return Row(
             children: [
-              Image.asset("assets/images/${data[index]['type']}.png"),
+              data[index]['title'] != null
+              ? Text(data[index]['title'], style: TextStyle(fontSize: 30.0, color: data[index]['color']))
+              : Image.asset("assets/images/${data[index]['type']}.png"),
               const SizedBox(width: 10),
-              data[index]['color'] == null ? Image.asset('assets/images/${data[index]['value']}.png')
-              : Text(data[index]['value'],style: TextStyle(fontSize: 25, color: data[index]['color']),)
+              data[index]['value'] != null
+              ? data[index]['value'].contains(RegExp(r'[0-9]')) == false
+                ? Image.asset('assets/images/infinity.png')
+                : Text(data[index]['value'],style: TextStyle(fontSize: 25, color: data[index]['color']),)
+              : const SizedBox(width: 0)
             ],
           );
         }),

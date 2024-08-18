@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';                 // imports material design widgets and properities
-import 'package:project3/widgets/logo.dart';            // widget represents app logo
-import 'package:project3/widgets/user_input.dart';      // widget represents user input
+import 'package:project3/widgets/login_widget/logo.dart';            // widget represents app logo
+import 'package:project3/widgets/login_widget/user_input.dart';      // widget represents user input
 import 'package:project3/screens/home_screen.dart';     // Home page
 
 // login page

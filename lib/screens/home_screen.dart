@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';               // imports material design widgets and properities
 import 'package:project3/widgets/stats_bar.dart';     // widget represents stats bar
-import 'package:project3/widgets/course.dart';        // widget represents course
+import 'package:project3/widgets/home_widget/course.dart';        // widget represents course
 import 'package:project3/widgets/bottom_navbar.dart'; // widget represents bottom navigation bar
 
 // Home page
