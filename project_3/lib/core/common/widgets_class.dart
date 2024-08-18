@@ -27,15 +27,12 @@ Widget myLoadingIndicator(
     width: width,
     child: Padding(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-      child: Transform(
-        transform: Matrix4.skewX(-0.5),
-        child: LinearProgressIndicator(
-          value: value,
-          color: const Color.fromRGBO(236, 192, 85, 1),
-          minHeight: 14,
-          borderRadius: const BorderRadius.only(
-              topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
-        ),
+      child: LinearProgressIndicator(
+        value: value,
+        color: const Color.fromRGBO(236, 192, 85, 1),
+        minHeight: 14,
+        borderRadius: const BorderRadius.only(
+            topRight: Radius.circular(10), bottomRight: Radius.circular(10)),
       ),
     ),
   );

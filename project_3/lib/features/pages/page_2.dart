@@ -79,7 +79,10 @@ class _YourScoreState extends State<YourScore> {
                                 title: 'Unit 1',
                                 listWidget: [
                                   Image.asset('assets/t.png'),
-                                  myLoadingIndicator(value: score[i]),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 12),
+                                    child: myLoadingIndicator(value: score[i]),
+                                  ),
                                 ],
                               ),
                             ),
