@@ -1,10 +1,7 @@
-import 'package:educational_kids_game/src/soon_screen.dart';
-import 'package:educational_kids_game/src/unit_screen.dart';
-import 'package:educational_kids_game/widget/costom_section.dart';
 import 'package:educational_kids_game/widget/profile.dart';
 import 'package:educational_kids_game/widget/statistics_row.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
+
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({

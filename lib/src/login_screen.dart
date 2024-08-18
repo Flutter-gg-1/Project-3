@@ -54,7 +54,7 @@ class LoginScreen extends StatelessWidget {
                     (route) => false),
                 style: const ButtonStyle(
                     backgroundColor:
-                        MaterialStatePropertyAll(Color(0xFFEB9F4A))),
+                        WidgetStatePropertyAll(Color(0xFFEB9F4A))),
                 child: const Text(
                   'Go',
                   style: TextStyle(

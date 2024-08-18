@@ -1,16 +1,61 @@
-# educational_kids_game
+# educational_kids_game 🎮🎯
 
-A new Flutter project.
+A new Flutter project for creating creative UI for Kids game applcation.
 
-## Getting Started
+## Main Screens
 
-This project is a starting point for a Flutter application.
+### Login
 
-A few resources to get you started if this is your first Flutter project:
+![alt text](image.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### Main Widget
+- `CustomTextFeild`
+- `TextButton`
+- SafeA`rea
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Section
+
+![alt text](image-1.png)
+
+#### Main Widget
+- `SingleChildScrollView`
+- `SizedBox`
+- `Icon`
+
+### Challenges
+
+![alt text](image-2.png)
+
+#### Main widget
+- `Align`
+- `Row`
+- `Image`
+
+### Profile
+
+![alt text](image-3.png)
+
+#### Main widget
+- `ListTile`
+- `TextButton`
+- `Container`
+
+### Unit
+
+![alt text](image-4.png)
+
+#### Main Widget
+- `Stack`
+- `Column`
+- `Text`
+
+#### Other Widget
+- BottomNavigationBar , AppBar ...etc
+
+## OutPut
+
+![alt text](project3-gif.gif)
+
+Feel free to use with account name mentioned
+
+by `Basel-75` Github

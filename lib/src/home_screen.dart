@@ -20,6 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
     ProfileScreen(),
     SoonScreen()
   ];
+  List color=[
+    Colors.green,
+    Colors.red,
+    Colors.deepPurple,
+    Colors.blue
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor:  Colors.green,
+        selectedItemColor:  color[_currentIndex],
         unselectedItemColor: Colors.grey,
         showSelectedLabels: false,
         
@@ -44,9 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
         }),
         items: const [
           BottomNavigationBarItem(icon: Icon(LineAwesome.home_solid,),label: 'home'),
-          BottomNavigationBarItem(icon: Icon(LineAwesome.bullseye_solid),label: 'home'),
-          BottomNavigationBarItem(icon: Icon(Bootstrap.person),label: 'home'),
-          BottomNavigationBarItem(icon: Icon(AntDesign.setting_outline),label: 'home'),
+          BottomNavigationBarItem(icon: Icon(LineAwesome.bullseye_solid),label: 'challenges'),
+          BottomNavigationBarItem(icon: Icon(Bootstrap.person),label: 'profile'),
+          BottomNavigationBarItem(icon: Icon(AntDesign.setting_outline),label: 'setting'),
           ],
       ),
     );

@@ -1,6 +1,4 @@
 import 'package:educational_kids_game/widget/challenges.dart';
-import 'package:educational_kids_game/widget/profile.dart';
-import 'package:educational_kids_game/widget/statistics_row.dart';
 import 'package:flutter/material.dart';
 
 class ChallengesScreen extends StatelessWidget {
