@@ -73,7 +73,7 @@ class _YourScoreState extends State<YourScore> {
                             },
                             child: Padding(
                               padding: const EdgeInsets.only(
-                                  left: 9, right: 7, top: 5, bottom: 9),
+                                  left: 9, right: 7, bottom: 8),
                               child: myContainer(
                                 title: 'Unit 1',
                                 listWidget: [
@@ -85,7 +85,7 @@ class _YourScoreState extends State<YourScore> {
                           ),
                           const SizedBox(width: 5),
                           myContainerImage(),
-                          const SizedBox(height: 15),
+                          const SizedBox(height: 8),
                         ],
                       ),
                     ],
@@ -114,10 +114,7 @@ class _YourScoreState extends State<YourScore> {
                 },
                 icon: const Icon(Icons.person, size: 35)),
             IconButton(
-                onPressed: () {
-                  (context).goTo(const YourScore());
-                },
-                icon: const Icon(Icons.settings, size: 35)),
+                onPressed: () {}, icon: const Icon(Icons.settings, size: 35)),
           ]),
         ],
       ),

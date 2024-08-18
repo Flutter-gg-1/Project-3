@@ -38,10 +38,7 @@ class Challenges extends StatelessWidget {
                 },
                 icon: const Icon(Icons.person, size: 35)),
             IconButton(
-                onPressed: () {
-                  (context).goTo(const YourScore());
-                },
-                icon: const Icon(Icons.settings, size: 35)),
+                onPressed: () {}, icon: const Icon(Icons.settings, size: 35)),
           ]),
         ],
       ),
