@@ -55,6 +55,7 @@ class Lessons extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     color: const Color.fromARGB(80, 196, 196, 196),
                   ) ,
+                  child: const Progressbar(percentage: 0.4,),
                 ),
                 
                 Positioned(
