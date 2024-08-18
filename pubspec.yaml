@@ -68,6 +68,8 @@ flutter:
      - lib/assest/image/pen.png
      - lib/assest/image/lock.png
      - lib/assest/image/book.png
+     - lib/assest/image/boy.png
+     - lib/assest/image/cat.png
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

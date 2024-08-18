@@ -1,4 +1,3 @@
-import 'package:educational_kids_game/widget/costom_section.dart';
 import 'package:educational_kids_game/widget/section_unit.dart';
 import 'package:educational_kids_game/widget/unit_topic_circle.dart';
 import 'package:flutter/material.dart';
@@ -107,16 +106,16 @@ class UnitScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                  UnitTopicCircle(
-                    imagePath: 'lib/assest/image/lock.png',
-                    isClose: true,
-                    lable: '',
-                  ),
-                  UnitTopicCircle(
-                    imagePath: 'lib/assest/image/lock.png',
-                    isClose: true,
-                    lable: '',
-                  ),
+                      UnitTopicCircle(
+                        imagePath: 'lib/assest/image/lock.png',
+                        isClose: true,
+                        lable: '',
+                      ),
+                      UnitTopicCircle(
+                        imagePath: 'lib/assest/image/lock.png',
+                        isClose: true,
+                        lable: '',
+                      ),
                     ],
                   ),
                 ],
