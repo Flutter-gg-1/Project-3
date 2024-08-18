@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project3/nav_bottom.dart';
+import 'package:project3/src/nav_bottom.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});

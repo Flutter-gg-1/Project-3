@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project3/challenges.dart';
-import 'package:project3/home.dart';
-import 'package:project3/profile.dart';
+import 'package:project3/src/challenges.dart';
+import 'package:project3/src/home.dart';
+import 'package:project3/src/profile.dart';
 
 class FirstScrean extends StatefulWidget {
   const FirstScrean({super.key});
