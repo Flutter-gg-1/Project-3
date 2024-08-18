@@ -128,3 +128,57 @@ class _YourScoreState extends State<YourScore> {
     );
   }
 }
+
+
+/*
+bottomNavigationBar: NavigationBar(
+          height: 92,
+          selectedIndex: navigationBarIndex,
+          onDestinationSelected: (value) {
+              setState(() => navigationBarIndex = value);},
+          backgroundColor: ColorPallete.colorDarkGrey,
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.home, size: 35, ),
+              label: 'Home',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.arrow_outward),
+              label: 'Profile',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.settings),
+              label: 'Settings',
+            ),
+          ]),
+    );
+  }
+}
+
+/*
+Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.home,
+                    size: 35, color: ColorPallete.colorLightGreen)),
+            IconButton(
+                onPressed: () {
+                  (context).goTo(const Challenges());
+                },
+                icon: const Icon(Icons.arrow_outward, size: 35)),
+            IconButton(
+                onPressed: () {
+                  (context).goTo(ProfileClass());
+                },
+                icon: const Icon(Icons.person, size: 35)),
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.settings, size: 35)),
+          ]),
+*/
+
+*/
+
