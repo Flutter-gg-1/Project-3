@@ -46,7 +46,7 @@ The widgets that are used:
 ## Output 
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/605573d0-cd5e-4bda-916b-d521d8c6315c" alt="Tuwaiq" width="200"/>
+<img src="assets/output.gif" alt="Tuwaiq" width="200"/>
 <br/>
 
 

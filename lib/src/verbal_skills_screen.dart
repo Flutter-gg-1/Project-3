@@ -84,17 +84,23 @@ class VerbalSkillsScreen extends StatelessWidget {
                           Stack(
                             alignment: Alignment.bottomLeft,
                             children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(30),
-                                child: Container(
-                                  width: 100,
-                                  height: 14,
-                                  color: const Color(0xffC4C4C4),
-                                  child: const LinearProgressIndicator(
-                                    value: 0.2,
-                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                        Color(0xffECC055)),
-                                    backgroundColor: Color(0xffC4C4C4),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(30),
+                                      bottomRight: Radius.circular(30),
+                                      topRight: Radius.circular(30)),
+                                  child: Container(
+                                    width: 80,
+                                    height: 14,
+                                    color: const Color(0xffC4C4C4),
+                                    child: const LinearProgressIndicator(
+                                      value: 0.2,
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                          Color(0xffECC055)),
+                                      backgroundColor: Color(0xffC4C4C4),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -106,7 +112,10 @@ class VerbalSkillsScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Text("3/40",style: GoogleFonts.roboto(textStyle:  TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.5)))),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5, top: 10),
+                            child: Text("3/40",style: GoogleFonts.roboto(textStyle:  TextStyle(fontSize: 15, color: Colors.black.withOpacity(0.5)))),
+                          ),
                         ],
                       )
                     ],
@@ -121,36 +130,38 @@ class VerbalSkillsScreen extends StatelessWidget {
                       child: CircleContainers(photoPath: 'assets/verbal_skill_icons/Pencil 1.png'),
                     ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 430),
+                  padding: const EdgeInsets.only(top: 400),
                   child: Text("Intro", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20, color: Colors.black),),)
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 375, left: 110),
+                  padding: const EdgeInsets.only(top: 345, left: 110),
                   child: Text("1", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 15),)),
                 ),
                 const Padding(
                   padding: EdgeInsets.only(top: 430),
                   child: Row(
                     children: [
+                      SizedBox(width: 60,),
                       CircleContainers(photoPath: 'assets/verbal_skill_icons/Book.png'),
-                      CircleContainers(photoPath: 'assets/verbal_skill_icons/Bike.png',),
+                      SizedBox(width: 17,),
+                      CircleContainers(photoPath: 'assets/verbal_skill_icons/Bike.png', ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 610, right: 220),
+                  padding: const EdgeInsets.only(top: 580, right: 160),
                   child: Text("Phrases", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20,color: Colors.black ),),)
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 555, left: 310),
+                  padding: const EdgeInsets.only(top: 525, left: 260),
                   child: Text("1", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 15),),)
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 610, left: 210),
+                  padding: const EdgeInsets.only(top: 580, left: 160),
                   child: Text("Travel", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 20, color: Colors.black),),)
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 555, right: 110),
+                  padding: const EdgeInsets.only(top: 525, right: 60),
                   child: Text("1", style: GoogleFonts.roboto(textStyle:const TextStyle(fontSize: 15),),)
                 ),
                 const Padding(
@@ -161,7 +172,9 @@ class VerbalSkillsScreen extends StatelessWidget {
                   padding: EdgeInsets.only(top: 784),
                   child: Row(
                     children: [
+                      SizedBox(width: 60,),
                       CircleContainers(photoPath: 'assets/home_screen_icons/lock.png'),
+                      SizedBox(width: 17,),
                       CircleContainers(photoPath: 'assets/home_screen_icons/lock.png'),
                     ],
                   ),

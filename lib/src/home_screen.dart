@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'widgets_of_home_screen/unit1.dart';
+import 'widgets_of_home_screen/complete_container.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                 const Padding(padding: EdgeInsets.only(left: 30,)),
               ],),
               const SizedBox(height: 10,),
-              const Unit1(value: 0.45,),
+              const CompleteContainer(value: 0.45,),
               const SizedBox(height: 30,),
               Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                 const Padding(padding: EdgeInsets.only(left: 30,)),
               ],),
               const SizedBox(height: 10,),
-              const Unit1(value: 0.8,),
+              const CompleteContainer(value: 0.8,),
               const SizedBox(height: 35,),
               Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -97,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                 const Padding(padding: EdgeInsets.only(left: 30,)),
               ],),
               const SizedBox(height: 10,),
-              const Unit1(value: 0.2,),
+              const CompleteContainer(value: 0.2,),
             ],
           ),
         ),

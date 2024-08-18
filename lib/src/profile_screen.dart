@@ -112,30 +112,28 @@ class Profile extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: const Color(0xffE5E5E5), width: 3)),
-              child: Expanded(
-                child: ContainedTabBarView(
-                  tabs: const [
-                    Text('FOLLOWING'),
-                    Text('FOLLOWERS'),
-                  ],
-                  tabBarProperties: const TabBarProperties(indicatorColor: Color(0xff02A1FB), labelColor: Color(0xff02A1FB)),
-                  views: const [
-                    Column(
-                      children: [
-                        FriendsListTile(letter: 'H', subtitle: '4367 XP', title: 'Hardi', color: Color(0xffAB70DF),),
-                        Divider(),
-                        FriendsListTile(letter: 'K', subtitle: '2334 XP', title: 'Krishna', color: Color(0xffDF7070),),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        FriendsListTile(letter: 'H', subtitle: '4367 XP', title: 'Hardi', color: Color(0xffAB70DF),),
-                        Divider(),
-                        FriendsListTile(letter: 'K', subtitle: '2334 XP', title: 'Krishna', color: Color(0xffDF7070),),
-                      ],
-                    ),
-                  ],
-                ),
+              child: ContainedTabBarView(
+                tabs: const [
+                  Text('FOLLOWING'),
+                  Text('FOLLOWERS'),
+                ],
+                tabBarProperties: const TabBarProperties(indicatorColor: Color(0xff02A1FB), labelColor: Color(0xff02A1FB)),
+                views: const [
+                  Column(
+                    children: [
+                      FriendsListTile(letter: 'H', subtitle: '4367 XP', title: 'Hardi', color: Color(0xffAB70DF),),
+                      Divider(),
+                      FriendsListTile(letter: 'K', subtitle: '2334 XP', title: 'Krishna', color: Color(0xffDF7070),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      FriendsListTile(letter: 'H', subtitle: '4367 XP', title: 'Hardi', color: Color(0xffAB70DF),),
+                      Divider(),
+                      FriendsListTile(letter: 'K', subtitle: '2334 XP', title: 'Krishna', color: Color(0xffDF7070),),
+                    ],
+                  ),
+                ],
               ),
             ),
             const SizedBox(
