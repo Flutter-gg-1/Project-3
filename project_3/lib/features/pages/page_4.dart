@@ -248,8 +248,7 @@ class ProfileClass extends StatelessWidget {
                           ListTile(
                               leading: CircleAvatar(
                                 radius: 20,
-                                backgroundImage: NetworkImage(
-                                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'),
+                                backgroundImage: null,
                               ),
                               title: Text('Krishna',
                                   style: TextStyle(fontSize: 20)),
@@ -259,8 +258,7 @@ class ProfileClass extends StatelessWidget {
                           ListTile(
                               leading: CircleAvatar(
                                 radius: 20,
-                                backgroundImage: NetworkImage(
-                                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'),
+                                backgroundImage: null,
                               ),
                               title:
                                   Text('Hardi', style: TextStyle(fontSize: 20)),
@@ -288,8 +286,18 @@ class ProfileClass extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Image.asset('assets/cat.png'),
-                        const Text(
-                            "Invite your friends Tell\n your friends it’s free\n and fun to learn\n on Mental up!"),
+                        const Flexible(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text('Invite your friends',
+                                  style: TextStyle(fontSize: 20)),
+                              Text(
+                                  " Tell your friends it’s free and fun to learn on Mental up!",
+                                  style: TextStyle(fontSize: 15)),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                     ElevatedButton(
