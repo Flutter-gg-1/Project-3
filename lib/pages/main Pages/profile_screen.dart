@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
       body: Expanded(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: const EdgeInsets.only(bottom: 12),
@@ -266,44 +266,44 @@ class ProfileScreen extends StatelessWidget {
                         Icon(FontAwesomeIcons.arrowRight)
                       ],
                     ),
-                        Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: const Color(0xFFe2ddda),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color(0xFFe2ddda),
+                  ),
+                ),
+                width: MediaQuery.of(context).size.width / 1.2,
+                height: 115,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Flexible(
+                      child: ListTile(
+                        leading: Image.asset("assets/Dayflow Black Cat.png"),
+                        title: const Text(
+                            "Invite your friends Tell your friends it’s free and fun to learn on Mental up!"),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 15,
+                    ),
+                    ElevatedButton(
+                      style: const ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll(
+                          Color(0xff02A1FB),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width / 1.2,
-                      height: 115,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Flexible(
-                            child: ListTile(
-                              leading:
-                                  Image.asset("assets/Dayflow Black Cat.png"),
-                              title: const Text(
-                                  "Invite your friends Tell your friends it’s free and fun to learn on Mental up!"),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          ElevatedButton(
-                            style: const ButtonStyle(
-                              backgroundColor: WidgetStatePropertyAll(
-                                Color(0xff02A1FB),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: const Text(
-                                style: TextStyle(color: Colors.white),
-                                "INVITE FRIENDS"),
-                          )
-                        ],
-                      ),
-                    ),
+                      onPressed: () {},
+                      child: const Text(
+                          style: TextStyle(color: Colors.white),
+                          "INVITE FRIENDS"),
+                    )
                   ],
                 ),
               ),
