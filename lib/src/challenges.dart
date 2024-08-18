@@ -9,6 +9,7 @@ class Challenges extends StatelessWidget {
       backgroundColor: const Color(0xffFBF5F2),
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        backgroundColor: const Color(0xffFBF5F2),
       ),
       body: ListView(
         children: [

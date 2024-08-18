@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+              backgroundColor: const Color(0xffFBF5F2),
       ),
       backgroundColor: const Color(0xffFBF5F2),
       body: ListView(
