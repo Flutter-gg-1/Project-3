@@ -20,13 +20,16 @@ class _YourScoreState extends State<YourScore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: ColorPallete.colorLightGrey,
+        automaticallyImplyLeading: false,
+      ),
       backgroundColor: ColorPallete.colorLightGrey,
       body: SafeArea(
         child: ListView(
           children: [
             Column(
               children: [
-                const SizedBox(height: 25),
                 myRowContainer(
                   addItem: [
                     Image.asset('assets/fire.png'),

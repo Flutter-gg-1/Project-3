@@ -7,6 +7,10 @@ class Challenges extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: ColorPallete.colorLightGrey,
+        automaticallyImplyLeading: false,
+      ),
       backgroundColor: ColorPallete.colorLightGrey,
       body: SafeArea(
         child: Center(

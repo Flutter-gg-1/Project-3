@@ -14,13 +14,16 @@ class ProfileClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: ColorPallete.colorLightGrey,
+        automaticallyImplyLeading: false,
+      ),
       backgroundColor: ColorPallete.colorLightGrey,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SizedBox(height: 35),
               myRowContainer(
                 addItem: [
                   const Text('Profile', style: TextStyle(fontSize: 30))

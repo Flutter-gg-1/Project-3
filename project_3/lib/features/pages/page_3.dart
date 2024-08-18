@@ -7,12 +7,15 @@ class VerbalSkills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: ColorPallete.colorLightGrey,
+        automaticallyImplyLeading: false,
+      ),
       backgroundColor: ColorPallete.colorLightGrey,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SizedBox(height: 25),
               myRowContainer(
                 addItem: [
                   const Text('Verbal skills', style: TextStyle(fontSize: 30)),
