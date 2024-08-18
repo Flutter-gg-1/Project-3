@@ -71,12 +71,16 @@ class _YourScoreState extends State<YourScore> {
                             onTap: () {
                               (context).goTo(const VerbalSkills());
                             },
-                            child: myContainer(
-                              title: 'Unit 1',
-                              listWidget: [
-                                Image.asset('assets/t.png'),
-                                myLoadingIndicator(value: score[i]),
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.only(
+                                  left: 9, right: 7, top: 5, bottom: 9),
+                              child: myContainer(
+                                title: 'Unit 1',
+                                listWidget: [
+                                  Image.asset('assets/t.png'),
+                                  myLoadingIndicator(value: score[i]),
+                                ],
+                              ),
                             ),
                           ),
                           const SizedBox(width: 5),
