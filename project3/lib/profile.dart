@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/lessons.dart';
 import 'progressbar.dart';
 
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class Profile extends StatelessWidget {
+  const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +14,13 @@ class Homepage extends StatelessWidget {
           preferredSize: const Size.fromHeight(30.0),
           child: Container(
             color: const Color.fromARGB(255, 229, 229, 229),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
+            child: const Padding(
+              padding: EdgeInsets.all(10),
               child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(width: 20),
-                Image.asset("assets/images/fire.png",),
-                const Text("  3",  style: TextStyle( color: Color.fromARGB(255, 235, 160, 74), fontSize: 18)),
-                const Spacer(),
-                Image.asset("assets/images/box.png",),
-                const Text("  1432 XP",  style: TextStyle( color: Color.fromARGB(255, 51, 143, 155), fontSize: 18)),
-                const Spacer(),
-                Image.asset("assets/images/heart.png",),
-                const SizedBox(width: 20),
+                Text("Profile",  style: TextStyle( fontSize: 20)),
+                
               ],
             ),
           ),
@@ -97,6 +90,7 @@ class Homepage extends StatelessWidget {
         ),
         ),
        ),
+       
     );
   }
 
@@ -162,3 +156,4 @@ class LockedCard extends StatelessWidget {
       );
     }
 }
+

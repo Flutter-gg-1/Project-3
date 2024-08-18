@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Homepage.dart';
+import 'nav_bar.dart';
 
 class Signin extends StatelessWidget {
   const Signin({super.key});
@@ -53,7 +53,7 @@ class Signin extends StatelessWidget {
                  minimumSize: const Size.fromHeight(40),),
             onPressed: () {
               Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const Homepage()),
+              MaterialPageRoute(builder: (context) => const NavBar()),
             );
           }, child: const Text("GO", style: TextStyle(fontWeight: FontWeight.bold, color: Color.fromARGB(255, 255, 255, 255), fontSize: 18))),
             const SizedBox(height: 10),
