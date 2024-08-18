@@ -1,6 +1,5 @@
 import 'package:educational_kids_game/src/bottom_navigation_bar.dart';
-import 'package:educational_kids_game/src/colored_text.dart';
-import 'package:educational_kids_game/src/home_screen.dart';
+import 'package:educational_kids_game/src/widgets/colored_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,7 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
-                
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: coloredText("MENTAL ^up^"),
               ),
@@ -101,14 +99,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const CustomBottomNavigationBar()));
+                          builder: (context) =>
+                              const CustomBottomNavigationBar()));
                     }
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffEB9F4A),
-                      padding: const EdgeInsets.symmetric( horizontal: 140
-                      ,
-                          vertical: 9)),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 140, vertical: 9)),
                   child: Text(
                     "GO",
                     style: GoogleFonts.roboto(

@@ -1,8 +1,7 @@
-// custom_widget.dart
-
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 
+// this widgert will be used in verbalSkills class for levels circles
 Widget verbalSkillsLevels({
   required logo,
   String? text,
@@ -52,7 +51,7 @@ Widget verbalSkillsLevels({
       if (title != null)
         Text(
           title,
-          style: TextStyle(fontSize: 20),
+          style: const TextStyle(fontSize: 20),
         ),
     ],
   );

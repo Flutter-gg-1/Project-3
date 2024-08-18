@@ -1,4 +1,4 @@
-import 'package:educational_kids_game/src/verbal_skills_levels.dart';
+import 'package:educational_kids_game/src/widgets/verbal_skills_levels.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';

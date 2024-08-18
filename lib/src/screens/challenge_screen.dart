@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'challenge_cards.dart'; // Adjust the import path as necessary
+import '../widgets/challenge_cards.dart';
 
 class ChallengeScreen extends StatefulWidget {
-  const ChallengeScreen({Key? key}) : super(key: key);
+  const ChallengeScreen({super.key});
 
   @override
   State<ChallengeScreen> createState() => _ChallengeScreenState();
 }
 
+//challeng screen with diffrent cards
 class _ChallengeScreenState extends State<ChallengeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffFBF5F2),
       appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: const Color(0xffFBF5F2),
           toolbarHeight: 30,
           bottom: PreferredSize(
@@ -41,7 +43,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(right: 160, top: 30),
+              padding: EdgeInsets.only(right: 160, top: 20),
               child: Text(
                 "Achievements",
                 style: TextStyle(fontSize: 30),
@@ -51,33 +53,39 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
               imagePath: "assets/Stuck at Home Vertical Painting 1-6.png",
               title: const Text(
                 "Lorem Ipsum ",
-                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               subtitle: const Text(
                 "is simply dummy text of the printing and typesetting industry.",
-                style: TextStyle(fontSize: 18, ),
+                style: TextStyle(
+                  fontSize: 20,
+                ),
               ),
             ),
             challengeCadrs(
               imagePath: "assets/Pebble People Plant 2-2.png",
               title: const Text(
                 "Lorem Ipsum ",
-                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               subtitle: const Text(
                 "is simply dummy text of the printing and typesetting industry.",
-                style: TextStyle(fontSize: 18, ),
+                style: TextStyle(
+                  fontSize: 20,
+                ),
               ),
             ),
             challengeCadrs(
               imagePath: "assets/Pebble People Basketball-3.png",
               title: const Text(
                 "Lorem Ipsum ",
-                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               subtitle: const Text(
                 "is simply dummy text of the printing and typesetting industry.",
-                style: TextStyle(fontSize: 18, ),
+                style: TextStyle(
+                  fontSize: 20,
+                ),
               ),
             ),
           ],

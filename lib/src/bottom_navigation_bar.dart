@@ -1,7 +1,7 @@
-import 'package:educational_kids_game/src/challenge_screen.dart';
-import 'package:educational_kids_game/src/home_screen.dart';
-import 'package:educational_kids_game/src/profile_screen.dart';
-import 'package:educational_kids_game/src/settings_screen.dart';
+import 'package:educational_kids_game/src/screens/challenge_screen.dart';
+import 'package:educational_kids_game/src/screens/home_screen.dart';
+import 'package:educational_kids_game/src/screens/profile_screen.dart';
+import 'package:educational_kids_game/src/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 

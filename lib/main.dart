@@ -1,4 +1,4 @@
-import 'package:educational_kids_game/src/login_screen.dart';
+import 'package:educational_kids_game/src/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -6,7 +6,7 @@ class SettingsScreen extends StatefulWidget {
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
-
+//settings screen with appbar only
 class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
@@ -14,6 +14,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       backgroundColor: const Color(0xffFBF5F2),
       appBar: AppBar(
           backgroundColor: const Color(0xffFBF5F2),
+          automaticallyImplyLeading: false,
           toolbarHeight: 30,
           bottom: PreferredSize(
               preferredSize: const Size.fromHeight(50),
@@ -24,7 +25,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Settings",style: TextStyle(fontSize: 28),
+                          "Settings",
+                          style: TextStyle(fontSize: 28),
                         )
                       ])))),
     );
