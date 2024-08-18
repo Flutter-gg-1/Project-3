@@ -5,7 +5,7 @@ This an UI for an education app develop using flutter framework where the user c
 
 
 ## UI Sample
-- ![App Sample](./sample/Education%20app.gif)
+- ![App Sample](/sample/Education%20app.gif)
 
 
 
