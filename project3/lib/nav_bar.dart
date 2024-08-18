@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Homepage.dart';
 import 'package:flutter_application_1/profile.dart';
+import 'challenges.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class _NavBarState extends State<NavBar> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     Homepage(),
-    Homepage(),
+    Challenges(),
     Profile(),
   ];
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/lessons.dart';
-import 'progressbar.dart';
+
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
