@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
-Widget buildCategoryItem(
+Widget buildCategoryItem(BuildContext context,
     {required String title, required int progress, required int total}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,7 +36,7 @@ Widget buildCategoryItem(
       Row(
         children: [
           Expanded(
-            child: buildUnitCard(
+            child: buildUnitCard(context,
                 unitName: 'Unit 1',
                 unlocked: true,
 
@@ -45,7 +45,7 @@ Widget buildCategoryItem(
           ),
           const SizedBox(width: 16),
           Expanded(
-              child: buildUnitCard(
+              child: buildUnitCard(context,
                   unitName: 'Unit 1', unlocked: false, progressValue: 0.8)),
         ],
       ),
@@ -55,55 +55,63 @@ Widget buildCategoryItem(
 }
 
 // TODO write a comments
-Widget buildUnitCard(
+Widget buildUnitCard(BuildContext context,
     {required String unitName,
     required bool unlocked,
     required double progressValue}) {
-  return Container(
-    height: 227,
-    decoration: BoxDecoration(
-      color: Colors.grey[300],
-      borderRadius: BorderRadius.circular(15),
-    ),
-    child: unlocked
-        ? Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Text(
-                unitName,
-                style:
-                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                child: Row(
-                  children: [
-                    const Icon(
-                      FontAwesome.crown_solid,
-                      color: Colors.amber,
-                      size: 22,
-                    ),
-
-                    // To add space between elements
-                    const SizedBox(width: 5),
-                    Expanded(
-                      child: LinearProgressIndicator(
-                          value: progressValue,
-                          color: Colors.amber,
-                          backgroundColor: Colors.grey[400],
-                          minHeight: 12,
-                          // TODO find way to edit position
-                          borderRadius: const BorderRadius.horizontal(
-                              left: Radius.zero, right: Radius.circular(20))),
-                    ),
-                  ],
+  return GestureDetector(
+    onTap: () {
+      if (unlocked) {
+        Navigator.pushNamed(context!, '/game',
+            arguments: {'unitName': unitName});
+      }
+    },
+    child: Container(
+      height: 227,
+      decoration: BoxDecoration(
+        color: Colors.grey[300],
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: unlocked
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  unitName,
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-              ),
-            ],
-          )
-        : Center(
-            child: Icon(Icons.lock, color: Colors.grey[700], size: 40),
-          ),
+                const SizedBox(height: 8),
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 5),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        FontAwesome.crown_solid,
+                        color: Colors.amber,
+                        size: 22,
+                      ),
+
+                      // To add space between elements
+                      const SizedBox(width: 5),
+                      Expanded(
+                        child: LinearProgressIndicator(
+                            value: progressValue,
+                            color: Colors.amber,
+                            backgroundColor: Colors.grey[400],
+                            minHeight: 12,
+                            // TODO find way to edit position
+                            borderRadius: const BorderRadius.horizontal(
+                                left: Radius.zero, right: Radius.circular(20))),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            )
+          : Center(
+              child: Icon(Icons.lock, color: Colors.grey[700], size: 40),
+            ),
+    ),
   );
 }

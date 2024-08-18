@@ -54,11 +54,11 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: ListView(
                   children: [
-                    buildCategoryItem(
+                    buildCategoryItem(context,
                         title: 'Logical reasoning', progress: 18, total: 40),
-                    buildCategoryItem(
+                    buildCategoryItem(context,
                         title: 'Artistic thinking', progress: 35, total: 40),
-                    buildCategoryItem(
+                    buildCategoryItem(context,
                         title: 'Verbal skills', progress: 3, total: 40),
                   ],
                 ),
