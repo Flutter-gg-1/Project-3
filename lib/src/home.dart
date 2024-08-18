@@ -21,13 +21,14 @@ class Home extends StatelessWidget {
             child: Row(
               children: [
                 Padding(
-                    padding: EdgeInsets.only(left: 47, top: 21, bottom: 21),
+                    padding:
+                        const EdgeInsets.only(left: 47, top: 21, bottom: 21),
                     child: Image.asset(
                       'images/Vector (7).png',
                       height: 29,
                       width: 26,
                     )),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(top: 18, bottom: 21, left: 10),
                   child: Text(
                     '3',
@@ -38,23 +39,32 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 35),
+                  padding: const EdgeInsets.only(left: 35),
                   child: Image.asset('images/Vector (9).png'),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: 10),
                   child: Text(
                     '1432 XP',
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Color(0xff338F9B),
                         fontSize: 25,
                         fontFamily: 'Roboto'),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 35),
-                  child: Image.asset('images/Heart.png'),
-                )
+                Container(
+                    height: 29,
+                    width: 32,
+                    margin: EdgeInsets.only(left: 40),
+                    child: FittedBox(
+                        fit: BoxFit.none,
+                        child: Image.asset('images/Heart.png'))),
+                Container(
+                    height: 29,
+                    width: 32,
+                    child: FittedBox(
+                        fit: BoxFit.none,
+                        child: Image.asset('images/Vector (10).png'))),
               ],
             ),
           ),
