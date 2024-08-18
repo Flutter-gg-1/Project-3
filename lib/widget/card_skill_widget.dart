@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:project_3/pages/skill_info_page.dart';
@@ -48,7 +48,7 @@ class CardSkillWidget extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  Container(
+                  SizedBox(
                     width: 110,
                     height: 14,
                     child: LinearProgressIndicator(
@@ -68,7 +68,7 @@ class CardSkillWidget extends StatelessWidget {
         ),
 
 
-        SizedBox(width: 15,),
+        const SizedBox(width: 15,),
 
 
 
@@ -80,7 +80,7 @@ class CardSkillWidget extends StatelessWidget {
           decoration: BoxDecoration(
               color: const Color(0xffC4C4C4).withOpacity(0.4),
               borderRadius: BorderRadius.circular(16)),
-          child: Icon(FontAwesome.lock_solid ,color: Color(0xff000000).withOpacity(0.5),size: 50,)
+          child: Icon(FontAwesome.lock_solid ,color: const Color(0xff000000).withOpacity(0.5),size: 50,)
         )
       ],
     );

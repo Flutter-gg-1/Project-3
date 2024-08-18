@@ -18,7 +18,7 @@ class ProfileCardIcon extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-                color: Color(0xff000000).withOpacity(0.1), width: 3)),
+                color: const Color(0xff000000).withOpacity(0.1), width: 3)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -33,7 +33,7 @@ class ProfileCardIcon extends StatelessWidget {
                 children: [
                   Text(title, style: GoogleFonts.roboto(fontSize: 16)),
                   Text(sub,
-                      style: GoogleFonts.roboto(fontSize: 16 , color: Color(0xff000000).withOpacity(0.4))),
+                      style: GoogleFonts.roboto(fontSize: 16 , color: const Color(0xff000000).withOpacity(0.4))),
 
 
                       

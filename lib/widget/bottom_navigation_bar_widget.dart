@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:project_3/pages/challenges_page.dart';
 import 'package:project_3/pages/profile_page.dart';
 import 'package:project_3/pages/skills_page.dart';
 
@@ -32,6 +33,14 @@ class BottomNavigationBarWidget extends StatelessWidget {
           
         },)),
          BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.bullseye_solid) ,onPressed: () {
+
+          Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) {
+                  
+                  return const ChallengesPage();
+
+                },));
+
+
           
         },))
     

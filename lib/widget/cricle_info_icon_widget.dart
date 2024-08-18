@@ -45,7 +45,7 @@ class CricleInfoIconWidget extends StatelessWidget {
                   border: Border.all(color: Colors.white, width: 4),
                   shape: BoxShape.circle),
               child: lockMethod() ?
-                  Image.asset(img) : Icon(FontAwesome.lock_solid ,color: Color(0xff000000).withOpacity(0.5),size: 50,) ,
+                  Image.asset(img) : Icon(FontAwesome.lock_solid ,color: const Color(0xff000000).withOpacity(0.5),size: 50,) ,
             ),
           ),
           const Positioned.fill(

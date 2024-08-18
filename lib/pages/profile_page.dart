@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:icons_plus/icons_plus.dart';
+
 import 'package:project_3/widget/bottom_navigation_bar_widget.dart';
 import 'package:project_3/widget/invite_frind_card_widget.dart';
 import 'package:project_3/widget/profile_card_icon.dart';

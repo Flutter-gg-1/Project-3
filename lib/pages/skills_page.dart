@@ -80,35 +80,3 @@ class SkillsPage extends StatelessWidget {
   }
 }
 
-class bottom_navigation_bar extends StatelessWidget {
-  const bottom_navigation_bar({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      fixedColor: const Color(0xff41AC78),
-      backgroundColor: const Color(0xffE5E5E5).withOpacity(0.8),
-    
-      items: [
-        BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.house_solid) ,onPressed: () {
-          
-        },)),
-         BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.bullseye_solid) ,onPressed: () {
-          
-        },))
-    
-        ,BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.people_group_solid) ,onPressed: () {
-          
-        },)),
-         BottomNavigationBarItem(label: "", icon: IconButton(icon:const Icon(FontAwesome.gear_solid) ,onPressed: () {
-          
-        },)),
-    
-        
-      ],
-    );
-  }
-}

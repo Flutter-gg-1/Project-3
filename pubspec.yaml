@@ -66,6 +66,7 @@ flutter:
     - asset/skillPage/
     - asset/skillInfoPage/
     - asset/ProfilePage/
+    - asset/ChallengesPage/
 
   #   - images/a_dot_ham.jpeg
 
