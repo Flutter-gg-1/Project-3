@@ -15,10 +15,49 @@ class Home extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-              color: const Color(0xeffE9E8E8),
-              width: 428,
-              height: 71,
-              child: Image.asset("icons/Footer.png")),
+            color: const Color(0xeffE9E8E8),
+            width: 428,
+            height: 71,
+            child: Row(
+              children: [
+                Padding(
+                    padding: EdgeInsets.only(left: 47, top: 21, bottom: 21),
+                    child: Image.asset(
+                      'images/Vector (7).png',
+                      height: 29,
+                      width: 26,
+                    )),
+                Padding(
+                  padding: EdgeInsets.only(top: 18, bottom: 21, left: 10),
+                  child: Text(
+                    '3',
+                    style: TextStyle(
+                        color: Color(0xffEB9F4A),
+                        fontSize: 25,
+                        fontFamily: 'Roboto'),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 35),
+                  child: Image.asset('images/Vector (9).png'),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 10),
+                  child: Text(
+                    '1432 XP',
+                    style: TextStyle(
+                        color: Color(0xff338F9B),
+                        fontSize: 25,
+                        fontFamily: 'Roboto'),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 35),
+                  child: Image.asset('images/Heart.png'),
+                )
+              ],
+            ),
+          ),
           Row(
             children: [
               Container(
@@ -29,13 +68,11 @@ class Home extends StatelessWidget {
                 ),
               ),
               Container(
-                margin:
-                    const EdgeInsets.only(top: 58, left: 16, bottom: 18),
+                margin: const EdgeInsets.only(top: 58, left: 16, bottom: 18),
                 child: Image.asset('icons/Vector (4).png'),
               ),
               Container(
-                margin:
-                    const EdgeInsets.only(top: 62, right: 26, bottom: 18),
+                margin: const EdgeInsets.only(top: 62, right: 26, bottom: 18),
                 child: Image.asset('icons/Crowns earned.png'),
               )
             ],
@@ -72,14 +109,12 @@ class Home extends StatelessWidget {
                             value: 18 / 40,
                             valueColor: AlwaysStoppedAnimation<Color>(
                                 Color(0xffECC055)),
-                            backgroundColor:
-                                Color.fromARGB(255, 184, 184, 184),
+                            backgroundColor: Color.fromARGB(255, 184, 184, 184),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      
                       padding: const EdgeInsets.only(
                         left: 12,
                         right: 124,
@@ -129,13 +164,11 @@ class Home extends StatelessWidget {
                 ),
               ),
               Container(
-                margin:
-                    const EdgeInsets.only(left: 40, bottom: 18, top: 40),
+                margin: const EdgeInsets.only(left: 40, bottom: 18, top: 40),
                 child: Image.asset('icons/Vector (4).png'),
               ),
               Container(
-                margin:
-                    const EdgeInsets.only(top: 44, right: 26, bottom: 17),
+                margin: const EdgeInsets.only(top: 44, right: 26, bottom: 17),
                 child: Image.asset('icons/Crowns earned (2).png'),
               )
             ],
@@ -172,8 +205,7 @@ class Home extends StatelessWidget {
                             value: 18 / 40,
                             valueColor: AlwaysStoppedAnimation<Color>(
                                 Color(0xffECC055)),
-                            backgroundColor:
-                                Color.fromARGB(255, 184, 184, 184),
+                            backgroundColor: Color.fromARGB(255, 184, 184, 184),
                           ),
                         ),
                       ),
@@ -228,8 +260,7 @@ class Home extends StatelessWidget {
                 ),
               ),
               Container(
-                margin:
-                    const EdgeInsets.only(top: 40, left: 84, bottom: 20),
+                margin: const EdgeInsets.only(top: 40, left: 84, bottom: 20),
                 child: Image.asset('icons/Vector (4).png'),
               ),
               Container(
@@ -243,8 +274,7 @@ class Home extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) => const VerbalSkills()),
+                MaterialPageRoute(builder: (context) => const VerbalSkills()),
               );
             },
             child: Row(
