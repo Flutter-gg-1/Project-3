@@ -108,7 +108,7 @@ class _ChapterCard extends StatelessWidget {
         const SizedBox(height: 8),
         Text(
           chapter.name,
-          style: RobotoTextStyle.robotoRegular(size: 16),
+          style: RobotoTextStyle.robotoRegular(),
         ),
       ],
     );

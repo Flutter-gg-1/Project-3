@@ -62,12 +62,12 @@ class _TabContainerState extends State<TabContainer> {
         bottomNavigationBar: Container(
           color: ThemeColors.courseCardBG,
           child: TabBar(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
             tabs: [
               Tab(
                 icon: SvgPicture.asset(
                   'assets/icons/home.svg',
-                  height: 35,
+                  height: 30,
                   colorFilter:
                       ColorFilter.mode(_getSelectedColor(0), BlendMode.srcIn),
                 ),
@@ -75,7 +75,7 @@ class _TabContainerState extends State<TabContainer> {
               Tab(
                 icon: SvgPicture.asset(
                   'assets/icons/target.svg',
-                  height: 35,
+                  height: 30,
                   colorFilter:
                       ColorFilter.mode(_getSelectedColor(1), BlendMode.srcIn),
                 ),
@@ -83,7 +83,7 @@ class _TabContainerState extends State<TabContainer> {
               Tab(
                 icon: SvgPicture.asset(
                   'assets/icons/profile.svg',
-                  height: 35,
+                  height: 30,
                   colorFilter:
                       ColorFilter.mode(_getSelectedColor(2), BlendMode.srcIn),
                 ),
@@ -91,7 +91,7 @@ class _TabContainerState extends State<TabContainer> {
               Tab(
                 icon: SvgPicture.asset(
                   'assets/icons/settings.svg',
-                  height: 35,
+                  height: 30,
                   colorFilter:
                       ColorFilter.mode(_getSelectedColor(3), BlendMode.srcIn),
                 ),
