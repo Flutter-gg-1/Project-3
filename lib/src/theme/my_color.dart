@@ -10,4 +10,9 @@ class MyColor {
   static const greenLight = Color(0xff72BFC7);
   static const greyLight = Color(0xffC4C4C4);
   static const black50 = Color(0x80000000);
+  static const black40 = Color(0x66000000);
+  static const black10 = Color(0x80000000);
+  static const red = Color(0xffDC3F00);
+  static const greenlight = Color(0xff41AC78);
+  static const purple = Color(0xffAB70DF);
 }

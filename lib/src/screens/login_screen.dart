@@ -15,15 +15,12 @@ class LoginScreen extends StatelessWidget {
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            //TODO
-            // crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Image.asset('assets/logo/logo.png'),
                   const SizedBox(height: 40.0),
-
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 50),
                     child: Column(
@@ -99,8 +96,6 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10.0),
-
-                  // Sign Up link
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -125,7 +120,7 @@ class LoginScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
 
                   child: Image.asset(
-                    'assets/kids_ride_dinosaur.png',
+                    'assets/images/kids_ride_dinosaur.png',
                     fit: BoxFit.fill,
                   ),
                 ),

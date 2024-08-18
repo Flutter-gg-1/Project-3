@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColor.primaryScreenBG,
-      bottomNavigationBar: myBottomNavigationBar(context),
+      bottomNavigationBar: MyBottomNavigationBar(),
       body: SafeArea(
         child: Column(
           children: [

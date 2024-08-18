@@ -26,7 +26,7 @@ class GameScreen extends StatelessWidget {
                           Align(
                             alignment: Alignment(0, -0.3),
                             child: Image(
-                                image: AssetImage('assets/crown.png'),
+                                image: AssetImage('assets/images/crown.png'),
                                 height: 30),
                           ),
                           SizedBox(width: 4),
@@ -38,7 +38,7 @@ class GameScreen extends StatelessWidget {
                       Row(
                         children: [
                           Image(
-                              image: AssetImage('assets/jewelry.png'),
+                              image: AssetImage('assets/images/jewelry.png'),
                               height: 20),
                           SizedBox(width: 5),
                           Text('213',
@@ -70,7 +70,7 @@ class GameScreen extends StatelessWidget {
                     top: -35,
                     left: 50,
                     child: Image.asset(
-                      'assets/beep_beep_horse.png',
+                      'assets/images/beep_beep_horse.png',
                       width: 100,
                       height: 70,
                     ),
@@ -96,7 +96,7 @@ class GameScreen extends StatelessWidget {
                         const Align(
                           alignment: Alignment(0, -0.7),
                           child: Image(
-                              image: AssetImage('assets/crown.png'),
+                              image: AssetImage('assets/images/crown.png'),
                               height: 20),
                         ),
                         // SizedBox(width: 8),
@@ -143,19 +143,20 @@ class LessonGrid extends StatelessWidget {
           height: 30,
         ),
         LessonItem(
-          iconPath: 'assets/hands_pencil.png',
+          iconPath: 'assets/images/hands_pencil.png',
           title: 'Intro',
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LessonItem(
-              iconPath: 'assets/hands_book.png',
+              iconPath: 'assets/images/hands_book.png',
               title: 'Phrases',
             ),
             SizedBox(width: 16),
             LessonItem(
-              iconPath: 'assets/dayflow_bike.png', // replace with travel icon
+              iconPath: 'assets/images/dayflow_bike.png',
+              // replace with travel icon
               title: 'Travel',
             ),
           ],
@@ -216,7 +217,8 @@ class LessonItem extends StatelessWidget {
             Positioned(
               bottom: 10,
               right: 0,
-              child: Image(image: AssetImage('assets/crown.png'), height: 27),
+              child: Image(
+                  image: AssetImage('assets/images/crown.png'), height: 27),
             ),
             Positioned(
               bottom: 10,
@@ -265,7 +267,8 @@ class LockedLesson extends StatelessWidget {
             Positioned(
               bottom: 10,
               right: 0,
-              child: Image(image: AssetImage('assets/crown.png'), height: 27),
+              child: Image(
+                  image: AssetImage('assets/images/crown.png'), height: 27),
             ),
           ],
         ),
