@@ -280,7 +280,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 width: MediaQuery.of(context).size.width / 1.2,
-                height: 115,
+                height: 150,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -288,6 +288,7 @@ class ProfileScreen extends StatelessWidget {
                       child: ListTile(
                         leading: Image.asset("assets/Dayflow Black Cat.png"),
                         title: const Text(
+                            style: TextStyle(fontSize: 12),
                             "Invite your friends Tell your friends it’s free and fun to learn on Mental up!"),
                       ),
                     ),
