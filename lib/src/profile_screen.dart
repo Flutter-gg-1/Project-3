@@ -1,8 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:project_3/src/home_screen.dart';
-import 'package:project_3/src/skills_screen.dart';
 import 'package:project_3/src/challenges_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
