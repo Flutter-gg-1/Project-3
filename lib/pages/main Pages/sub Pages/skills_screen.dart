@@ -120,12 +120,19 @@ class SkillsScreen extends StatelessWidget {
                         Center(child: Image.asset("assets/Beep Beep Horse.png"))
                       ],
                     ),
-                    const Center(child: IntroPadge()),
+                    const Center(
+                        child: Column(
+                      children: [IntroPadge(), Text("Intro")],
+                    )),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        PhrasesPadge(),
-                        TravelPadge(),
+                        Column(
+                          children: [PhrasesPadge(), Text("Phrases")],
+                        ),
+                        Column(
+                          children: [TravelPadge(), Text("Travel")],
+                        ),
                       ],
                     ),
                     const LockPadge(),
