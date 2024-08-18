@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:project_3/src/profile_screen.dart';
 import 'package:project_3/src/skills_screen.dart';
+import 'package:project_3/src/challenges_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,12 +16,7 @@ class HomeScreen extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                    onPressed: () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
-                        return const SkillsScreen();
-                      }));
-                    },
+                    onPressed: () {},
                     icon: const Icon(
                       Icons.home,
                       size: 40,
@@ -33,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (context) {
-                        return const SkillsScreen();
+                        return const ChellengesScreen();
                       }));
                     },
                     icon: const Icon(
@@ -49,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context)
                           .push(MaterialPageRoute(builder: (context) {
-                        return const SkillsScreen();
+                        return const ProfileScreen();
                       }));
                     },
                     icon: const Icon(
@@ -62,12 +59,7 @@ class HomeScreen extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                    onPressed: () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
-                        return const SkillsScreen();
-                      }));
-                    },
+                    onPressed: () {},
                     icon: const Icon(
                       Icons.settings,
                       size: 40,
@@ -78,346 +70,370 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      appBar: AppBar(
-        backgroundColor:
-            const Color(0xFFE5E5E5), // Replace with your desired color
-        elevation: 0,
-        centerTitle: true,
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Row(
-              children: [
-                Icon(
-                  Icons.local_fire_department_outlined,
-                  color: Color(0xffEB9F4A),
-                ),
-                Text(
-                  '3',
-                  style: TextStyle(color: Color(0xffEB9F4A)),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.local_fire_department_outlined,
-                  color: Color(0xff338F9B),
-                ),
-                Text(
-                  '1432 XP',
-                  style: TextStyle(color: Color(0xff338F9B)),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                Icon(
-                  Icons.favorite,
-                  color: Color(0xffDC3F00),
-                ),
-                Text(
-                  '∞',
-                  style: TextStyle(color: Color(0xffDC3F00)),
-                )
-              ],
-            ),
-          ],
-        ),
-        automaticallyImplyLeading: false,
-      ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              children: [
-                const SizedBox(height: 20),
-                Column(
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 50,
+              ),
+              Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                height: 71,
+                color: const Color(0xffE9E8E8),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Row(
                       children: [
-                        const Text(
-                          'Logical reasoning  ',
-                          style: TextStyle(fontSize: 36),
+                        Icon(
+                          Icons.local_fire_department_outlined,
+                          color: Color(0xffEB9F4A),
+                          size: 40,
                         ),
-                        Image.asset("assets/Vector.png"),
-                        const Text(
-                          '18/40',
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Color.fromARGB(180, 0, 0, 0)),
-                        ),
+                        Text(
+                          '3',
+                          style:
+                              TextStyle(color: Color(0xffEB9F4A), fontSize: 35),
+                        )
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        InkWell(
-                          child: Container(
-                            height: 250,
-                            width: 210,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromARGB(255, 223, 223, 223),
-                            ),
-                            child: Column(
-                              children: [
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                const Text(
-                                  'Unit 1',
-                                  style: TextStyle(
-                                      fontSize: 28, fontFamily: 'Roboto'),
-                                ),
-                                const SizedBox(
-                                  height: 150,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 14),
-                                  child: Row(
-                                    children: [
-                                      Image.asset("assets/Vector.png"),
-                                      Container(
-                                        padding: const EdgeInsets.only(
-                                          left: 4,
-                                        ),
-                                        width: 140,
-                                        height: 14,
-                                        child: const ClipRRect(
-                                          borderRadius: BorderRadius.horizontal(
-                                            right: Radius.circular(60),
-                                          ),
-                                          child: LinearProgressIndicator(
-                                            value: 0.3,
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                                    Color(0xffECC055)),
-                                            backgroundColor: Color.fromARGB(
-                                                255, 184, 184, 184),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (context) {
-                              return const SkillsScreen();
-                            }));
-                          },
+                        Icon(
+                          Icons.indeterminate_check_box,
+                          color: Color(0xff338F9B),
+                          size: 45,
                         ),
-                        Container(
-                            height: 250,
-                            width: 210,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromARGB(255, 223, 223, 223),
-                            ),
-                            child: const Icon(
-                              Icons.lock,
-                              size: 70,
-                              color: Color.fromARGB(255, 121, 121, 121),
-                            ))
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      children: [
-                        const Text(
-                          'Artistic thinking     ',
-                          style: TextStyle(fontSize: 36),
-                        ),
-                        Image.asset("assets/Vector.png"),
-                        const Text(
-                          '35/40',
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Color.fromARGB(180, 0, 0, 0)),
-                        ),
+                        Text(
+                          '1432 XP',
+                          style:
+                              TextStyle(color: Color(0xff338F9B), fontSize: 30),
+                        )
                       ],
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        InkWell(
-                          child: Container(
-                            height: 250,
-                            width: 210,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromARGB(255, 223, 223, 223),
-                            ),
-                            child: Column(
-                              children: [
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                const Text(
-                                  'Unit 1',
-                                  style: TextStyle(
-                                      fontSize: 28, fontFamily: 'Roboto'),
-                                ),
-                                const SizedBox(
-                                  height: 150,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 14),
-                                  child: Row(
-                                    children: [
-                                      Image.asset("assets/Vector.png"),
-                                      Container(
-                                        padding: const EdgeInsets.only(
-                                          left: 4,
-                                        ),
-                                        width: 140,
-                                        height: 14,
-                                        child: const ClipRRect(
-                                          borderRadius: BorderRadius.horizontal(
-                                            right: Radius.circular(60),
-                                          ),
-                                          child: LinearProgressIndicator(
-                                            value: 0.3,
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                                    Color(0xffECC055)),
-                                            backgroundColor: Color.fromARGB(
-                                                255, 184, 184, 184),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (context) {
-                              return const SkillsScreen();
-                            }));
-                          },
+                        Icon(
+                          Icons.favorite,
+                          color: Color(0xffDC3F00),
+                          size: 45,
                         ),
-                        Container(
-                            height: 250,
-                            width: 210,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromARGB(255, 223, 223, 223),
-                            ),
-                            child: const Icon(
-                              Icons.lock,
-                              size: 70,
-                              color: Color.fromARGB(255, 121, 121, 121),
-                            ))
+                        Text(
+                          '∞',
+                          style:
+                              TextStyle(color: Color(0xffDC3F00), fontSize: 35),
+                        )
                       ],
                     ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    Row(
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 20),
+                    Column(
                       children: [
-                        const Text(
-                          'Verbal skills             ',
-                          style: TextStyle(fontSize: 36),
-                        ),
-                        Image.asset("assets/Vector.png"),
-                        const Text(
-                          '3/40',
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Color.fromARGB(180, 0, 0, 0)),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InkWell(
-                          child: Container(
-                            height: 250,
-                            width: 210,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromARGB(255, 223, 223, 223),
+                        Row(
+                          children: [
+                            const Text(
+                              'Logical reasoning  ',
+                              style: TextStyle(fontSize: 36),
                             ),
-                            child: Column(
-                              children: [
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                const Text(
-                                  'Unit 1',
-                                  style: TextStyle(
-                                      fontSize: 28, fontFamily: 'Roboto'),
-                                ),
-                                const SizedBox(
-                                  height: 150,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 14),
-                                  child: Row(
-                                    children: [
-                                      Image.asset("assets/Vector.png"),
-                                      Container(
-                                        padding: const EdgeInsets.only(
-                                          left: 4,
-                                        ),
-                                        width: 140,
-                                        height: 14,
-                                        child: const ClipRRect(
-                                          borderRadius: BorderRadius.horizontal(
-                                            right: Radius.circular(60),
-                                          ),
-                                          child: LinearProgressIndicator(
-                                            value: 0.3,
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                                    Color(0xffECC055)),
-                                            backgroundColor: Color.fromARGB(
-                                                255, 184, 184, 184),
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                )
-                              ],
+                            Image.asset("assets/Vector.png"),
+                            const Text(
+                              '18/40',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color.fromARGB(180, 0, 0, 0)),
                             ),
-                          ),
-                          onTap: () {
-                            Navigator.of(context)
-                                .push(MaterialPageRoute(builder: (context) {
-                              return const SkillsScreen();
-                            }));
-                          },
+                          ],
                         ),
-                        Container(
-                            height: 250,
-                            width: 210,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: const Color.fromARGB(255, 223, 223, 223),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InkWell(
+                              child: Container(
+                                height: 250,
+                                width: 210,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color:
+                                      const Color.fromARGB(255, 223, 223, 223),
+                                ),
+                                child: Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    const Text(
+                                      'Unit 1',
+                                      style: TextStyle(
+                                          fontSize: 28, fontFamily: 'Roboto'),
+                                    ),
+                                    const SizedBox(
+                                      height: 150,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 14),
+                                      child: Row(
+                                        children: [
+                                          Image.asset("assets/Vector.png"),
+                                          Container(
+                                            padding: const EdgeInsets.only(
+                                              left: 4,
+                                            ),
+                                            width: 140,
+                                            height: 14,
+                                            child: const ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.horizontal(
+                                                right: Radius.circular(60),
+                                              ),
+                                              child: LinearProgressIndicator(
+                                                value: 0.3,
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                            Color>(
+                                                        Color(0xffECC055)),
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 184, 184, 184),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.of(context)
+                                    .push(MaterialPageRoute(builder: (context) {
+                                  return const SkillsScreen();
+                                }));
+                              },
                             ),
-                            child: const Icon(
-                              Icons.lock,
-                              size: 70,
-                              color: Color.fromARGB(255, 121, 121, 121),
-                            ))
+                            Container(
+                                height: 250,
+                                width: 210,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color:
+                                      const Color.fromARGB(255, 223, 223, 223),
+                                ),
+                                child: const Icon(
+                                  Icons.lock,
+                                  size: 70,
+                                  color: Color.fromARGB(255, 121, 121, 121),
+                                ))
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Row(
+                          children: [
+                            const Text(
+                              'Artistic thinking     ',
+                              style: TextStyle(fontSize: 36),
+                            ),
+                            Image.asset("assets/Vector.png"),
+                            const Text(
+                              '35/40',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color.fromARGB(180, 0, 0, 0)),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InkWell(
+                              child: Container(
+                                height: 250,
+                                width: 210,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color:
+                                      const Color.fromARGB(255, 223, 223, 223),
+                                ),
+                                child: Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    const Text(
+                                      'Unit 1',
+                                      style: TextStyle(
+                                          fontSize: 28, fontFamily: 'Roboto'),
+                                    ),
+                                    const SizedBox(
+                                      height: 150,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 14),
+                                      child: Row(
+                                        children: [
+                                          Image.asset("assets/Vector.png"),
+                                          Container(
+                                            padding: const EdgeInsets.only(
+                                              left: 4,
+                                            ),
+                                            width: 140,
+                                            height: 14,
+                                            child: const ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.horizontal(
+                                                right: Radius.circular(60),
+                                              ),
+                                              child: LinearProgressIndicator(
+                                                value: 0.3,
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                            Color>(
+                                                        Color(0xffECC055)),
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 184, 184, 184),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.of(context)
+                                    .push(MaterialPageRoute(builder: (context) {
+                                  return const SkillsScreen();
+                                }));
+                              },
+                            ),
+                            Container(
+                                height: 250,
+                                width: 210,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color:
+                                      const Color.fromARGB(255, 223, 223, 223),
+                                ),
+                                child: const Icon(
+                                  Icons.lock,
+                                  size: 70,
+                                  color: Color.fromARGB(255, 121, 121, 121),
+                                ))
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Row(
+                          children: [
+                            const Text(
+                              'Verbal skills             ',
+                              style: TextStyle(fontSize: 36),
+                            ),
+                            Image.asset("assets/Vector.png"),
+                            const Text(
+                              '3/40',
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  color: Color.fromARGB(180, 0, 0, 0)),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InkWell(
+                              child: Container(
+                                height: 250,
+                                width: 210,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color:
+                                      const Color.fromARGB(255, 223, 223, 223),
+                                ),
+                                child: Column(
+                                  children: [
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    const Text(
+                                      'Unit 1',
+                                      style: TextStyle(
+                                          fontSize: 28, fontFamily: 'Roboto'),
+                                    ),
+                                    const SizedBox(
+                                      height: 150,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 14),
+                                      child: Row(
+                                        children: [
+                                          Image.asset("assets/Vector.png"),
+                                          Container(
+                                            padding: const EdgeInsets.only(
+                                              left: 4,
+                                            ),
+                                            width: 140,
+                                            height: 14,
+                                            child: const ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.horizontal(
+                                                right: Radius.circular(60),
+                                              ),
+                                              child: LinearProgressIndicator(
+                                                value: 0.3,
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                            Color>(
+                                                        Color(0xffECC055)),
+                                                backgroundColor: Color.fromARGB(
+                                                    255, 184, 184, 184),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.of(context)
+                                    .push(MaterialPageRoute(builder: (context) {
+                                  return const SkillsScreen();
+                                }));
+                              },
+                            ),
+                            Container(
+                                height: 250,
+                                width: 210,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  color:
+                                      const Color.fromARGB(255, 223, 223, 223),
+                                ),
+                                child: const Icon(
+                                  Icons.lock,
+                                  size: 70,
+                                  color: Color.fromARGB(255, 121, 121, 121),
+                                ))
+                          ],
+                        )
                       ],
                     )
                   ],
-                )
-              ],
-            ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
