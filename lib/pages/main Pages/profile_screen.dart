@@ -18,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
       body: Expanded(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                 padding: const EdgeInsets.only(bottom: 12),
@@ -307,6 +307,9 @@ class ProfileScreen extends StatelessWidget {
                     )
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 6,
               ),
             ],
           ),
