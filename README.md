@@ -5,9 +5,9 @@
 
 # Flutter Project 3 Page 
 
-LoginPage: This is a login page that displays an image, two text fields for username and password (although they don't actually do anything), and a "Go" button. Clicking the button navigates to the HomeScreen.
+LoginPage: This is a login page that displays an image, two text fields for username and password, and a "Go" button. Clicking the button navigates to the HomeScreen.
 <hr>
-HomeScreen: This is the home screen of the app. It displays three progress bars with icons and text representing different categories It also has a bottom navigation bar with icons for Home, Challenges, Profile, and Settings. Clicking on the icons in the navigation bar presumably navigates to different screens in the app (although those screens are not defined in this code snippet).
+HomeScreen: This is the home screen of the app. It displays three progress bars with icons and text representing different categories It also has a bottom navigation bar with icons for Home, Challenges, Profile, and Settings. Clicking on the icons in the navigation bar presumably navigates to different screens
 
 <hr>
 
