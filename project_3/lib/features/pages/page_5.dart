@@ -10,6 +10,7 @@ class Challenges extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               myRowContainer(
                 addItem: [
@@ -41,6 +42,10 @@ class Challenges extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(right: 190, top: 25),
+                child: Text('Achievement', style: TextStyle(fontSize: 30)),
               ),
             ],
           ),
