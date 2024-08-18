@@ -15,11 +15,11 @@ Widget frindszTileList(
         color: colorValue,
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 14),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 14),
         child: Text(
-                letter,
-                style: const TextStyle(fontSize: 15, color: Colors.white),
-              ),
+          letter,
+          style: const TextStyle(fontSize: 15, color: Colors.white),
+        ),
       ),
     ),
     title: Text(titalValue,

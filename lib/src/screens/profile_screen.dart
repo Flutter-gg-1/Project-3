@@ -16,6 +16,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xffFBF5F2),
+        //appbar 
         appBar: AppBar(
             automaticallyImplyLeading: false,
             backgroundColor: const Color(0xffFBF5F2),
@@ -32,6 +33,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ])))),
         body: Center(
           child: ListView(children: [
+            
+            //for usere data
             Container(
               padding: const EdgeInsets.only(right: 20, top: 8),
               decoration: const BoxDecoration(
@@ -82,6 +85,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
+           
             //card for frinds updates
             Card(
                 margin: const EdgeInsets.only(left: 25, right: 25, top: 30),
@@ -109,6 +113,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     color: Color.fromRGBO(0, 0, 0, 0.3),
                   ),
                 )),
+            
             //statistics with deffrent card
             const Padding(
               padding: EdgeInsets.only(
@@ -206,7 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       labelStyle: TextStyle(color: Color(0xff02A1FB)),
                       height: 40,
                     ),
-                    tabBarViewProperties: TabBarViewProperties(),
+                    tabBarViewProperties: const TabBarViewProperties(),
                     tabs: const [
                       Text(
                         "FOLLOWING",
@@ -241,6 +246,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ],
                       ),
                     ])),
+            
+            //cars for invite frind
             Card(
               margin: const EdgeInsets.only(left: 30, right: 30, top: 25),
               elevation: 0,

@@ -6,6 +6,7 @@ class SettingsScreen extends StatefulWidget {
   @override
   State<SettingsScreen> createState() => _SettingsScreenState();
 }
+
 //settings screen with appbar only
 class _SettingsScreenState extends State<SettingsScreen> {
   @override

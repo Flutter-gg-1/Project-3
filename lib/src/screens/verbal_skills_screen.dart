@@ -93,10 +93,10 @@ class _VerbalSkillsScreenState extends State<VerbalSkillsScreen> {
                                 width: 70,
                                 child: LinearProgressIndicator(
                                     minHeight: 13,
-                                    backgroundColor: const Color(0xffC4C4C4),
-                                    color: const Color(0xffECC055),
+                                    backgroundColor:  Color(0xffC4C4C4),
+                                    color:  Color(0xffECC055),
                                     value: 0.75,
-                                    borderRadius: const BorderRadius.only(
+                                    borderRadius:  BorderRadius.only(
                                       topRight: Radius.circular(10),
                                       bottomRight: Radius.circular(10),
                                     )),
