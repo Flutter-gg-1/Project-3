@@ -6,16 +6,16 @@ A new Flutter project for creating creative UI for Kids game applcation.
 
 ### Login
 
-![alt text](image.png)
+![alt text](./lib/assest/readme_assest/image.png)
 
 #### Main Widget
 - `CustomTextFeild`
 - `TextButton`
-- SafeA`rea
+- `SafeArea`
 
 ### Section
 
-![alt text](image-1.png)
+![alt text](./lib/assest/readme_assest/image-1.png)
 
 #### Main Widget
 - `SingleChildScrollView`
@@ -24,7 +24,7 @@ A new Flutter project for creating creative UI for Kids game applcation.
 
 ### Challenges
 
-![alt text](image-2.png)
+![alt text](./lib/assest/readme_assest/image-2.png)
 
 #### Main widget
 - `Align`
@@ -33,7 +33,7 @@ A new Flutter project for creating creative UI for Kids game applcation.
 
 ### Profile
 
-![alt text](image-3.png)
+![alt text](./lib/assest/readme_assest/image-3.png)
 
 #### Main widget
 - `ListTile`
@@ -42,7 +42,7 @@ A new Flutter project for creating creative UI for Kids game applcation.
 
 ### Unit
 
-![alt text](image-4.png)
+![alt text](./lib/assest/readme_assest/image-4.png)
 
 #### Main Widget
 - `Stack`
@@ -54,7 +54,7 @@ A new Flutter project for creating creative UI for Kids game applcation.
 
 ## OutPut
 
-![alt text](project3-gif.gif)
+![alt text](./lib/assest/readme_assest/project3-gif.gif)
 
 Feel free to use with account name mentioned
 
