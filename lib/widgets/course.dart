@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:project3/screens/unit_screen.dart';
+import 'package:flutter/material.dart';               // imports material design widgets and properities
+import 'package:project3/screens/unit_screen.dart';   // unit page
 
+// widget represents course
 class Course extends StatelessWidget {
   final String courseName;
   final String courseScore;

@@ -11,23 +11,18 @@ class UserInput extends StatelessWidget {
       width: 316,
       height: 60,
       child: TextField(
-          obscureText: inputName.toLowerCase() == 'password' ? true : false,
-          maxLines: 1,
-          onTapOutside: (event) {
-            FocusManager.instance.primaryFocus?.unfocus();
-          },
-          decoration: InputDecoration(
-              contentPadding: const EdgeInsets.only(left: 30, top: 20, bottom: 20),
-              border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(25)),
-              filled: true,
-              fillColor: Colors.white,
-              hintText: inputName,
-              hintStyle: const TextStyle(
-                  color: Color.fromRGBO(0, 0, 0, 0.4),
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold))),
+        obscureText: inputName.toLowerCase() == 'password' ? true : false,
+        maxLines: 1,
+        onTapOutside: (event) {FocusManager.instance.primaryFocus?.unfocus();},
+        decoration: InputDecoration(
+          contentPadding: const EdgeInsets.only(left: 30, top: 20, bottom: 20),
+          border: OutlineInputBorder(borderSide: BorderSide.none, borderRadius: BorderRadius.circular(25)),
+          filled: true,
+          fillColor: Colors.white,
+          hintText: inputName,
+          hintStyle: const TextStyle(color: Color.fromRGBO(0, 0, 0, 0.4),fontSize: 18,fontWeight: FontWeight.bold)
+        )
+      ),
     );
   }
 }
