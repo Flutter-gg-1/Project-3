@@ -31,10 +31,13 @@ class Challenges extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(10),
                       child: Image(
-                        image: AssetImage('assets/t.png'),
-                        width: 100,
-                        height: 100,
-                      ),
+                          image: AssetImage('assets/g.png'),
+                          width: 116,
+                          height: 105),
+                    ),
+                    Flexible(
+                      child: Text(
+                          'Complete 1000 word streak Win 1000XP along with 300 diamonds.'),
                     ),
                   ],
                 ),
