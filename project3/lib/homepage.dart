@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/signin.dart';
+import 'package:flutter_application_1/lessons.dart';
+import 'progressbar.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -12,7 +13,7 @@ class Homepage extends StatelessWidget {
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(30.0),
           child: Container(
-            color: const Color.fromARGB(255, 229, 229, 229), // Set the background color here
+            color: const Color.fromARGB(255, 229, 229, 229),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Row(
@@ -103,41 +104,7 @@ class Homepage extends StatelessWidget {
 
 
 } 
-class Progressbar extends StatelessWidget {
 
-   final double percentage;
-   const Progressbar({super.key, required this.percentage});
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(40.0)),
-          ),
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(20)),
-              child: LinearProgressIndicator(
-                minHeight: 10,
-                value: percentage,
-                color: const Color.fromARGB(255, 236, 193, 85),
-                backgroundColor: const Color.fromARGB(255, 196, 196, 196),
-              ),
-            ),
-          ),
-        ),
-        Positioned(
-          bottom: -2,
-          left: -3,
-          child: Image.asset("assets/images/crown_strock.png"),
-        ),
-      ],
-    );
-  }
-}
 class UnitCard extends StatelessWidget {
   final double percentage;
   const UnitCard({super.key, required this.percentage});
@@ -148,7 +115,7 @@ class UnitCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const Signin()),
+          MaterialPageRoute(builder: (context) => const Lessons()),
         );
       },
       child: Container(
