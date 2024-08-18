@@ -5,7 +5,7 @@
 
 # Flutter UI Implementation Project
 
- This project about working with the Flutter framework to implement a set of user interfaces using a specific list of widgets. The goal is to enhance your proficiency in Flutter development and UI implementation.
+ This project focuses on utilizing the Flutter framework to create a collection of user interfaces by using a certain set of widgets. 
 
 ## Requirements
 
@@ -41,7 +41,20 @@ The widgets that are used:
 | Container | Similar to a box used to store things |
 | Padding | Add space around widget |
 | Row | Presents the components in a horizental array |
-| ElevatedButton | is a label that, when clicked, takes you to a different screen |
+| ElevatedButton | Is a label that, when clicked, takes you to a different screen |
+| ListView | Is a collection of widgets that may be scrolled through. |
+| ClipRRect | Used to provide the progress bar rounded corners. |
+| AppBar | Is a material design application bar that may be utilized as the application's top bar |
+| SingleChildScrollView | Creates a scrollable area for a single child |
+| Divider | Creates a thin horizontal line that's usually used to divide content in lists or between UI components |
+| Image.asset | Used to display images from the assets directory of your project |
+| TextField | Used to generate a text input area that accepts input from users |
+| ContainedTabBarView | Integrates a TabBar and a TabBarView into a Material widget to create a smooth tabbed user interface |
+| RichText | Allows you to display text with multiple styles within a single Text widget |
+| ListTileWidget | Used to create a fixed-height row that typically displays a single line of text with an optional leading icon, trailing icon, or subtitle |
+| BottomNavigationBar | Provides a bottom navigation bar that allows users to switch between different sections of your app |
+| Stack | Allows you to overlay multiple widgets on top of each other |
+
 
 ## Output 
 

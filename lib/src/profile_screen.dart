@@ -35,7 +35,7 @@ class Profile extends StatelessWidget {
           children: [
             const ProfileInfo(),
             const Divider(),
-            SizedBox(height: 16,),
+            const SizedBox(height: 16,),
             Container(
               height: 69,
               width: 400,

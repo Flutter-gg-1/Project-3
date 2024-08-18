@@ -87,7 +87,7 @@ class VerbalSkillsScreen extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(left: 30),
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                           topLeft: Radius.circular(30),
                                       bottomRight: Radius.circular(30),
                                       topRight: Radius.circular(30)),
