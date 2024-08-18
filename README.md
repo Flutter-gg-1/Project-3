@@ -17,7 +17,8 @@ Mental Up is a cognitive training app built with Flutter, designed to enhance me
 <img width="328" alt="image" src="https://github.com/user-attachments/assets/3a9790b3-2bbe-4948-94e0-90769613941e">
 
 
-<img width="328" alt="image" src="https://github.com/user-attachments/assets/c3ae6b01-bf6c-4789-a77e-30aade3be095">
+<img width="328" alt="Screenshot 1446-02-14 at 9 19 12 AM" src="https://github.com/user-attachments/assets/874bc5cb-bb80-4bf7-8bfb-dfde000e66a2">
+
 
 
 <img width="328" alt="Screenshot 1446-02-14 at 5 56 50 AM" src="https://github.com/user-attachments/assets/81456e37-73e4-416f-8994-48f80b2268d1">
