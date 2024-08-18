@@ -175,7 +175,7 @@ Widget myContainerView({required String text, required String imagePath}) {
           child: Image(image: AssetImage(imagePath), width: 116, height: 105),
         ),
         Flexible(
-          child: Text(text),
+          child: Text(text, style: const TextStyle(fontSize: 20)),
         ),
       ],
     ),

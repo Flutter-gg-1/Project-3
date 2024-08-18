@@ -7,6 +7,7 @@ class VerbalSkills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorPallete.colorLightGrey,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

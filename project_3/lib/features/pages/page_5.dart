@@ -7,6 +7,7 @@ class Challenges extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorPallete.colorLightGrey,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -31,21 +32,22 @@ class Challenges extends StatelessWidget {
                 const SizedBox(height: 25),
                 myContainerView(
                   text:
-                      'Complete 1000 word streak Win 1000XP along with 300 diamonds.',
-                  imagePath: 'assets/g.png',
+                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                  imagePath: 'assets/n.png',
+                ),
+                const SizedBox(height: 25),
+                myContainerView(
+                  text:
+                      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                  imagePath: 'assets/s.png',
                 ),
                 const SizedBox(height: 25),
                 myContainerView(
                   text:
                       'Complete 1000 word streak Win 1000XP along with 300 diamonds.',
-                  imagePath: 'assets/g.png',
+                  imagePath: 'assets/k.png',
                 ),
                 const SizedBox(height: 25),
-                myContainerView(
-                  text:
-                      'Complete 1000 word streak Win 1000XP along with 300 diamonds.',
-                  imagePath: 'assets/g.png',
-                ),
               ],
             ),
           ),

@@ -20,6 +20,7 @@ class _YourScoreState extends State<YourScore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorPallete.colorLightGrey,
       body: SafeArea(
         child: ListView(
           children: [
