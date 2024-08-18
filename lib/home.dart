@@ -202,7 +202,7 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.horizontal(
                               right: Radius.circular(60),
                             ),
-                            value: 18 / 40,
+                            value: 32 / 40,
                             valueColor: AlwaysStoppedAnimation<Color>(
                                 Color(0xffECC055)),
                             backgroundColor: Color.fromARGB(255, 184, 184, 184),
@@ -306,7 +306,7 @@ class Home extends StatelessWidget {
                               borderRadius: BorderRadius.horizontal(
                                 right: Radius.circular(60),
                               ),
-                              value: 18 / 40,
+                              value: 18 / 70,
                               valueColor: AlwaysStoppedAnimation<Color>(
                                   Color(0xffECC055)),
                               backgroundColor:

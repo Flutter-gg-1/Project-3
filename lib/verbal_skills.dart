@@ -144,7 +144,10 @@ class VerbalSkills extends StatelessWidget {
                       height: 14,
                       width: 101,
                       child: LinearProgressIndicator(
-                        value: 18 / 40,
+                        value: 13 / 40,
+                        borderRadius: BorderRadius.horizontal(
+                          right: Radius.circular(60),
+                        ),
                         valueColor:
                             AlwaysStoppedAnimation<Color>(Color(0xffECC055)),
                         backgroundColor: Color.fromARGB(255, 184, 184, 184),
