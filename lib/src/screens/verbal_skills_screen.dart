@@ -65,7 +65,9 @@ class _VerbalSkillsScreenState extends State<VerbalSkillsScreen> {
                 child: Stack(children: [
                   Container(
                     height: 110,
-                    margin: const EdgeInsets.only(top: 60),
+                    margin: const EdgeInsets.only(
+                      top: 60,
+                    ),
                     decoration: BoxDecoration(
                         color: const Color(0xffE9E8E8),
                         borderRadius: BorderRadius.circular(15),
@@ -80,24 +82,21 @@ class _VerbalSkillsScreenState extends State<VerbalSkillsScreen> {
                           style: TextStyle(fontSize: 18),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 10),
                           child: Row(
                             children: [
                               SizedBox(
-                                width: 20,
+                                width: 45,
                               ),
-                              Icon(
-                                FluentIcons.crown_20_filled,
-                                size: 35,
-                                color: Color(0xffECC055),
-                              ),
-                              Expanded(
+                              SizedBox(
+                                width: 70,
                                 child: LinearProgressIndicator(
-                                    minHeight: 10,
-                                    backgroundColor: Color(0xffC4C4C4),
-                                    color: Color(0xffECC055),
-                                    value: 0.075,
-                                    borderRadius: BorderRadius.only(
+                                    minHeight: 13,
+                                    backgroundColor: const Color(0xffC4C4C4),
+                                    color: const Color(0xffECC055),
+                                    value: 0.75,
+                                    borderRadius: const BorderRadius.only(
                                       topRight: Radius.circular(10),
                                       bottomRight: Radius.circular(10),
                                     )),
@@ -113,8 +112,17 @@ class _VerbalSkillsScreenState extends State<VerbalSkillsScreen> {
                               )
                             ],
                           ),
-                        )
+                        ),
                       ],
+                    ),
+                  ),
+                  const Positioned(
+                    bottom: 10,
+                    left: 32,
+                    child: Icon(
+                      FluentIcons.crown_20_filled,
+                      size: 35,
+                      color: Color(0xffECC055),
                     ),
                   ),
                   Positioned(

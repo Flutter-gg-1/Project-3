@@ -36,7 +36,6 @@ Widget completionContainer({
                 "Unit 1",
                 style: TextStyle(fontSize: 28),
               ),
-              
               Padding(
                 padding: const EdgeInsets.only(left: 36, top: 10, bottom: 10),
                 child: SizedBox(
