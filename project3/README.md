@@ -4,6 +4,8 @@ Overview
 --------
 This project aims to enhance proficiency in Flutter development and UI implementation by guiding through the process of implementing a set of user interfaces using a specific list of widgets.
 
+![Uploading ezgif-5-ea5bc4e3f4.gif…]()
+
 UI Implemented
 --------------
 The following Figma design user interfaces have been implemented:
