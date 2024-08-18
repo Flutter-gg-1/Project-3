@@ -1,8 +1,7 @@
-
+import 'package:educational_kids_game/widget/challenges.dart';
 import 'package:educational_kids_game/widget/profile.dart';
 import 'package:educational_kids_game/widget/statistics_row.dart';
 import 'package:flutter/material.dart';
-
 
 class ChallengesScreen extends StatelessWidget {
   const ChallengesScreen({
@@ -26,11 +25,40 @@ class ChallengesScreen extends StatelessWidget {
                     fontWeight: FontWeight.w400),
               ),
             )),
-        Expanded(
+        const Expanded(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                
+                Challenges(
+                  title: 'Complete 1000 word streak',
+                  subtitle: 'Win 1000XP along with 300 diamonds.',
+                  imagePath: 'lib/assest/image/women.png',
+                ),
+                SizedBox(height: 31,),
+                Align(
+                  alignment: Alignment(-0.8, 0),
+                    child: Text(
+                  'Achievements',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+                )),
+                Challenges(
+                  title: 'Lorem Ipsum',
+                  subtitle:
+                      'is simply dummy text of the printing and typesetting industry.',
+                  imagePath: 'lib/assest/image/leaf.png',
+                ),
+                Challenges(
+                  title: 'Lorem Ipsum',
+                  subtitle:
+                      'is simply dummy text of the printing and typesetting industry.',
+                  imagePath: 'lib/assest/image/sabbar.png',
+                ),
+                Challenges(
+                  title: 'Lorem Ipsum',
+                  subtitle:
+                      'is simply dummy text of the printing and typesetting industry.',
+                  imagePath: 'lib/assest/image/ball.png',
+                ),
               ],
             ),
           ),

@@ -1,5 +1,7 @@
+import 'package:educational_kids_game/src/challenges_screen.dart';
 import 'package:educational_kids_game/src/profile_screen.dart';
 import 'package:educational_kids_game/src/section_screen.dart';
+import 'package:educational_kids_game/src/soon_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
@@ -14,9 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   List body = const [
     SectionScreen(),
-    Placeholder(),
+    ChallengesScreen(),
     ProfileScreen(),
-    Placeholder(),
+    SoonScreen()
   ];
   @override
   Widget build(BuildContext context) {

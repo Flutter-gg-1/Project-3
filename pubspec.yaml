@@ -70,6 +70,10 @@ flutter:
      - lib/assest/image/book.png
      - lib/assest/image/boy.png
      - lib/assest/image/cat.png
+     - lib/assest/image/women.png
+     - lib/assest/image/leaf.png
+     - lib/assest/image/sabbar.png
+     - lib/assest/image/ball.png
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
