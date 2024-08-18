@@ -16,6 +16,29 @@ class Challenges extends StatelessWidget {
                   const Text('Challenges', style: TextStyle(fontSize: 30))
                 ],
               ),
+              const SizedBox(height: 25),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  border:
+                      Border.all(color: ColorPallete.colorDarkGrey, width: 2),
+                  color: ColorPallete.colorWhite,
+                ),
+                width: 377,
+                height: 150,
+                child: const Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Image(
+                        image: AssetImage('assets/t.png'),
+                        width: 100,
+                        height: 100,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
@@ -25,7 +48,10 @@ class Challenges extends StatelessWidget {
         addItem: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.home, size: 35)),
+                onPressed: () {
+                  (context).goTo(const YourScore());
+                },
+                icon: const Icon(Icons.home, size: 35)),
             IconButton(
                 onPressed: () {
                   (context).goTo(const Challenges());
