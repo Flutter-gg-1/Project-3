@@ -137,6 +137,59 @@ class Challenges extends StatelessWidget {
           Container(
             width: 378,
             height: 116,
+            margin: const EdgeInsets.only(top: 42, left: 24, right: 26),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: const Color(0x10000000),
+                width: 3.0,
+              ),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 13,
+                    ),
+                    child: Image.asset(
+                      'images/Pebble People Plant 2.png',
+                      width: 116,
+                      height: 104.38,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  const Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 16),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Lorem Ipsum ',
+                            style:
+                                TextStyle(fontSize: 20, fontFamily: 'Roboto'),
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            'is simply dummy text of\nthe printing and\ntypesetting industry.',
+                            style:
+                                TextStyle(fontSize: 15, fontFamily: 'Roboto'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            width: 378,
+            height: 116,
             margin: const EdgeInsets.only(top: 28, left: 24, right: 26),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
