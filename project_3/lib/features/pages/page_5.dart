@@ -9,45 +9,45 @@ class Challenges extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              myRowContainer(
-                addItem: [
-                  const Text('Challenges', style: TextStyle(fontSize: 30))
-                ],
-              ),
-              const SizedBox(height: 25),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  border:
-                      Border.all(color: ColorPallete.colorDarkGrey, width: 2),
-                  color: ColorPallete.colorWhite,
-                ),
-                width: 377,
-                height: 150,
-                child: const Row(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Image(
-                          image: AssetImage('assets/g.png'),
-                          width: 116,
-                          height: 105),
-                    ),
-                    Flexible(
-                      child: Text(
-                          'Complete 1000 word streak Win 1000XP along with 300 diamonds.'),
-                    ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                myRowContainer(
+                  addItem: [
+                    const Text('Challenges', style: TextStyle(fontSize: 30))
                   ],
                 ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(right: 190, top: 25),
-                child: Text('Achievement', style: TextStyle(fontSize: 30)),
-              ),
-            ],
+                const SizedBox(height: 25),
+                myContainerView(
+                  text:
+                      'Complete 1000 word streak Win 1000XP along with 300 diamonds.',
+                  imagePath: 'assets/g.png',
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(right: 190, top: 25),
+                  child: Text('Achievement', style: TextStyle(fontSize: 30)),
+                ),
+                const SizedBox(height: 25),
+                myContainerView(
+                  text:
+                      'Complete 1000 word streak Win 1000XP along with 300 diamonds.',
+                  imagePath: 'assets/g.png',
+                ),
+                const SizedBox(height: 25),
+                myContainerView(
+                  text:
+                      'Complete 1000 word streak Win 1000XP along with 300 diamonds.',
+                  imagePath: 'assets/g.png',
+                ),
+                const SizedBox(height: 25),
+                myContainerView(
+                  text:
+                      'Complete 1000 word streak Win 1000XP along with 300 diamonds.',
+                  imagePath: 'assets/g.png',
+                ),
+              ],
+            ),
           ),
         ),
       ),

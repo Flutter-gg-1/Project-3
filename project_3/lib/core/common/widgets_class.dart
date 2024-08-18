@@ -158,3 +158,26 @@ Widget myAvatar({required String imagePath, required String imagePath2}) {
     ),
   ]);
 }
+
+Widget myContainerView({required String text, required String imagePath}) {
+  return Container(
+    decoration: BoxDecoration(
+      borderRadius: const BorderRadius.all(Radius.circular(20)),
+      border: Border.all(color: ColorPallete.colorDarkGrey, width: 2),
+      color: ColorPallete.colorWhite,
+    ),
+    width: 377,
+    height: 150,
+    child: Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: Image(image: AssetImage(imagePath), width: 116, height: 105),
+        ),
+        Flexible(
+          child: Text(text),
+        ),
+      ],
+    ),
+  );
+}
