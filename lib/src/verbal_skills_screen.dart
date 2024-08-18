@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'widget_of_verbal_skill_screen/circle_containers.dart';
 
+// Verbal Skills Screen
 class VerbalSkillsScreen extends StatelessWidget {
   const VerbalSkillsScreen({super.key});
 

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project3/src/buttom_navigation_bar_screen.dart';
 import 'package:project3/src/widgets_of_login_screen/rich_text.dart';
 import 'package:project3/src/widgets_of_login_screen/text_field.dart';
-
+// LogIn Screen
 class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});
 

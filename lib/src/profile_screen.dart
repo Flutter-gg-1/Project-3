@@ -5,6 +5,7 @@ import 'widgets_of_profile_screen/invite_friends.dart';
 import 'widgets_of_profile_screen/list_tile_profile.dart';
 import 'widgets_of_profile_screen/profile_info.dart';
 
+// profile Screen
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
